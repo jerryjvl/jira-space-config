@@ -1,0 +1,23 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "startAt": 0,
+  "total": 3,
+  "values": [
+    {
+      "disabled": false,
+      "id": "10004",
+      "value": "Standard"
+    },
+    {
+      "disabled": false,
+      "id": "10005",
+      "value": "Normal"
+    },
+    {
+      "disabled": false,
+      "id": "10006",
+      "value": "Emergency"
+    }
+  ]
+}

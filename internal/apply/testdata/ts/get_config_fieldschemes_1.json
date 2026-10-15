@@ -1,0 +1,10 @@
+{
+  "fieldsCount": 60,
+  "id": "1",
+  "isDefault": true,
+  "links": {
+    "associations": "https://example.atlassian.net/rest/api/3/config/fieldschemes/1/fields",
+    "projects": "https://example.atlassian.net/rest/api/3/config/fieldschemes/1/projects"
+  },
+  "name": "Default Field Scheme"
+}

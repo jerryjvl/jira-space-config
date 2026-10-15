@@ -1,0 +1,18 @@
+{
+  "isLast": true,
+  "maxResults": 200,
+  "self": "https://jira-wfl-prd-apse2-01.ap-southeast-2.sp.prod.atl-paas.net/rest/api/3/statuses/search?searchString=Done&startAt=0",
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "description": "",
+      "id": "10010",
+      "name": "Done",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "DONE"
+    }
+  ]
+}

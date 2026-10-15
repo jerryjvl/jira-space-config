@@ -1,0 +1,88 @@
+{
+  "actors": [
+    {
+      "actorUser": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000011"
+      },
+      "displayName": "Example User",
+      "id": 10047,
+      "type": "atlassian-user-role-actor"
+    },
+    {
+      "actorUser": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000006"
+      },
+      "displayName": "Example User",
+      "id": 10049,
+      "type": "atlassian-user-role-actor"
+    },
+    {
+      "actorUser": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000004"
+      },
+      "displayName": "Example User",
+      "id": 10044,
+      "type": "atlassian-user-role-actor"
+    },
+    {
+      "actorUser": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000008"
+      },
+      "displayName": "Example User",
+      "id": 10048,
+      "type": "atlassian-user-role-actor"
+    },
+    {
+      "actorUser": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000003"
+      },
+      "displayName": "Example User",
+      "id": 10051,
+      "type": "atlassian-user-role-actor"
+    },
+    {
+      "actorUser": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000007"
+      },
+      "displayName": "Example User",
+      "id": 10043,
+      "type": "atlassian-user-role-actor"
+    },
+    {
+      "actorUser": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000010"
+      },
+      "displayName": "Example User",
+      "id": 10045,
+      "type": "atlassian-user-role-actor"
+    },
+    {
+      "actorUser": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000002"
+      },
+      "displayName": "Example User",
+      "id": 10046,
+      "type": "atlassian-user-role-actor"
+    },
+    {
+      "actorUser": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000005"
+      },
+      "displayName": "Example User",
+      "id": 10050,
+      "type": "atlassian-user-role-actor"
+    },
+    {
+      "actorUser": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000009"
+      },
+      "displayName": "Example User",
+      "id": 10042,
+      "type": "atlassian-user-role-actor"
+    }
+  ],
+  "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+  "id": 10003,
+  "name": "atlassian-addons-project-access",
+  "self": "https://example.atlassian.net/rest/api/3/project/10003/role/10003"
+}

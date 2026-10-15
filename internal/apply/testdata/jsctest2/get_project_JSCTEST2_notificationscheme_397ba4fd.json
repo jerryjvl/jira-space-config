@@ -1,0 +1,126 @@
+{
+  "description": "Every recipient kind (test data)",
+  "expand": "notificationSchemeEvents,user,group,projectRole,field,all",
+  "id": 10003,
+  "name": "JSCTEST2 Notification Scheme",
+  "notificationSchemeEvents": [
+    {
+      "event": {
+        "description": "This is the 'issue created' event.",
+        "id": 1,
+        "name": "Issue Created"
+      },
+      "notifications": [
+        {
+          "expand": "group",
+          "group": {
+            "groupId": "58a02559-d97d-4dd0-835a-d1b4d19632c9",
+            "name": "jira-admins-example",
+            "self": "https://example.atlassian.net/rest/api/3/group?groupId=58a02559-d97d-4dd0-835a-d1b4d19632c9"
+          },
+          "id": 10193,
+          "notificationType": "Group",
+          "parameter": "jira-admins-example",
+          "recipient": "58a02559-d97d-4dd0-835a-d1b4d19632c9"
+        },
+        {
+          "id": 10194,
+          "notificationType": "Reporter"
+        },
+        {
+          "expand": "field",
+          "field": {
+            "clauseNames": [
+              "JSCTEST2 Owner[User Picker (single user)]",
+              "cf[10049]",
+              "JSCTEST2 Owner"
+            ],
+            "custom": true,
+            "id": "customfield_10049",
+            "key": "customfield_10049",
+            "name": "JSCTEST2 Owner",
+            "navigable": true,
+            "orderable": true,
+            "schema": {
+              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:userpicker",
+              "customId": 10049,
+              "type": "user"
+            },
+            "searchable": true,
+            "untranslatedName": "JSCTEST2 Owner"
+          },
+          "id": 10195,
+          "notificationType": "UserCustomField",
+          "parameter": "customfield_10049",
+          "recipient": "customfield_10049"
+        },
+        {
+          "expand": "field",
+          "field": {
+            "clauseNames": [
+              "JSCTEST2 Team Group[Group Picker (single group)]",
+              "cf[10052]",
+              "JSCTEST2 Team Group"
+            ],
+            "custom": true,
+            "id": "customfield_10052",
+            "key": "customfield_10052",
+            "name": "JSCTEST2 Team Group",
+            "navigable": true,
+            "orderable": true,
+            "schema": {
+              "custom": "com.atlassian.jira.plugin.system.customfieldtypes:grouppicker",
+              "customId": 10052,
+              "type": "group"
+            },
+            "searchable": true,
+            "untranslatedName": "JSCTEST2 Team Group"
+          },
+          "id": 10196,
+          "notificationType": "GroupCustomField",
+          "parameter": "customfield_10052",
+          "recipient": "customfield_10052"
+        },
+        {
+          "id": 10197,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "expand": "projectRole",
+          "id": 10198,
+          "notificationType": "ProjectRole",
+          "parameter": "10002",
+          "projectRole": {
+            "description": "A project role that represents administrators in a project",
+            "id": 10002,
+            "name": "Administrators",
+            "self": "https://example.atlassian.net/rest/api/3/role/10002"
+          },
+          "recipient": "10002"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue resolved' event.",
+        "id": 4,
+        "name": "Issue Resolved"
+      },
+      "notifications": [
+        {
+          "id": 10199,
+          "notificationType": "ProjectLead"
+        },
+        {
+          "id": 10200,
+          "notificationType": "AllWatchers"
+        },
+        {
+          "id": 10201,
+          "notificationType": "ComponentLead"
+        }
+      ]
+    }
+  ],
+  "self": "https://example.atlassian.net/rest/api/3/notificationscheme/10003"
+}

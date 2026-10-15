@@ -1,0 +1,18 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "startAt": 0,
+  "total": 2,
+  "values": [
+    {
+      "disabled": false,
+      "id": "10037",
+      "value": "Service"
+    },
+    {
+      "disabled": false,
+      "id": "10038",
+      "value": "Library"
+    }
+  ]
+}

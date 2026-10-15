@@ -1,0 +1,19 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "issueTypeScheme": {
+        "defaultIssueTypeId": "10000",
+        "description": "",
+        "id": "10146",
+        "name": "TS: Kanban Issue Type Scheme"
+      },
+      "projectIds": [
+        "10002"
+      ]
+    }
+  ]
+}

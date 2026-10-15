@@ -1,0 +1,23 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "startAt": 0,
+  "total": 3,
+  "values": [
+    {
+      "disabled": false,
+      "id": "10032",
+      "value": "alpha"
+    },
+    {
+      "disabled": false,
+      "id": "10033",
+      "value": "beta"
+    },
+    {
+      "disabled": false,
+      "id": "10034",
+      "value": "gamma"
+    }
+  ]
+}

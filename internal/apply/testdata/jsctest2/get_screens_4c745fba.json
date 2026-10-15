@@ -1,0 +1,14 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "self": "https://example.atlassian.net/rest/api/3/screens?queryString=Resolve+Issue+Screen&startAt=0&maxResults=100",
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "description": "Allows to set resolution, change fix versions and assign an issue.",
+      "id": 3,
+      "name": "Resolve Issue Screen"
+    }
+  ]
+}

@@ -33,7 +33,7 @@ type environment struct {
 func Execute(args []string, stdout, stderr io.Writer) error {
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
 	defer stop()
-	return execute(ctx, args, stdout, stderr, environment{getenv: os.Getenv, stdin: os.Stdin})
+	return execute(ctx, args, stdout, stderr, environment{getenv: os.Getenv, stdin: os.Stdin, terminal: isTerminal})
 }
 
 func execute(ctx context.Context, args []string, stdout, stderr io.Writer, env environment) error {
@@ -77,6 +77,6 @@ func newRootCommand(env environment) *cobra.Command {
 		SilenceUsage:  true,
 		SilenceErrors: true,
 	}
-	root.AddCommand(newWhoamiCommand(env), newValidateCommand(), newExportCommand(env))
+	root.AddCommand(newWhoamiCommand(env), newValidateCommand(), newExportCommand(env), newApplyCommand(env))
 	return root
 }

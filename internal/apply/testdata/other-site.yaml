@@ -1,0 +1,8 @@
+apiVersion: jira-space-config/v1alpha1
+kind: SpaceConfig
+metadata: {name: other}
+binding: {site: https://other.atlassian.net, cloud_id: cloud-2}
+statuses:
+  - {name: Open, mode: reuse, id: "99"}
+space:
+  key: VULN

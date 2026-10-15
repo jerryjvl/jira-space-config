@@ -1,0 +1,252 @@
+[
+  {
+    "description": "Admins can do most things, like update settings and add other admins.",
+    "id": 10005,
+    "name": "Administrator",
+    "scope": {
+      "project": {
+        "id": "10000"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/role/10005"
+  },
+  {
+    "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+    "id": 10013,
+    "name": "atlassian-addons-project-access",
+    "scope": {
+      "project": {
+        "id": "10000"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/role/10013"
+  },
+  {
+    "description": "Can only access one assigned space within the app, with no app admin permissions. Assign to external collaborators who need limited access. (non-billable)",
+    "id": 10010,
+    "name": "jira-guest-member",
+    "scope": {
+      "project": {
+        "id": "10000"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/role/10010"
+  },
+  {
+    "description": "Members are part of the team, and can add, edit, and collaborate on all work.",
+    "id": 10006,
+    "name": "Member",
+    "scope": {
+      "project": {
+        "id": "10000"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/role/10006"
+  },
+  {
+    "description": "Viewers can search through, view, and comment on your team's work, but not much else.",
+    "id": 10008,
+    "name": "Viewer",
+    "scope": {
+      "project": {
+        "id": "10000"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/role/10008"
+  },
+  {
+    "description": "Admins can do most things, like update settings and add other admins.",
+    "id": 10004,
+    "name": "Administrator",
+    "self": "https://example.atlassian.net/rest/api/3/role/10004"
+  },
+  {
+    "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+    "id": 10012,
+    "name": "atlassian-addons-project-access",
+    "self": "https://example.atlassian.net/rest/api/3/role/10012"
+  },
+  {
+    "description": "Can only access one assigned space within the app, with no app admin permissions. Assign to external collaborators who need limited access. (non-billable)",
+    "id": 10011,
+    "name": "jira-guest-member",
+    "self": "https://example.atlassian.net/rest/api/3/role/10011"
+  },
+  {
+    "description": "Members are part of the team, and can add, edit, and collaborate on all work.",
+    "id": 10007,
+    "name": "Member",
+    "self": "https://example.atlassian.net/rest/api/3/role/10007"
+  },
+  {
+    "description": "Viewers can search through, view, and comment on your team's work, but not much else.",
+    "id": 10009,
+    "name": "Viewer",
+    "self": "https://example.atlassian.net/rest/api/3/role/10009"
+  },
+  {
+    "description": "Admins can do most things, like update settings and add other admins.",
+    "id": 10015,
+    "name": "Administrator",
+    "scope": {
+      "project": {
+        "id": "10001"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/role/10015"
+  },
+  {
+    "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+    "id": 10019,
+    "name": "atlassian-addons-project-access",
+    "scope": {
+      "project": {
+        "id": "10001"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/role/10019"
+  },
+  {
+    "description": "Can only access one assigned space within the app, with no app admin permissions. Assign to external collaborators who need limited access. (non-billable)",
+    "id": 10018,
+    "name": "jira-guest-member",
+    "scope": {
+      "project": {
+        "id": "10001"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/role/10018"
+  },
+  {
+    "description": "Members are part of the team, and can add, edit, and collaborate on all work.",
+    "id": 10016,
+    "name": "Member",
+    "scope": {
+      "project": {
+        "id": "10001"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/role/10016"
+  },
+  {
+    "description": "Viewers can search through, view, and comment on your team's work, but not much else.",
+    "id": 10017,
+    "name": "Viewer",
+    "scope": {
+      "project": {
+        "id": "10001"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/role/10017"
+  },
+  {
+    "description": "A project role that represents administrators in a project",
+    "id": 10002,
+    "name": "Administrators",
+    "self": "https://example.atlassian.net/rest/api/3/role/10002"
+  },
+  {
+    "actors": [
+      {
+        "actorUser": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000002"
+        },
+        "displayName": "Example User",
+        "id": 10014,
+        "type": "atlassian-user-role-actor"
+      },
+      {
+        "actorUser": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000006"
+        },
+        "displayName": "Example User",
+        "id": 10008,
+        "type": "atlassian-user-role-actor"
+      },
+      {
+        "actorUser": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000004"
+        },
+        "displayName": "Example User",
+        "id": 10002,
+        "type": "atlassian-user-role-actor"
+      },
+      {
+        "actorUser": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000011"
+        },
+        "displayName": "Example User",
+        "id": 10029,
+        "type": "atlassian-user-role-actor"
+      },
+      {
+        "actorUser": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000008"
+        },
+        "displayName": "Example User",
+        "id": 10005,
+        "type": "atlassian-user-role-actor"
+      },
+      {
+        "actorUser": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000010"
+        },
+        "displayName": "Example User",
+        "id": 10011,
+        "type": "atlassian-user-role-actor"
+      },
+      {
+        "actorUser": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000007"
+        },
+        "displayName": "Example User",
+        "id": 10026,
+        "type": "atlassian-user-role-actor"
+      },
+      {
+        "actorUser": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000003"
+        },
+        "displayName": "Example User",
+        "id": 10017,
+        "type": "atlassian-user-role-actor"
+      },
+      {
+        "actorUser": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000005"
+        },
+        "displayName": "Example User",
+        "id": 10023,
+        "type": "atlassian-user-role-actor"
+      },
+      {
+        "actorUser": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000009"
+        },
+        "displayName": "Example User",
+        "id": 10020,
+        "type": "atlassian-user-role-actor"
+      }
+    ],
+    "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+    "id": 10003,
+    "name": "atlassian-addons-project-access",
+    "self": "https://example.atlassian.net/rest/api/3/role/10003"
+  },
+  {
+    "description": "Can only access one assigned space within the app, with no app admin permissions. Assign to external collaborators who need limited access. (non-billable)",
+    "id": 10014,
+    "name": "jira-guest-member",
+    "self": "https://example.atlassian.net/rest/api/3/role/10014"
+  }
+]

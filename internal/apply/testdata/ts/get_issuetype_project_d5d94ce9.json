@@ -1,0 +1,56 @@
+[
+  {
+    "avatarId": 10316,
+    "description": "A small piece of work that's part of a larger task.",
+    "hierarchyLevel": -1,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium",
+    "id": "10012",
+    "name": "Sub-task",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10012",
+    "subtask": true,
+    "untranslatedName": "Sub-task"
+  },
+  {
+    "description": "A collection of related bugs, stories, and tasks.",
+    "hierarchyLevel": 1,
+    "iconUrl": "https://example.atlassian.net/images/icons/issuetypes/epic.svg",
+    "id": "10000",
+    "name": "Epic",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10000",
+    "subtask": false,
+    "untranslatedName": "Epic"
+  },
+  {
+    "avatarId": 10300,
+    "description": "Created by Jira Agile - do not edit or delete. Issue type for a user story.",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+    "id": "10005",
+    "name": "Story",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10005",
+    "subtask": false,
+    "untranslatedName": "Story"
+  },
+  {
+    "avatarId": 10303,
+    "description": "A problem or error.",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+    "id": "10013",
+    "name": "Bug",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10013",
+    "subtask": false,
+    "untranslatedName": "Bug"
+  },
+  {
+    "avatarId": 10318,
+    "description": "A small, distinct piece of work.",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+    "id": "10014",
+    "name": "Task",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10014",
+    "subtask": false,
+    "untranslatedName": "Task"
+  }
+]

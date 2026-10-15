@@ -1,0 +1,28 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 5,
+  "values": [
+    {
+      "issueTypeId": "10012",
+      "issueTypeSchemeId": "10147"
+    },
+    {
+      "issueTypeId": "10000",
+      "issueTypeSchemeId": "10147"
+    },
+    {
+      "issueTypeId": "10005",
+      "issueTypeSchemeId": "10147"
+    },
+    {
+      "issueTypeId": "10013",
+      "issueTypeSchemeId": "10147"
+    },
+    {
+      "issueTypeId": "10014",
+      "issueTypeSchemeId": "10147"
+    }
+  ]
+}

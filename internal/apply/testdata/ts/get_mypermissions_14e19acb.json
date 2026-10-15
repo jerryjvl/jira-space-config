@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "ADMINISTER": {
+      "description": "Create and administer projects, issue types, fields, workflows, and schemes for all projects. Users with this permission can perform most administration tasks, except: managing users, importing data, and editing system email settings.",
+      "havePermission": true,
+      "id": "0",
+      "key": "ADMINISTER",
+      "name": "Administer Jira",
+      "type": "GLOBAL"
+    },
+    "ADMINISTER_PROJECTS": {
+      "description": "Ability to administer a project in Jira.",
+      "havePermission": false,
+      "id": "23",
+      "key": "ADMINISTER_PROJECTS",
+      "name": "Administer Projects",
+      "type": "PROJECT"
+    },
+    "BROWSE_PROJECTS": {
+      "description": "Ability to browse projects and the issues within them.",
+      "havePermission": true,
+      "id": "10",
+      "key": "BROWSE_PROJECTS",
+      "name": "Browse Projects",
+      "type": "PROJECT"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "summary",
+    "name": "Summary"
+  },
+  {
+    "id": "issuetype",
+    "name": "Issue Type"
+  },
+  {
+    "id": "customfield_10043",
+    "name": "JSCTEST2 Severity"
+  },
+  {
+    "id": "customfield_10044",
+    "name": "JSCTEST2 Target"
+  },
+  {
+    "id": "customfield_10049",
+    "name": "JSCTEST2 Owner"
+  }
+]

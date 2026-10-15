@@ -205,7 +205,7 @@ func TestFixturesAreScrubbed(t *testing.T) {
 	account := regexp.MustCompile(`\d{6}(:|%3[Aa])[0-9a-f-]{36}`)                // %3A: in a URL
 	fakeAccount := regexp.MustCompile(`^000000:00000000-0000-0000-0000-\d{12}$`) // numbered by the scrub script
 	var files []string
-	for _, pattern := range []string{"testdata/*/*.json"} {
+	for _, pattern := range []string{"testdata/*/*.json", "../apply/testdata/*/*.json", "../apply/testdata/*/*.yaml"} {
 		found, err := filepath.Glob(pattern)
 		if err != nil || len(found) == 0 {
 			t.Fatalf("no fixtures match %s: %v", pattern, err)

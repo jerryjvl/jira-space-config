@@ -1,0 +1,18 @@
+{
+  "isLast": true,
+  "maxResults": 200,
+  "self": "https://jira-wfl-prd-apse2-01.ap-southeast-2.sp.prod.atl-paas.net/rest/api/3/statuses/search?searchString=Resolved&startAt=0",
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "description": "A resolution has been taken, and it's awaiting verification by the reporter. From here work items are either reopened, or are closed.",
+      "id": "5",
+      "name": "Resolved",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "DONE"
+    }
+  ]
+}

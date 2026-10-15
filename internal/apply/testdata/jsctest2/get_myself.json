@@ -1,0 +1,19 @@
+{
+  "accountId": "000000:00000000-0000-0000-0000-000000000001",
+  "accountType": "atlassian",
+  "active": true,
+  "applicationRoles": {
+    "items": [],
+    "size": 1
+  },
+  "displayName": "Example User",
+  "emailAddress": "user@example.com",
+  "expand": "groups,applicationRoles",
+  "groups": {
+    "items": [],
+    "size": 4
+  },
+  "locale": "en_GB",
+  "self": "https://example.atlassian.net/rest/api/3/user?accountId=000000:00000000-0000-0000-0000-000000000001",
+  "timeZone": "Australia/Sydney"
+}

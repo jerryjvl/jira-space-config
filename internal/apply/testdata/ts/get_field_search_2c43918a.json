@@ -1,0 +1,59 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 50,
+  "total": 53,
+  "values": [
+    {
+      "areOptionsSupported": false,
+      "description": "The total number of forms on the work item",
+      "id": "customfield_10034",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Total forms",
+      "schema": {
+        "custom": "com.atlassian.jira.plugins.proforma-managed-fields:forms-total-field-cftype",
+        "customId": 10034,
+        "type": "number"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber",
+      "translatedDescription": "The total number of forms on the work item",
+      "translatedName": "Total forms",
+      "typeDisplayName": "Total forms"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Custom field that stores vulnerability information for JQL",
+      "id": "customfield_10036",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Vulnerability",
+      "schema": {
+        "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+        "customId": 10036,
+        "type": "any"
+      },
+      "searcherKey": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf-searcher",
+      "translatedDescription": "Custom field that stores vulnerability information for JQL",
+      "translatedName": "Vulnerability",
+      "typeDisplayName": "Vulnerability"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "UUIDs of forms associated with this work item at creation",
+      "id": "customfield_10030",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Work item created forms",
+      "schema": {
+        "custom": "com.atlassian.jira.plugins.proforma-managed-fields:proforma-forms-field-cftype",
+        "customId": 10030,
+        "items": "Forms",
+        "type": "array"
+      },
+      "translatedDescription": "UUIDs of forms associated with this work item at creation",
+      "translatedName": "Work item created forms",
+      "typeDisplayName": "Forms"
+    }
+  ]
+}

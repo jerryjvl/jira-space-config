@@ -1,0 +1,246 @@
+jira-space-config apply · DRY RUN · nothing will be changed
+
+  Site       https://example.atlassian.net
+  Space      TS "Test Sandbox" · company-managed · 0 work items
+  Account    Example User · Administer Jira ✓ · Administer projects ✓ (through Administer Jira)
+  Spec       spec.yaml · valid · 24 warnings ('validate spec.yaml' lists them)
+  Spec hash  sha256:3b3888b8bf595aa3d35ca235dd2b415bd2219f77496ed92152bcee67414134f9
+  Overrides  none
+
+Plan · 21 steps evaluated · 0 with changes · 0 need attention
+
+      1  Preflight                        ok
+      2  Role types                       nothing to do (3 exist)
+      4  Statuses                         nothing to do (4 exist)
+      5  Resolutions                      nothing to do (4 exist)
+      6  Priorities                       nothing to do (5 exist)
+      8  Issue types                      nothing to do (5 exist)
+      9  Custom fields                    nothing to do (40 exist)
+     10  Field contexts                   nothing to do (5 exist)
+     11  Screens                          nothing to do (3 exist)
+     12  Workflows                        nothing to do (1 exists)
+     13  Issue type scheme                nothing to do (1 exists)
+     14  Screens of the issue types       nothing to do (1 exists)
+     15  Fields in the space              nothing to do (1 exists)
+     16  Workflows of the issue types     nothing to do (1 exists)
+     17  Permissions                      nothing to do (1 exists)
+     18  Notifications                    nothing to do (1 exists)
+     19  Issue security                   nothing to do (1 exists)
+     20  Priorities in the space          nothing to do (1 exists)
+     21  Space details                    nothing to do (1 exists)
+     24  Role members                     nothing to do (1 exists)
+     25  Scheme switches                  nothing to do (1 exists)
+
+── Step 2 of 28 · Role types ───────────────────────────────────────────────────────────────────────
+
+  Site-wide objects (role types, groups, statuses, resolutions, priorities, issue link types, issue
+  types and custom fields) are shared by every space on the site, so existing ones are compared,
+  never changed. Missing ones with mode ensure are created; missing ones with mode reuse must be
+  created first.
+
+  ✓ exists   Administrators     matches (id 10002)
+  ✓ exists   atlassian-addons-project-access
+                                matches (id 10003)
+  ✓ exists   jira-guest-member  matches (id 10014)
+
+── Step 4 of 28 · Statuses ─────────────────────────────────────────────────────────────────────────
+
+  ✓ exists   Backlog                   matches (id 10008)
+  ✓ exists   Done                      matches (id 10010)
+  ✓ exists   In Progress               matches (id 3)
+  ✓ exists   Selected for development  matches (id 10009)
+
+── Step 5 of 28 · Resolutions ──────────────────────────────────────────────────────────────────────
+
+  ✓ exists   Cannot Reproduce  matches (id 10003)
+  ✓ exists   Done              matches (id 10000)
+  ✓ exists   Duplicate         matches (id 10002)
+  ✓ exists   Won't Do          matches (id 10001)
+
+── Step 6 of 28 · Priorities ───────────────────────────────────────────────────────────────────────
+
+  ✓ exists   Highest  matches (id 1)
+  ✓ exists   High     matches (id 2)
+  ✓ exists   Medium   matches (id 3)
+  ✓ exists   Low      matches (id 4)
+  ✓ exists   Lowest   matches (id 5)
+
+── Step 8 of 28 · Issue types ──────────────────────────────────────────────────────────────────────
+
+  ✓ exists   Bug       matches (id 10013)
+  ✓ exists   Epic      matches (id 10000)
+  ✓ exists   Story     matches (id 10005)
+  ✓ exists   Sub-task  matches (id 10012)
+  ✓ exists   Task      matches (id 10014)
+
+── Step 9 of 28 · Custom fields ────────────────────────────────────────────────────────────────────
+
+  ✓ exists   Actual end               matches (id customfield_10009)
+  ✓ exists   Actual start             matches (id customfield_10008)
+  ✓ exists   AgentSessions            matches (id customfield_10026)
+  ✓ exists   Approvals                matches (id customfield_10025)
+  ✓ exists   Approvers                matches (id customfield_10003)
+  ✓ exists   Change reason            matches (id customfield_10007)
+  ✓ exists   Change risk              matches (id customfield_10006)
+  ✓ exists   Change type              matches (id customfield_10005)
+  ✓ exists   Epic Color               matches (id customfield_10013)
+  ✓ exists   Epic Link                matches (id customfield_10014)
+  ✓ exists   Epic Name                matches (id customfield_10011)
+  ✓ exists   Epic Status              matches (id customfield_10012)
+  ✓ exists   Flagged                  matches (id customfield_10021)
+  ✓ exists   Focus Areas              matches (id customfield_10040)
+  ✓ exists   Goals                    matches (id customfield_10029)
+  ✓ exists   Impact                   matches (id customfield_10004)
+  ✓ exists   Incident manager         matches (id customfield_10038)
+  ✓ exists   Issue color              matches (id customfield_10017)
+  ✓ exists   Locked forms             matches (id customfield_10033)
+  ✓ exists   Open forms               matches (id customfield_10032)
+  ✓ exists   Organizations            matches (id customfield_10002)
+  ✓ exists   Parent Link              matches (id customfield_10018)
+  ✓ exists   Project overview key     matches (id customfield_10041)
+  ✓ exists   Project overview status  matches (id customfield_10042)
+  ✓ exists   Rank                     matches (id customfield_10019)
+  ✓ exists   Request Type             matches (id customfield_10010)
+  ✓ exists   Sentiment                matches (id customfield_10024)
+  ✓ exists   Sprint                   matches (id customfield_10020)
+  ✓ exists   Start date               matches (id customfield_10015)
+  ✓ exists   Story Points             matches (id customfield_10035)
+  ✓ exists   Story point estimate     matches (id customfield_10016)
+  ✓ exists   Submitted forms          matches (id customfield_10031)
+  ✓ exists   Target end               matches (id customfield_10023)
+  ✓ exists   Target start             matches (id customfield_10022)
+  ✓ exists   Team                     matches (id customfield_10001)
+  ✓ exists   Total forms              matches (id customfield_10034)
+  ✓ exists   Work item created forms  matches (id customfield_10030)
+  ✓ exists   [CHART] Date of First Response
+                                      matches (id customfield_10027)
+  ✓ exists   [CHART] Time in Status   matches (id customfield_10028)
+  ✓ exists   development              matches (id customfield_10000)
+
+── Step 10 of 28 · Field contexts ──────────────────────────────────────────────────────────────────
+
+  A field's contexts give its options and default value, per space and issue type. A context used
+  only by this space is created when missing, and its options, default and issue types are changed
+  to match; taking an option, an issue type or a context away needs --allow-delete=contexts, and is
+  blocked while work items have a value it would affect. A shared one must exist, and is never
+  changed.
+
+  ✓ exists   Change reason  matches (1 context)
+  ✓ exists   Change risk    matches (1 context)
+  ✓ exists   Change type    matches (1 context)
+  ✓ exists   Flagged        matches (1 context)
+  ✓ exists   Impact         matches (1 context)
+
+── Step 11 of 28 · Screens ─────────────────────────────────────────────────────────────────────────
+
+  Screens and workflows can be used by several spaces. A managed one (mode managed, the default) is
+  created for this space when missing, and changed to match the spec only while this space alone
+  uses it; a change that removes something needs --allow-delete. A reused one must exist, and is
+  never changed.
+
+  ✓ exists   TS: Kanban Bug Screen   matches (id 10013)
+  ✓ exists   TS: Kanban Default Issue Screen
+                                     matches (id 10012)
+  ✓ exists   TS: Kanban Epic Screen  matches (id 10014)
+
+── Step 12 of 28 · Workflows ───────────────────────────────────────────────────────────────────────
+
+  ✓ exists   Software Simplified Workflow for Project TS
+               matches (id ed643179-7c7c-444a-beaf-a807bd648e02)
+
+  Note: Workflow "Software Simplified Workflow for Project TS" is a simplified workflow that Jira
+  manages through the board's columns; change it there, not here.
+
+── Step 13 of 28 · Issue type scheme ───────────────────────────────────────────────────────────────
+
+  These steps tie the space's issue types to the objects above, through schemes. A scheme the space
+  uses that matches is kept; one this tool made that only this space uses is changed to match.
+  Jira's own and shared schemes are never changed: when the space's scheme does not match, the one
+  the spec's binding names, or a new one named after space.managed_prefix, is used instead, and step
+  25 switches the space to it.
+
+  ✓ exists   Issue type scheme  the space's, "TS: Kanban Issue Type Scheme" (id 10146), matches
+
+── Step 14 of 28 · Screens of the issue types ──────────────────────────────────────────────────────
+
+  ✓ exists   Issue type screen scheme  the space's, "TS: Kanban Issue Type Screen Scheme" (id
+                                       10002), matches
+
+── Step 15 of 28 · Fields in the space ─────────────────────────────────────────────────────────────
+
+  ✓ exists   Field scheme  the space's, "Default Field Scheme" (id 1), matches
+
+  Note: Field "development" is shown as "Development" in this account's language; the spec uses the
+  stored name.
+
+  Note: Field "Issue color" is shown as "Issue colour" in this account's language; the spec uses the
+  stored name.
+
+  Note: Field "AgentSessions" is shown as "Agent Sessions" in this account's language; the spec uses
+  the stored name.
+
+  Note: Field dataclassification is configured for the space but is not in the site's field list;
+  the spec names it as id:dataclassification.
+
+  Note: Field dataclassification is configured for the space but is not in the site's field list;
+  the spec names it as id:dataclassification.
+
+── Step 16 of 28 · Workflows of the issue types ────────────────────────────────────────────────────
+
+  ✓ exists   Workflow scheme  the space's, "TS: Software Simplified Workflow Scheme" (id 10003),
+                              matches
+
+── Step 17 of 28 · Permissions ─────────────────────────────────────────────────────────────────────
+
+  Who may do what in the space, who is told of changes, who may see which work items, and which
+  priorities it offers are schemes too, decided the same way: the space's scheme is kept when it
+  matches; otherwise the one the spec's binding names, or a new one named after
+  space.managed_prefix, is used, and step 25 switches the space to it. A switch that would leave
+  work items without their priority or security level is blocked.
+
+  ✓ exists   Permission scheme  the space's, "Default software scheme" (id 10002), matches
+
+── Step 18 of 28 · Notifications ───────────────────────────────────────────────────────────────────
+
+  ✓ exists   Notification scheme  the space's, "Default Notification Scheme" (id 10000), matches
+
+── Step 19 of 28 · Issue security ──────────────────────────────────────────────────────────────────
+
+  ✓ exists   Issue security scheme  the space has none, as the spec says
+
+── Step 20 of 28 · Priorities in the space ─────────────────────────────────────────────────────────
+
+  ✓ exists   Priority scheme  the space's, "Default priority scheme" (id 10124), matches
+
+── Step 21 of 28 · Space details ───────────────────────────────────────────────────────────────────
+
+  The space's own details, components, versions and role members belong to this space alone: what
+  differs is updated, what is missing is created. Nothing is deleted; what Jira has and the spec
+  does not is left as it is, and noted.
+
+  ✓ exists   Details  match
+
+── Step 24 of 28 · Role members ────────────────────────────────────────────────────────────────────
+
+  ✓ exists   atlassian-addons-project-access
+               has every member the spec lists
+
+  Note: Role type "atlassian-addons-project-access" (id 10012) has the same name as role 10003 used
+  here; the ID in the spec tells them apart.
+
+  Note: Role type "jira-guest-member" (id 10011) has the same name as role 10014 used here; the ID
+  in the spec tells them apart.
+
+── Step 25 of 28 · Scheme switches ─────────────────────────────────────────────────────────────────
+
+  The space is switched to the schemes the steps above decided on, one kind at a time. A switch is
+  blocked while it would affect work items: their count is shown, with what to do first.
+
+  ✓ exists   Schemes  the space keeps every scheme it uses
+
+Summary · dry run
+  Would create   0
+  Matched        81
+  Needs fixing   0
+
+Nothing was changed. 81 requests made, all read-only.

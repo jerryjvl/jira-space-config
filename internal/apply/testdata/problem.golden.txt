@@ -1,0 +1,8 @@
+✗ Could not evaluate step 4 of 28 · Statuses
+
+  Jira answered   403 Forbidden: fixture status
+  While           looking up statuses named "Open"
+  Fix             The account is signed in but lacks a permission this request needs. Run 'whoami'
+                  to see which permissions the account has.
+
+Stopped at step 4 of 28. Nothing was changed.

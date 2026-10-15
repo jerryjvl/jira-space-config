@@ -1,0 +1,29 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 2,
+  "values": [
+    {
+      "contextId": 10149,
+      "defaultValues": [
+        {
+          "isAnyIssueType": true
+        }
+      ]
+    },
+    {
+      "contextId": 10159,
+      "defaultValues": [
+        {
+          "issueTypeId": "10013",
+          "value": {
+            "cascadingOptionId": "10029",
+            "optionId": "10026",
+            "type": "option.cascading"
+          }
+        }
+      ]
+    }
+  ]
+}
