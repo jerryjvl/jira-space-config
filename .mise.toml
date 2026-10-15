@@ -43,6 +43,10 @@ for target in linux/amd64 linux/arm64 darwin/amd64 darwin/arm64 windows/amd64 wi
 done
 '''
 
+[tasks.release-check]
+description = "Check the release config and build a release into dist/, without publishing it"
+run = "goreleaser check && goreleaser release --snapshot --clean"
+
 [tasks.check]
 description = "Everything CI runs: lint, test, check coverage, cross-compile"
 depends = ["lint", "test", "checkcover", "cross"]
