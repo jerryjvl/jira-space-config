@@ -1,0 +1,27 @@
+{
+  "isLast": true,
+  "maxResults": 200,
+  "self": "https://jira-wfl-prd-apse2-01.ap-southeast-2.sp.prod.atl-paas.net/rest/api/3/statuses/search?searchString=Open&startAt=0",
+  "startAt": 0,
+  "total": 2,
+  "values": [
+    {
+      "description": "The work item is open and ready for the assignee to start work on it.",
+      "id": "1",
+      "name": "Open",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "TODO"
+    },
+    {
+      "description": "This work item was once resolved, but the resolution was deemed incorrect. From here the work items are either reopened, or are closed.",
+      "id": "4",
+      "name": "Reopened",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "TODO"
+    }
+  ]
+}

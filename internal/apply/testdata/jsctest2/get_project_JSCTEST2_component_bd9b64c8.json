@@ -1,0 +1,80 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 2,
+  "values": [
+    {
+      "assignee": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000001",
+        "accountType": "atlassian",
+        "active": true,
+        "displayName": "Example User",
+        "self": "https://example.atlassian.net/rest/api/3/user?accountId=000000:00000000-0000-0000-0000-000000000001"
+      },
+      "assigneeType": "COMPONENT_LEAD",
+      "componentBean": {
+        "assignee": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000001",
+          "accountType": "atlassian",
+          "active": true,
+          "displayName": "Example User",
+          "self": "https://example.atlassian.net/rest/api/3/user?accountId=000000:00000000-0000-0000-0000-000000000001"
+        },
+        "assigneeType": "COMPONENT_LEAD",
+        "description": "The public API",
+        "id": "10000",
+        "isAssigneeTypeValid": false,
+        "lead": {
+          "accountId": "000000:00000000-0000-0000-0000-000000000001",
+          "accountType": "atlassian",
+          "active": true,
+          "displayName": "Example User",
+          "self": "https://example.atlassian.net/rest/api/3/user?accountId=000000:00000000-0000-0000-0000-000000000001"
+        },
+        "name": "API",
+        "project": "JSCTEST2",
+        "projectId": 10003,
+        "realAssigneeType": "PROJECT_DEFAULT",
+        "self": "https://example.atlassian.net/rest/api/3/component/10000"
+      },
+      "description": "The public API",
+      "id": "10000",
+      "isAssigneeTypeValid": false,
+      "issueCount": 0,
+      "lead": {
+        "accountId": "000000:00000000-0000-0000-0000-000000000001",
+        "accountType": "atlassian",
+        "active": true,
+        "displayName": "Example User",
+        "self": "https://example.atlassian.net/rest/api/3/user?accountId=000000:00000000-0000-0000-0000-000000000001"
+      },
+      "name": "API",
+      "project": "JSCTEST2",
+      "projectId": 10003,
+      "realAssigneeType": "PROJECT_DEFAULT",
+      "self": "https://example.atlassian.net/rest/api/3/component/10000"
+    },
+    {
+      "assigneeType": "PROJECT_DEFAULT",
+      "componentBean": {
+        "assigneeType": "PROJECT_DEFAULT",
+        "id": "10001",
+        "isAssigneeTypeValid": false,
+        "name": "Website",
+        "project": "JSCTEST2",
+        "projectId": 10003,
+        "realAssigneeType": "PROJECT_DEFAULT",
+        "self": "https://example.atlassian.net/rest/api/3/component/10001"
+      },
+      "id": "10001",
+      "isAssigneeTypeValid": false,
+      "issueCount": 0,
+      "name": "Website",
+      "project": "JSCTEST2",
+      "projectId": 10003,
+      "realAssigneeType": "PROJECT_DEFAULT",
+      "self": "https://example.atlassian.net/rest/api/3/component/10001"
+    }
+  ]
+}

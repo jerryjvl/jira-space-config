@@ -1,0 +1,23 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "self": "https://example.atlassian.net/rest/api/3/filter/search?expand=description%2Cjql%2CsharePermissions%2CeditPermissions&maxResults=50&projectId=10003&startAt=0",
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "editPermissions": [],
+      "expand": "description,owner,jql,viewUrl,searchUrl,favourite,favouritedCount,sharePermissions,editPermissions,isWritable,approximateLastUsed,subscriptions",
+      "id": "10003",
+      "jql": "project = 10003 ORDER BY Rank ASC",
+      "name": "Filter for JSCTEST2 board",
+      "self": "https://example.atlassian.net/rest/api/3/filter/10003",
+      "sharePermissions": [
+        {
+          "id": 10004,
+          "type": "project-unknown"
+        }
+      ]
+    }
+  ]
+}

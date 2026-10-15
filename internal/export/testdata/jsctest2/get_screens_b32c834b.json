@@ -1,0 +1,14 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "self": "https://example.atlassian.net/rest/api/3/screens?startAt=0&maxResults=100",
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "description": "Allows to update all system fields.",
+      "id": 1,
+      "name": "Default Screen"
+    }
+  ]
+}

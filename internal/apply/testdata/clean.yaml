@@ -1,0 +1,8 @@
+apiVersion: jira-space-config/v1alpha1
+kind: SpaceConfig
+metadata: {name: clean}
+statuses:
+  - {name: Open, mode: reuse}
+  - {name: In Triage, mode: ensure, category: in_progress}
+space:
+  key: VULN

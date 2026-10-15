@@ -1,0 +1,23 @@
+{
+  "baseUrl": "https://example.atlassian.net",
+  "buildDate": "2026-10-13T22:22:12.000+1100",
+  "buildNumber": 100295,
+  "defaultLocale": {
+    "locale": "en_US"
+  },
+  "deploymentType": "Cloud",
+  "displayUrl": "https://example.atlassian.net",
+  "displayUrlCSMHelpSeeker": "https://example.atlassian.net",
+  "displayUrlConfluence": "https://example.atlassian.net",
+  "displayUrlServicedeskHelpCenter": "https://example.atlassian.net",
+  "scmInfo": "ebe79a766a7c9049e087ebcb53dfb0df2c1d2c51",
+  "serverTime": "2026-10-14T12:48:17.477+1100",
+  "serverTimeZone": "Etc/UTC",
+  "serverTitle": "Jira",
+  "version": "1001.0.0-SNAPSHOT",
+  "versionNumbers": [
+    1001,
+    0,
+    0
+  ]
+}

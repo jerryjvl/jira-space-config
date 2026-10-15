@@ -1,0 +1,33 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "startAt": 0,
+  "total": 5,
+  "values": [
+    {
+      "disabled": false,
+      "id": "10011",
+      "value": "Repair"
+    },
+    {
+      "disabled": false,
+      "id": "10012",
+      "value": "Upgrade"
+    },
+    {
+      "disabled": false,
+      "id": "10013",
+      "value": "Maintenance"
+    },
+    {
+      "disabled": false,
+      "id": "10014",
+      "value": "New functionality"
+    },
+    {
+      "disabled": false,
+      "id": "10015",
+      "value": "Other"
+    }
+  ]
+}

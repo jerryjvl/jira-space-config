@@ -1,0 +1,65 @@
+[
+  {
+    "description": "The work item is considered finished, the resolution is correct. work items which are closed can be reopened.",
+    "id": "6",
+    "name": "Closed",
+    "scope": {
+      "type": "GLOBAL"
+    },
+    "statusCategory": "DONE"
+  },
+  {
+    "description": "",
+    "id": "10010",
+    "name": "Done",
+    "scope": {
+      "type": "GLOBAL"
+    },
+    "statusCategory": "DONE"
+  },
+  {
+    "description": "This work item is being actively worked on at the moment by the assignee.",
+    "id": "3",
+    "name": "In Progress",
+    "scope": {
+      "type": "GLOBAL"
+    },
+    "statusCategory": "IN_PROGRESS"
+  },
+  {
+    "description": "The work item is open and ready for the assignee to start work on it.",
+    "id": "1",
+    "name": "Open",
+    "scope": {
+      "type": "GLOBAL"
+    },
+    "statusCategory": "TODO"
+  },
+  {
+    "description": "This work item was once resolved, but the resolution was deemed incorrect. From here the work items are either reopened, or are closed.",
+    "id": "4",
+    "name": "Reopened",
+    "scope": {
+      "type": "GLOBAL"
+    },
+    "statusCategory": "TODO"
+  },
+  {
+    "description": "A resolution has been taken, and it's awaiting verification by the reporter. From here work items are either reopened, or are closed.",
+    "id": "5",
+    "name": "Resolved",
+    "scope": {
+      "type": "GLOBAL"
+    },
+    "statusCategory": "DONE"
+  },
+  {
+    "description": "",
+    "id": "10011",
+    "name": "To Do",
+    "scope": {
+      "type": "GLOBAL"
+    },
+    "statusCategory": "TODO"
+  }
+]

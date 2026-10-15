@@ -1,0 +1,17 @@
+# Weekly pull requests for newer GitHub Actions (pinned by commit in the
+# workflows) and Go modules. Tool versions (Go, golangci-lint, GoReleaser)
+# are pinned in .mise.toml and updated by hand.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 14 # only versions at least two weeks old
+  - package-ecosystem: gomod
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 14

@@ -1,0 +1,131 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "self": "https://jira-wfl-prd-apse2-01.ap-southeast-2.sp.prod.atl-paas.net/rest/api/3/workflows/search?startAt=0&queryString=JSCTEST2%20Classic%20Jira",
+  "startAt": 0,
+  "statuses": [
+    {
+      "description": "This work item was once resolved, but the resolution was deemed incorrect. From here the work items are either reopened, or are closed.",
+      "id": "4",
+      "name": "Reopened",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "TODO",
+      "statusReference": "4"
+    },
+    {
+      "description": "A resolution has been taken, and it's awaiting verification by the reporter. From here work items are either reopened, or are closed.",
+      "id": "5",
+      "name": "Resolved",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "DONE",
+      "statusReference": "5"
+    },
+    {
+      "description": "The work item is considered finished, the resolution is correct. work items which are closed can be reopened.",
+      "id": "6",
+      "name": "Closed",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "DONE",
+      "statusReference": "6"
+    },
+    {
+      "description": "The work item is open and ready for the assignee to start work on it.",
+      "id": "1",
+      "name": "Open",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "TODO",
+      "statusReference": "1"
+    },
+    {
+      "description": "This work item is being actively worked on at the moment by the assignee.",
+      "id": "3",
+      "name": "In Progress",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "IN_PROGRESS",
+      "statusReference": "3"
+    }
+  ],
+  "total": 1,
+  "values": [
+    {
+      "created": "2026-10-13 11:34:57.808368",
+      "description": "The default Jira workflow.",
+      "id": "0cfdac10-d186-4e2d-ad75-ea4140279570",
+      "isEditable": true,
+      "loopedTransitionContainerLayout": {},
+      "name": "JSCTEST2 Classic Jira",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "startPointLayout": {
+        "x": 1353.0,
+        "y": 54.0
+      },
+      "statuses": [
+        {
+          "deprecated": false,
+          "layout": {
+            "x": 1328.0,
+            "y": 165.0
+          },
+          "properties": {},
+          "statusReference": "1"
+        },
+        {
+          "deprecated": false,
+          "layout": {
+            "x": 1305.07373046875,
+            "y": 610.0
+          },
+          "properties": {},
+          "statusReference": "3"
+        },
+        {
+          "deprecated": false,
+          "layout": {
+            "x": 1714.5,
+            "y": 165.0
+          },
+          "properties": {},
+          "statusReference": "5"
+        },
+        {
+          "deprecated": false,
+          "layout": {
+            "x": 1713.75,
+            "y": 421.0
+          },
+          "properties": {},
+          "statusReference": "4"
+        },
+        {
+          "deprecated": false,
+          "layout": {
+            "x": 1522.0,
+            "y": 315.0
+          },
+          "properties": {
+            "jira.issue.editable": "false"
+          },
+          "statusReference": "6"
+        }
+      ],
+      "transitions": [],
+      "updated": "2026-10-13 11:42:20.022367",
+      "version": {
+        "id": "8e217a3f-33bb-45a8-a466-441a95191e17",
+        "versionNumber": 1
+      }
+    }
+  ]
+}

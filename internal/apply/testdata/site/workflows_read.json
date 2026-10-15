@@ -1,0 +1,7 @@
+{"workflows":[{"id":"wf-1","name":"VULN Workflow","description":"Triage flow [managed-by: jira-space-config]","scope":{"type":"GLOBAL"},
+  "statuses":[{"statusReference":"r1","properties":{}},{"statusReference":"r2","properties":{}}],
+  "transitions":[
+    {"id":"1","type":"INITIAL","name":"Create","toStatusReference":"r1","links":[],"properties":{}},
+    {"id":"11","type":"GLOBAL","name":"Finish","toStatusReference":"r2","links":[],"properties":{}},
+    {"id":"21","type":"DIRECTED","name":"Reopen","toStatusReference":"r1","links":[{"fromStatusReference":"r2"}],"properties":{}}]}],
+ "statuses":[{"id":"1","name":"Open","statusReference":"r1"},{"id":"10001","name":"Done","statusReference":"r2"}]}

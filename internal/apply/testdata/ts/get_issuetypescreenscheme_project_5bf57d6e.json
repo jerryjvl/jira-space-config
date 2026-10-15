@@ -1,0 +1,25 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "issueTypeScreenScheme": {
+        "description": "",
+        "id": "10002",
+        "name": "TS: Kanban Issue Type Screen Scheme",
+        "projects": {
+          "isLast": true,
+          "maxResults": 0,
+          "startAt": 0,
+          "total": 0,
+          "values": []
+        }
+      },
+      "projectIds": [
+        "10002"
+      ]
+    }
+  ]
+}

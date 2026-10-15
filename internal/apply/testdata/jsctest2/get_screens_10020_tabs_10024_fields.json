@@ -1,0 +1,22 @@
+[
+  {
+    "id": "customfield_10043",
+    "name": "JSCTEST2 Severity"
+  },
+  {
+    "id": "customfield_10044",
+    "name": "JSCTEST2 Target"
+  },
+  {
+    "id": "customfield_10045",
+    "name": "JSCTEST2 Impact"
+  },
+  {
+    "id": "customfield_10047",
+    "name": "JSCTEST2 Score"
+  },
+  {
+    "id": "customfield_10048",
+    "name": "JSCTEST2 Review Date"
+  }
+]

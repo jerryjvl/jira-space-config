@@ -1,0 +1,3 @@
+{"id":10002,"name":"Default software scheme","description":"Default software scheme for the site",
+ "permissions":[{"permission":"BROWSE_PROJECTS","holder":{"type":"projectRole","parameter":"10002"}},
+                {"permission":"ADMINISTER_PROJECTS","holder":{"type":"projectRole","parameter":"10002"}}]}

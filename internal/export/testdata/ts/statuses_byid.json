@@ -1,0 +1,38 @@
+[
+  {
+    "id": "10008",
+    "name": "Backlog",
+    "statusCategory": "TODO",
+    "scope": {
+      "type": "GLOBAL"
+    },
+    "description": ""
+  },
+  {
+    "id": "10009",
+    "name": "Selected for development",
+    "statusCategory": "IN_PROGRESS",
+    "scope": {
+      "type": "GLOBAL"
+    },
+    "description": ""
+  },
+  {
+    "id": "3",
+    "name": "In Progress",
+    "statusCategory": "IN_PROGRESS",
+    "scope": {
+      "type": "GLOBAL"
+    },
+    "description": "This work item is being actively worked on at the moment by the assignee."
+  },
+  {
+    "id": "10010",
+    "name": "Done",
+    "statusCategory": "DONE",
+    "scope": {
+      "type": "GLOBAL"
+    },
+    "description": ""
+  }
+]

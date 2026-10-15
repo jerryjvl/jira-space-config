@@ -1,0 +1,23 @@
+# Build output
+/bin/
+/dist/
+
+# Credentials and local environment: never commit
+*.env
+.env*
+.envrc
+
+# Run artefacts: audit logs, specs written by apply against a real site
+*.audit.jsonl
+/runs/
+*.applied.yaml
+
+# Test and tooling output
+*.out
+coverage.*
+/testdata/live/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store

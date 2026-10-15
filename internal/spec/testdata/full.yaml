@@ -1,0 +1,170 @@
+# Exercises every part of the format. Hand-written, so deliberately not in
+# canonical order; full.golden.yaml is what the canonical writer makes of it.
+apiVersion: jira-space-config/v1alpha1
+kind: SpaceConfig
+metadata:
+  name: example-full
+  description: Every section of the format, for tests.
+
+binding:
+  site: https://example.atlassian.net
+  cloud_id: 00000000-0000-0000-0000-000000000000
+  written_at: "2026-10-13T08:20:00Z"
+  tool_version: test
+  field_backend: field_configurations
+
+statuses:
+  - { name: In Triage, mode: ensure, category: in_progress, description: Being assessed, id: "10101" }
+  - { name: Open, mode: reuse, category: todo, id: "1" }
+  - { name: Closed, mode: reuse }
+roles:
+  - { name: Triage Team, mode: ensure, description: Assesses new items, default_members: ["group:team-alpha"] }
+groups:
+  - { name: team-alpha, mode: reuse }
+resolutions:
+  - { name: Fixed, mode: ensure, description: The problem was fixed, site_default: true }
+  - { name: False Positive, mode: ensure }
+  - { name: Duplicate, mode: reuse }
+priorities:
+  - { name: High, mode: reuse, colour: "#f15C75", icon: /images/icons/priorities/high.svg }
+  - { name: Medium, mode: reuse, site_default: true }
+issue_link_types:
+  - { name: Duplicate, mode: reuse, inward: is duplicated by, outward: duplicates }
+issue_types:
+  - { name: Finding, mode: ensure, level: standard, description: Something to assess, avatar: "10303" }
+  - { name: Epic, mode: reuse, level: epic, icon: /images/icons/issuetypes/epic.svg }
+custom_fields:
+  - { name: Severity, mode: ensure, type: select, searcher: default, description: How bad it is }
+  - { name: Target Type, mode: ensure, type: cascading }
+  - { name: Source IDs, mode: ensure, type: labels }
+  - { name: Sprint, mode: reuse, type: "com.pyxis.greenhopper.jira:gh-sprint", locked: true }
+
+workflows:
+  - name: DEMO Workflow
+    description: Triage flow
+    statuses:
+      - Open
+      - name: In Triage
+        layout: { x: 120, y: 40.5 }
+        properties: { jira.issue.editable: "false" }
+      - { name: Closed, deprecated: true }
+    transitions:
+      - { name: Create, type: initial, to: Open }
+      - name: Start Triage
+        from: [Open]
+        to: In Triage
+        screen: DEMO Triage
+        event: Issue Assigned
+        conditions:
+          all:
+            - { type: restrict_to, roles: [Triage Team], groups: [team-alpha] }
+            - any:
+                - { type: previous_status, status: Open, most_recent_only: true }
+                - { type: block_all, mode: users }
+        validators:
+          - { type: fields_required, fields: [Severity, Target Type], error_message: Assess first }
+          - type: rule
+            key: forge:expression-validator
+            parameters: { key: "ari:cloud:ecosystem::extension/x", config: "{}" }
+        post_functions:
+          - { type: set_field, field: Resolution, value: Fixed, mode: replace }
+          - { type: assign, to: current_user, extra: { unknownParam: "1" } }
+        properties:
+          jira.field.resolution.include: [False Positive, Duplicate]
+          opsbar-sequence: "10"
+      - { name: Reassess, from: [In Triage], looped: true }
+      - { name: Close, type: global, to: Closed }
+
+screens:
+  - name: DEMO View
+    tabs:
+      - { name: Field Tab, fields: [Summary, Description, Severity] }
+  - name: DEMO Create
+    description: Shown when creating
+    tabs:
+      - { name: Field Tab, fields: [Summary, Severity] }
+      - { name: Details, fields: [Target Type, Source IDs] }
+  - name: DEMO Triage
+    tabs:
+      - { name: Field Tab, fields: [Severity] }
+  - name: Default Screen
+    mode: reuse
+
+space:
+  key: DEMO
+  id: "10042"
+  managed_prefix: DEMO
+  details:
+    name: Demo space
+    type: software
+    avatar: "10417"
+    description: A space for tests
+    lead: user:5b10a2844c20165700ede21g
+    assignee_type: unassigned
+    category: null
+    url: null
+  issue_types:
+    - name: Finding
+      default: true
+      workflow: DEMO Workflow
+      screens: { create: DEMO Create, edit: DEMO View, view: DEMO View }
+      binding:
+        screen_scheme: { name: DEMO Screen Scheme, id: "10110" }
+        field_configuration: { name: DEMO Field Configuration, id: "10120" }
+    - name: Epic
+      screens: Default Screen
+  fields:
+    - { name: Summary, required: true }
+    - { name: Description, renderer: wiki, description: What was found }
+    - { name: Severity, required: false, by_issue_type: { Finding: { required: true } } }
+    - { name: Target Type, issue_types: [Finding] }
+    - { name: Source IDs }
+  field_contexts:
+    Severity:
+      - issue_types: all
+        options: ["5 – Critical", "4 – High", "3 – Medium", { value: Legacy, disabled: true }]
+        default: "3 – Medium"
+        binding: { name: DEMO Severity, id: "10377", scope: space }
+    Target Type:
+      - issue_types: [Finding]
+        options:
+          - { value: Host, children: [Linux, Windows] }
+          - Network
+        default: [Host, Linux]
+        binding: { name: Default Configuration Scheme for Target Type, scope: shared, mode: reuse }
+  permissions:
+    grants:
+      SCHEDULE_ISSUES: ["role:atlassian-addons-project-access"]
+      BROWSE_PROJECTS: ["role:Triage Team", "group:team-alpha", "role:Administrators"]
+    binding: { name: DEMO Permission Scheme, id: "10200" }
+  notifications:
+    events:
+      "Issue Created": ["role:Triage Team", current_assignee]
+    binding: { name: Default Notification Scheme, mode: reuse, site_default: true, description: The site default }
+  issue_security: null
+  priorities:
+    priorities: [High, Medium]
+    default: Medium
+    binding: { name: DEMO Priority Scheme }
+  binding:
+    issue_type_scheme: { name: DEMO Issue Type Scheme, id: "10300" }
+    workflow_scheme: { name: DEMO Workflow Scheme }
+  role_members:
+    Triage Team: ["group:team-alpha", "user:5b10a2844c20165700ede21g"]
+  components:
+    - { name: API, description: The API, lead: null, assignee_type: space_default, id: "10500" }
+  versions:
+    - { name: "1.10", released: false }
+    - { name: "1.9", start_date: "2026-01-01", release_date: "2026-03-31", released: true, archived: false }
+  properties:
+    example.setting: { enabled: true, threshold: 3, since: 2026-01-01 }
+
+filters:
+  - { name: DEMO Open findings, jql: "project = DEMO AND status = Open", viewers: [space, "group:demo-team"], editors: ["role:Administrators"] }
+boards:
+  - { name: DEMO board, type: kanban, filter: DEMO Open findings }
+issue_layouts:
+  - { name: Finding layout, manual: true }
+
+notes:
+  - Written by hand for tests.

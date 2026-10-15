@@ -1,0 +1,9 @@
+apiVersion: jira-space-config/v1alpha1
+kind: SpaceConfig
+metadata: {name: new-screen}
+screens:
+  - name: VULN Triage Screen
+    tabs: [{name: Triage, fields: [Summary]}]
+space:
+  key: VULN
+  managed_prefix: VULN

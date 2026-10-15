@@ -1,0 +1,20 @@
+{
+  "actors": [
+    {
+      "actorGroup": {
+        "displayName": "Example User",
+        "groupId": "58a02559-d97d-4dd0-835a-d1b4d19632c9",
+        "name": "jira-admins-example"
+      },
+      "displayName": "Example User",
+      "id": 10052,
+      "name": "jira-admins-example",
+      "type": "atlassian-group-role-actor",
+      "user": "jira-admins-example"
+    }
+  ],
+  "description": "A project role that represents administrators in a project",
+  "id": 10002,
+  "name": "Administrators",
+  "self": "https://example.atlassian.net/rest/api/3/project/10003/role/10002"
+}

@@ -1,0 +1,870 @@
+{
+  "isLast": false,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 53,
+  "values": [
+    {
+      "areOptionsSupported": false,
+      "description": "",
+      "id": "customfield_10027",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "[CHART] Date of First Response",
+      "schema": {
+        "custom": "com.atlassian.jira.ext.charting:firstresponsedate",
+        "customId": 10027,
+        "type": "datetime"
+      },
+      "searcherKey": "com.atlassian.jira.ext.charting:firstreponsedatesearcher",
+      "translatedDescription": "",
+      "translatedName": "[CHART] Date of First Response",
+      "typeDisplayName": "Date of First Response"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "",
+      "id": "customfield_10028",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "[CHART] Time in Status",
+      "schema": {
+        "custom": "com.atlassian.jira.ext.charting:timeinstatus",
+        "customId": 10028,
+        "type": "any"
+      },
+      "searcherKey": "com.atlassian.jira.ext.charting:textsearcher",
+      "translatedDescription": "",
+      "translatedName": "[CHART] Time in Status",
+      "typeDisplayName": "Time in Status"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Enter when the change actually ended.",
+      "id": "customfield_10009",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "Actual end",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+        "customId": 10009,
+        "type": "datetime"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:datetimerange",
+      "translatedDescription": "Enter when the change actually ended.",
+      "translatedName": "Actual end",
+      "typeDisplayName": "Date Time Picker"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Enter when the change actually started.",
+      "id": "customfield_10008",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "Actual start",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+        "customId": 10008,
+        "type": "datetime"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:datetimerange",
+      "translatedDescription": "Enter when the change actually started.",
+      "translatedName": "Actual start",
+      "typeDisplayName": "Date Time Picker"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Link agent sessions to work items",
+      "id": "customfield_10026",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "AgentSessions",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:agent-sessions",
+        "customId": 10026,
+        "items": "admin.customfield.type.agent.sessions.name",
+        "type": "array"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:agent-sessions-searcher",
+      "translatedDescription": "Link agent sessions to work items",
+      "translatedName": "Agent Sessions",
+      "typeDisplayName": "AgentSessions"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Provides search options for Jira approvals information. This custom field is created programmatically and required by Jira.",
+      "id": "customfield_10025",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Approvals",
+      "schema": {
+        "custom": "com.atlassian.servicedesk.approvals-plugin:sd-approvals",
+        "customId": 10025,
+        "type": "sd-approvals"
+      },
+      "searcherKey": "com.atlassian.servicedesk.approvals-plugin:sd-approvals-searcher",
+      "translatedDescription": "Provides search options for Jira approvals information. This custom field is created programmatically and required by Jira.",
+      "translatedName": "Approvals",
+      "typeDisplayName": "Approvals"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Contains users needed for approval. This custom field was created by Jira.",
+      "id": "customfield_10003",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "Approvers",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker",
+        "customId": 10003,
+        "items": "user",
+        "type": "array"
+      },
+      "translatedDescription": "Contains users needed for approval. This custom field was created by Jira.",
+      "translatedName": "Approvers",
+      "typeDisplayName": "User Picker (multiple users)"
+    },
+    {
+      "areOptionsSupported": true,
+      "description": "Choose the reason for the change request",
+      "id": "customfield_10007",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "Change reason",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+        "customId": 10007,
+        "type": "option"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher",
+      "translatedDescription": "Choose the reason for the change request",
+      "translatedName": "Change reason",
+      "typeDisplayName": "Select List (single choice)"
+    },
+    {
+      "areOptionsSupported": true,
+      "description": "",
+      "id": "customfield_10006",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "Change risk",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+        "customId": 10006,
+        "type": "option"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher",
+      "translatedDescription": "",
+      "translatedName": "Change risk",
+      "typeDisplayName": "Select List (single choice)"
+    },
+    {
+      "areOptionsSupported": true,
+      "description": "",
+      "id": "customfield_10005",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "Change type",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+        "customId": 10005,
+        "type": "option"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher",
+      "translatedDescription": "",
+      "translatedName": "Change type",
+      "typeDisplayName": "Select List (single choice)"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Custom field that stores design information for JQL",
+      "id": "customfield_10037",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Design",
+      "schema": {
+        "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf",
+        "customId": 10037,
+        "items": "design.field.name",
+        "type": "array"
+      },
+      "searcherKey": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf-searcher",
+      "translatedDescription": "Custom field that stores design information for JQL",
+      "translatedName": "Design",
+      "typeDisplayName": "Design"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Includes development summary panel information used in JQL",
+      "id": "customfield_10000",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "development",
+      "schema": {
+        "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+        "customId": 10000,
+        "type": "any"
+      },
+      "searcherKey": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarysearcher",
+      "translatedDescription": "Includes development summary panel information used in JQL",
+      "translatedName": "Development",
+      "typeDisplayName": "Dev Summary Custom Field"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Epic Color field for Jira Software use only.",
+      "id": "customfield_10013",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Epic Color",
+      "schema": {
+        "custom": "com.pyxis.greenhopper.jira:gh-epic-color",
+        "customId": 10013,
+        "type": "string"
+      },
+      "searcherKey": "com.pyxis.greenhopper.jira:gh-epic-color-searcher",
+      "translatedDescription": "Epic Color field for Jira Software use only.",
+      "translatedName": "Epic Color",
+      "typeDisplayName": "Colour of Epic"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Choose an epic to assign this issue to.",
+      "id": "customfield_10014",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Epic Link",
+      "schema": {
+        "custom": "com.pyxis.greenhopper.jira:gh-epic-link",
+        "customId": 10014,
+        "type": "any"
+      },
+      "searcherKey": "com.pyxis.greenhopper.jira:gh-epic-link-searcher",
+      "translatedDescription": "Choose an epic to assign this issue to.",
+      "translatedName": "Epic Link",
+      "typeDisplayName": "Epic Link Relationship"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Provide a short name to identify this epic.",
+      "id": "customfield_10011",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Epic Name",
+      "schema": {
+        "custom": "com.pyxis.greenhopper.jira:gh-epic-label",
+        "customId": 10011,
+        "type": "string"
+      },
+      "searcherKey": "com.pyxis.greenhopper.jira:gh-epic-label-searcher",
+      "translatedDescription": "Provide a short name to identify this epic.",
+      "translatedName": "Epic Name",
+      "typeDisplayName": "Name of Epic"
+    },
+    {
+      "areOptionsSupported": true,
+      "description": "Epic Status field for Jira Software use only.",
+      "id": "customfield_10012",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Epic Status",
+      "schema": {
+        "custom": "com.pyxis.greenhopper.jira:gh-epic-status",
+        "customId": 10012,
+        "type": "option"
+      },
+      "searcherKey": "com.pyxis.greenhopper.jira:gh-epic-status-searcher",
+      "translatedDescription": "Epic Status field for Jira Software use only.",
+      "translatedName": "Epic Status",
+      "typeDisplayName": "Status of Epic"
+    },
+    {
+      "areOptionsSupported": true,
+      "description": "Allows to flag issues with impediments.",
+      "id": "customfield_10021",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Flagged",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+        "customId": 10021,
+        "items": "option",
+        "type": "array"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher",
+      "translatedDescription": "Allows to flag issues with impediments.",
+      "translatedName": "Flagged",
+      "typeDisplayName": "Checkboxes"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Link focus areas to work items",
+      "id": "customfield_10040",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Focus Areas",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:focus-areas",
+        "customId": 10040,
+        "items": "Focus Areas",
+        "type": "array"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:focus-areas-searcher",
+      "translatedDescription": "Link focus areas to work items",
+      "translatedName": "Focus Areas",
+      "typeDisplayName": "Focus Areas"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Link goals to work items",
+      "id": "customfield_10029",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Goals",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:goals",
+        "customId": 10029,
+        "items": "Goals",
+        "type": "array"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:goals-searcher",
+      "translatedDescription": "Link goals to work items",
+      "translatedName": "Goals",
+      "typeDisplayName": "Goals"
+    },
+    {
+      "areOptionsSupported": true,
+      "description": "",
+      "id": "customfield_10004",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "Impact",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+        "customId": 10004,
+        "type": "option"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher",
+      "translatedDescription": "",
+      "translatedName": "Impact",
+      "typeDisplayName": "Select List (single choice)"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "The assigned team member managing the incident end-to-end, from response through resolution.",
+      "id": "customfield_10038",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Incident manager",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:userpicker",
+        "customId": 10038,
+        "type": "user"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:userpickergroupsearcher",
+      "translatedDescription": "The assigned team member managing the incident end-to-end, from response through resolution.",
+      "translatedName": "Incident manager",
+      "typeDisplayName": "User Picker (single user)"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "",
+      "id": "customfield_10017",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Issue color",
+      "schema": {
+        "custom": "com.pyxis.greenhopper.jira:jsw-issue-color",
+        "customId": 10017,
+        "type": "string"
+      },
+      "searcherKey": "com.pyxis.greenhopper.jira:jsw-issue-color-searcher",
+      "translatedDescription": "",
+      "translatedName": "Issue colour",
+      "typeDisplayName": "Issue colour"
+    },
+    {
+      "areOptionsSupported": true,
+      "description": "Breadth of impact (test data)",
+      "id": "customfield_10045",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "JSCTEST2 Impact",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+        "customId": 10045,
+        "type": "option"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher",
+      "translatedDescription": "Breadth of impact (test data)",
+      "translatedName": "JSCTEST2 Impact",
+      "typeDisplayName": "Radio Buttons"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Longer notes (test data)",
+      "id": "customfield_10050",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "JSCTEST2 Notes",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+        "customId": 10050,
+        "type": "string"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:textsearcher",
+      "translatedDescription": "Longer notes (test data)",
+      "translatedName": "JSCTEST2 Notes",
+      "typeDisplayName": "Paragraph (supports rich text)"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Who owns it (test data)",
+      "id": "customfield_10049",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "JSCTEST2 Owner",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:userpicker",
+        "customId": 10049,
+        "type": "user"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:userpickergroupsearcher",
+      "translatedDescription": "Who owns it (test data)",
+      "translatedName": "JSCTEST2 Owner",
+      "typeDisplayName": "User Picker (single user)"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "A link (test data)",
+      "id": "customfield_10051",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "JSCTEST2 Reference",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:url",
+        "customId": 10051,
+        "type": "string"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:exacttextsearcher",
+      "translatedDescription": "A link (test data)",
+      "translatedName": "JSCTEST2 Reference",
+      "typeDisplayName": "URL Field"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "When to review (test data)",
+      "id": "customfield_10048",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "JSCTEST2 Review Date",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+        "customId": 10048,
+        "type": "date"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:daterange",
+      "translatedDescription": "When to review (test data)",
+      "translatedName": "JSCTEST2 Review Date",
+      "typeDisplayName": "Date Picker"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "A numeric score (test data)",
+      "id": "customfield_10047",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "JSCTEST2 Score",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+        "customId": 10047,
+        "type": "number"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber",
+      "translatedDescription": "A numeric score (test data)",
+      "translatedName": "JSCTEST2 Score",
+      "typeDisplayName": "Number Field"
+    },
+    {
+      "areOptionsSupported": true,
+      "description": "How bad it is (test data)",
+      "id": "customfield_10043",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "JSCTEST2 Severity",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+        "customId": 10043,
+        "type": "option"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher",
+      "translatedDescription": "How bad it is (test data)",
+      "translatedName": "JSCTEST2 Severity",
+      "typeDisplayName": "Select List (single choice)"
+    },
+    {
+      "areOptionsSupported": true,
+      "description": "Free classification (test data)",
+      "id": "customfield_10046",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "JSCTEST2 Tags",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiselect",
+        "customId": 10046,
+        "items": "option",
+        "type": "array"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher",
+      "translatedDescription": "Free classification (test data)",
+      "translatedName": "JSCTEST2 Tags",
+      "typeDisplayName": "Select List (multiple choices)"
+    },
+    {
+      "areOptionsSupported": true,
+      "description": "What is affected, by kind and detail (test data)",
+      "id": "customfield_10044",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "JSCTEST2 Target",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:cascadingselect",
+        "customId": 10044,
+        "type": "option-with-child"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:cascadingselectsearcher",
+      "translatedDescription": "What is affected, by kind and detail (test data)",
+      "translatedName": "JSCTEST2 Target",
+      "typeDisplayName": "Select List (cascading)"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Owning group (test data)",
+      "id": "customfield_10052",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "JSCTEST2 Team Group",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:grouppicker",
+        "customId": 10052,
+        "type": "group"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:grouppickersearcher",
+      "translatedDescription": "Owning group (test data)",
+      "translatedName": "JSCTEST2 Team Group",
+      "typeDisplayName": "Group Picker (single group)"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "The number of locked forms on the work item",
+      "id": "customfield_10033",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Locked forms",
+      "schema": {
+        "custom": "com.atlassian.jira.plugins.proforma-managed-fields:forms-locked-field-cftype",
+        "customId": 10033,
+        "type": "number"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber",
+      "translatedDescription": "The number of locked forms on the work item",
+      "translatedName": "Locked forms",
+      "typeDisplayName": "Locked forms"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "The number of open forms on the work item",
+      "id": "customfield_10032",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Open forms",
+      "schema": {
+        "custom": "com.atlassian.jira.plugins.proforma-managed-fields:forms-open-field-cftype",
+        "customId": 10032,
+        "type": "number"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber",
+      "translatedDescription": "The number of open forms on the work item",
+      "translatedName": "Open forms",
+      "typeDisplayName": "Open forms"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Stores the organizations that are associated with a Service Desk customer portal requests. This custom field is created programmatically and required by Service Desk.",
+      "id": "customfield_10002",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Organizations",
+      "schema": {
+        "custom": "com.atlassian.servicedesk:sd-customer-organizations",
+        "customId": 10002,
+        "items": "sd-customerorganization",
+        "type": "array"
+      },
+      "searcherKey": "com.atlassian.servicedesk:sd-customer-organizations-searcher",
+      "translatedDescription": "Stores the organizations that are associated with a Service Desk customer portal requests. This custom field is created programmatically and required by Service Desk.",
+      "translatedName": "Organizations",
+      "typeDisplayName": "Organisations"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "",
+      "id": "customfield_10018",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Parent Link",
+      "schema": {
+        "custom": "com.atlassian.jpo:jpo-custom-field-parent",
+        "customId": 10018,
+        "type": "any"
+      },
+      "searcherKey": "com.atlassian.jpo:jpo-custom-field-parent-searcher",
+      "translatedDescription": "",
+      "translatedName": "Parent Link",
+      "typeDisplayName": "Parent Link"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Add a project to work items to track progress and share updates more easily.",
+      "id": "customfield_10039",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Project",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:atlas-project",
+        "customId": 10039,
+        "type": "atlas-project"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:atlas-project-searcher",
+      "translatedDescription": "Add a project to work items to track progress and share updates more easily.",
+      "translatedName": "Atlassian Project",
+      "typeDisplayName": "Project"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Key of project overview connected via Atlassian Home for Jira Cloud",
+      "id": "customfield_10041",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Project overview key",
+      "schema": {
+        "custom": "read-only-string-issue-field",
+        "customId": 10041,
+        "type": "string"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:readonlyissuefieldsearcher",
+      "translatedDescription": "Key of project overview connected via Atlassian Home for Jira Cloud",
+      "translatedName": "Project overview key",
+      "typeDisplayName": "Project overview key"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Status of project overview connected via Atlassian Home for Jira Cloud",
+      "id": "customfield_10042",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Project overview status",
+      "schema": {
+        "custom": "read-only-string-issue-field",
+        "customId": 10042,
+        "type": "string"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:readonlyissuefieldsearcher",
+      "translatedDescription": "Status of project overview connected via Atlassian Home for Jira Cloud",
+      "translatedName": "Project overview status",
+      "typeDisplayName": "Project overview status"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Global rank field for Jira Software use only.",
+      "id": "customfield_10019",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Rank",
+      "schema": {
+        "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+        "customId": 10019,
+        "type": "any"
+      },
+      "searcherKey": "com.pyxis.greenhopper.jira:gh-lexo-rank-searcher",
+      "translatedDescription": "Global rank field for Jira Software use only.",
+      "translatedName": "Rank",
+      "typeDisplayName": "Global Rank"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Holds information about which Service Desk was used to create a ticket. This custom field is created programmatically and must not be modified.",
+      "id": "customfield_10010",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Request Type",
+      "schema": {
+        "custom": "com.atlassian.servicedesk:vp-origin",
+        "customId": 10010,
+        "type": "sd-customerrequesttype"
+      },
+      "searcherKey": "com.atlassian.servicedesk:vp-origin-searcher",
+      "translatedDescription": "Holds information about which Service Desk was used to create a ticket. This custom field is created programmatically and must not be modified.",
+      "translatedName": "Request Type",
+      "typeDisplayName": "Customer Request Type Custom Field"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Sentiment is determined by content in the issue and latest comments from the customer. Content quality may vary",
+      "id": "customfield_10024",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Sentiment",
+      "schema": {
+        "custom": "com.atlassian.servicedesk.sentiment:sd-sentiment",
+        "customId": 10024,
+        "items": "sd-sentiment",
+        "type": "array"
+      },
+      "searcherKey": "com.atlassian.servicedesk.sentiment:sd-sentiment-searcher",
+      "translatedDescription": "Sentiment is determined by content in the issue and latest comments from the customer. Content quality may vary",
+      "translatedName": "Sentiment",
+      "typeDisplayName": "Sentiment"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Jira Software sprint field",
+      "id": "customfield_10020",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Sprint",
+      "schema": {
+        "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+        "customId": 10020,
+        "items": "json",
+        "type": "array"
+      },
+      "searcherKey": "com.pyxis.greenhopper.jira:gh-sprint-searcher",
+      "translatedDescription": "Jira Software sprint field",
+      "translatedName": "Sprint",
+      "typeDisplayName": "Jira Sprint Field"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Allows the planned start date for a piece of work to be set.",
+      "id": "customfield_10015",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Start date",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+        "customId": 10015,
+        "type": "date"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:daterange",
+      "translatedDescription": "Allows the planned start date for a piece of work to be set.",
+      "translatedName": "Start date",
+      "typeDisplayName": "Date Picker"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Measurement of complexity and/or size of a requirement.",
+      "id": "customfield_10016",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Story point estimate",
+      "schema": {
+        "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+        "customId": 10016,
+        "type": "number"
+      },
+      "searcherKey": "com.pyxis.greenhopper.jira:jsw-story-points-searcher",
+      "translatedDescription": "Measurement of complexity and/or size of a requirement.",
+      "translatedName": "Story point estimate",
+      "typeDisplayName": "Story point estimate value."
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Measurement of complexity and/or size of a requirement.",
+      "id": "customfield_10035",
+      "isLocked": false,
+      "isOptionsCountOverLimit": false,
+      "name": "Story Points",
+      "schema": {
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+        "customId": 10035,
+        "type": "number"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber",
+      "translatedDescription": "Measurement of complexity and/or size of a requirement.",
+      "translatedName": "Story Points",
+      "typeDisplayName": "Number Field"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "The number of submitted forms on the work item",
+      "id": "customfield_10031",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Submitted forms",
+      "schema": {
+        "custom": "com.atlassian.jira.plugins.proforma-managed-fields:forms-submitted-field-cftype",
+        "customId": 10031,
+        "type": "number"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:exactnumber",
+      "translatedDescription": "The number of submitted forms on the work item",
+      "translatedName": "Submitted forms",
+      "typeDisplayName": "Submitted forms"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "The targeted end date. This custom field is created and required by Advanced Roadmaps for Jira.",
+      "id": "customfield_10023",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Target end",
+      "schema": {
+        "custom": "com.atlassian.jpo:jpo-custom-field-baseline-end",
+        "customId": 10023,
+        "type": "date"
+      },
+      "searcherKey": "com.atlassian.jpo:jpo-custom-field-baseline-end-searcher",
+      "translatedDescription": "The targeted end date. This custom field is created and required by Advanced Roadmaps for Jira.",
+      "translatedName": "Target end",
+      "typeDisplayName": "Target end"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "The targeted start date. This custom field is created and required by Advanced Roadmaps for Jira.",
+      "id": "customfield_10022",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Target start",
+      "schema": {
+        "custom": "com.atlassian.jpo:jpo-custom-field-baseline-start",
+        "customId": 10022,
+        "type": "date"
+      },
+      "searcherKey": "com.atlassian.jpo:jpo-custom-field-baseline-start-searcher",
+      "translatedDescription": "The targeted start date. This custom field is created and required by Advanced Roadmaps for Jira.",
+      "translatedName": "Target start",
+      "typeDisplayName": "Target start"
+    },
+    {
+      "areOptionsSupported": false,
+      "description": "Associates a team to an issue. You can use this field to search and filter issues by team.",
+      "id": "customfield_10001",
+      "isLocked": true,
+      "isOptionsCountOverLimit": false,
+      "name": "Team",
+      "schema": {
+        "configuration": {
+          "com.atlassian.jira.plugin.system.customfieldtypes:atlassian-team": true
+        },
+        "custom": "com.atlassian.jira.plugin.system.customfieldtypes:atlassian-team",
+        "customId": 10001,
+        "type": "team"
+      },
+      "searcherKey": "com.atlassian.jira.plugin.system.customfieldtypes:atlassian-team-searcher",
+      "translatedDescription": "Associates a team to an issue. You can use this field to search and filter issues by team.",
+      "translatedName": "Team",
+      "typeDisplayName": "Team"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+apiVersion: jira-space-config/v1alpha1
+kind: SpaceConfig
+metadata: {name: vuln}
+binding: {site: https://example.atlassian.net, cloud_id: cloud-1}
+
+roles:
+  - {name: Administrators, mode: reuse}
+  - {name: Triage Team, mode: ensure, description: Triages new findings}
+
+groups:
+  - {name: team-alpha, mode: reuse}
+  - {name: Team-Beta, mode: ensure}
+
+statuses:
+  - {name: Open, mode: reuse, id: "1"}
+  - {name: In Triage, mode: ensure, category: in_progress}
+  - {name: Closed, mode: reuse, category: done}
+  - {name: Blocked, mode: reuse}
+  - {name: in review, mode: ensure, category: in_progress}
+  - {name: Done, mode: reuse, category: todo, manual: true}
+
+resolutions:
+  - {name: Fixed, mode: ensure}
+  - {name: Accepted Risk, mode: ensure, description: The risk is accepted}
+
+priorities:
+  - {name: High, mode: reuse, colour: "#FF5630", description: Serious problem}
+  - name: Medium
+    mode: reuse
+    description: A problem that should be looked at within the current sprint, before lower priorities.
+  - {name: Urgent, mode: ensure, colour: "#ff0000"}
+
+issue_link_types:
+  - {name: Blocks, mode: reuse, inward: is blocked by, outward: blocks}
+
+issue_types:
+  - {name: Finding, mode: ensure, level: standard}
+  - {name: Task, mode: reuse, id: "10099"}
+  - {name: User Story, mode: reuse, id: "10005"}
+
+custom_fields:
+  - {name: Severity, mode: ensure, type: select}
+  - {name: Target, mode: reuse}
+  - {name: Story points, mode: reuse, type: number}
+
+screens:
+  - name: VULN Triage Screen
+    tabs: [{name: Triage, fields: [Summary, Severity]}]
+  - name: Default Screen
+    mode: reuse
+    tabs: [{name: Field Tab, fields: [Summary, Description]}]
+  - name: VULN Old Screen
+    tabs: [{name: Main, fields: [Summary]}]
+  - name: VULN Bad Screen
+    tabs: [{name: Main, fields: [Summary, Sumary]}]
+
+workflows:
+  - name: VULN Workflow
+    id: wf-1
+    description: Triage flow
+    statuses: [Open, Done]
+    transitions:
+      - {name: Create, type: initial, to: Open}
+      - {name: Finish, type: global, to: Done}
+  - name: VULN New Workflow
+    statuses: [Open, In Triage]
+    transitions:
+      - {name: Create, type: initial, to: Open}
+      - {name: Triage, from: [Open], to: In Triage, screen: VULN Triage Screen}
+  - name: VULN Broken
+    statuses: [Nowhere]
+    transitions:
+      - {name: Create, type: initial, to: Nowhere}
+
+space:
+  key: VULN
+  managed_prefix: VULN
+  permissions: {grants: {BROWSE_PROJECTS: [anyone]}}

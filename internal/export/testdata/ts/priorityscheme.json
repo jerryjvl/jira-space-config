@@ -1,0 +1,17 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "defaultPriorityId": "3",
+      "description": "This is the default scheme used by all new and unassigned projects",
+      "id": "10124",
+      "isDefault": true,
+      "name": "Default priority scheme",
+      "prioritiesLimit": 100,
+      "self": "https://example.atlassian.net/rest/api/3/priorityscheme/10124"
+    }
+  ]
+}

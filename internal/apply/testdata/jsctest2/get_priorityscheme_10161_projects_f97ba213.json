@@ -1,0 +1,23 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "avatarUrls": {
+        "16x16": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413?size=xsmall",
+        "24x24": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413?size=small",
+        "32x32": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413?size=medium",
+        "48x48": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10413"
+      },
+      "id": "10003",
+      "key": "JSCTEST2",
+      "name": "Second Test",
+      "prioritiesLimit": 100,
+      "projectTypeKey": "software",
+      "self": "https://example.atlassian.net/rest/api/3/project/10003",
+      "simplified": false
+    }
+  ]
+}

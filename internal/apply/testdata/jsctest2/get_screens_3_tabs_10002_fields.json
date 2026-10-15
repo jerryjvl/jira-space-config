@@ -1,0 +1,18 @@
+[
+  {
+    "id": "resolution",
+    "name": "Resolution"
+  },
+  {
+    "id": "fixVersions",
+    "name": "Fix versions"
+  },
+  {
+    "id": "assignee",
+    "name": "Assignee"
+  },
+  {
+    "id": "worklog",
+    "name": "Log Work"
+  }
+]

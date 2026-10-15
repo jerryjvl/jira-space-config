@@ -1,0 +1,226 @@
+[
+  {
+    "avatarId": 10316,
+    "description": "Subtasks track small pieces of work that are part of a larger task.",
+    "hierarchyLevel": -1,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium",
+    "id": "10002",
+    "name": "Subtask",
+    "scope": {
+      "project": {
+        "id": "10000"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10002",
+    "subtask": true,
+    "untranslatedName": "Subtask"
+  },
+  {
+    "avatarId": 10316,
+    "description": "A small piece of work that's part of a larger task.",
+    "hierarchyLevel": -1,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium",
+    "id": "10012",
+    "name": "Sub-task",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10012",
+    "subtask": true,
+    "untranslatedName": "Sub-task"
+  },
+  {
+    "avatarId": 10316,
+    "description": "Subtasks track small pieces of work that are part of a larger task.",
+    "hierarchyLevel": -1,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10316?size=medium",
+    "id": "10007",
+    "name": "Subtask",
+    "scope": {
+      "project": {
+        "id": "10001"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10007",
+    "subtask": true,
+    "untranslatedName": "Subtask"
+  },
+  {
+    "avatarId": 10300,
+    "description": "Created by Jira Agile - do not edit or delete. Issue type for a user story.",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10300?size=medium",
+    "id": "10005",
+    "name": "Story",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10005",
+    "subtask": false,
+    "untranslatedName": "Story"
+  },
+  {
+    "avatarId": 10318,
+    "description": "A small, distinct piece of work.",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+    "id": "10014",
+    "name": "Task",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10014",
+    "subtask": false,
+    "untranslatedName": "Task"
+  },
+  {
+    "avatarId": 10318,
+    "description": "A small, distinct piece of work.",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+    "id": "10003",
+    "name": "Task",
+    "scope": {
+      "project": {
+        "id": "10000"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10003",
+    "subtask": false,
+    "untranslatedName": "Task"
+  },
+  {
+    "avatarId": 10315,
+    "description": "Created by Jira Agile - do not edit or delete. Issue type for a user story.",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+    "id": "10004",
+    "name": "Story",
+    "scope": {
+      "project": {
+        "id": "10000"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10004",
+    "subtask": false,
+    "untranslatedName": "Story"
+  },
+  {
+    "avatarId": 10314,
+    "description": "",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10314?size=medium",
+    "id": "10010",
+    "name": "Feature",
+    "scope": {
+      "project": {
+        "id": "10001"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10010",
+    "subtask": false,
+    "untranslatedName": "Feature"
+  },
+  {
+    "avatarId": 10303,
+    "description": "A problem or error.",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+    "id": "10011",
+    "name": "Bug",
+    "scope": {
+      "project": {
+        "id": "10001"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10011",
+    "subtask": false,
+    "untranslatedName": "Bug"
+  },
+  {
+    "avatarId": 10303,
+    "description": "A problem or error.",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10303?size=medium",
+    "id": "10013",
+    "name": "Bug",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10013",
+    "subtask": false,
+    "untranslatedName": "Bug"
+  },
+  {
+    "avatarId": 10318,
+    "description": "A small, distinct piece of work.",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium",
+    "id": "10008",
+    "name": "Task",
+    "scope": {
+      "project": {
+        "id": "10001"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10008",
+    "subtask": false,
+    "untranslatedName": "Task"
+  },
+  {
+    "avatarId": 10315,
+    "description": "Created by Jira Agile - do not edit or delete. Issue type for a user story.",
+    "hierarchyLevel": 0,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10315?size=medium",
+    "id": "10009",
+    "name": "Story",
+    "scope": {
+      "project": {
+        "id": "10001"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10009",
+    "subtask": false,
+    "untranslatedName": "Story"
+  },
+  {
+    "avatarId": 10307,
+    "description": "A collection of related bugs, stories, and tasks.",
+    "hierarchyLevel": 1,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10307?size=medium",
+    "id": "10006",
+    "name": "Epic",
+    "scope": {
+      "project": {
+        "id": "10001"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10006",
+    "subtask": false,
+    "untranslatedName": "Epic"
+  },
+  {
+    "avatarId": 10307,
+    "description": "A collection of related bugs, stories, and tasks.",
+    "hierarchyLevel": 1,
+    "iconUrl": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/issuetype/avatar/10307?size=medium",
+    "id": "10001",
+    "name": "Epic",
+    "scope": {
+      "project": {
+        "id": "10000"
+      },
+      "type": "PROJECT"
+    },
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10001",
+    "subtask": false,
+    "untranslatedName": "Epic"
+  },
+  {
+    "description": "A collection of related bugs, stories, and tasks.",
+    "hierarchyLevel": 1,
+    "iconUrl": "https://example.atlassian.net/images/icons/issuetypes/epic.svg",
+    "id": "10000",
+    "name": "Epic",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10000",
+    "subtask": false,
+    "untranslatedName": "Epic"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "contextId": 10154,
+      "defaultValues": [
+        {
+          "isAnyIssueType": true,
+          "value": {
+            "accountId": "000000:00000000-0000-0000-0000-000000000001",
+            "type": "single.user.select",
+            "userFilter": {
+              "enabled": false,
+              "groups": [],
+              "roleIds": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

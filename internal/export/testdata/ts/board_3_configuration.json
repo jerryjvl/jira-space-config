@@ -1,0 +1,68 @@
+{
+  "columnConfig": {
+    "columns": [
+      {
+        "name": "Backlog",
+        "statuses": []
+      },
+      {
+        "name": "Backlog",
+        "statuses": [
+          {
+            "id": "10008",
+            "self": "https://example.atlassian.net/rest/api/2/status/10008"
+          }
+        ]
+      },
+      {
+        "name": "Selected for development",
+        "statuses": [
+          {
+            "id": "10009",
+            "self": "https://example.atlassian.net/rest/api/2/status/10009"
+          }
+        ]
+      },
+      {
+        "name": "In Progress",
+        "statuses": [
+          {
+            "id": "3",
+            "self": "https://example.atlassian.net/rest/api/2/status/3"
+          }
+        ]
+      },
+      {
+        "name": "Done",
+        "statuses": [
+          {
+            "id": "10010",
+            "self": "https://example.atlassian.net/rest/api/2/status/10010"
+          }
+        ]
+      }
+    ],
+    "constraintType": "issueCount"
+  },
+  "filter": {
+    "id": "10002",
+    "self": "https://example.atlassian.net/rest/api/2/filter/10002"
+  },
+  "id": 3,
+  "location": {
+    "id": "10002",
+    "key": "TS",
+    "name": "Test Sandbox",
+    "self": "https://example.atlassian.net/rest/api/2/project/10002",
+    "type": "project"
+  },
+  "name": "TS board",
+  "ranking": {
+    "rankCustomFieldId": 10019
+  },
+  "self": "https://example.atlassian.net/rest/agile/1.0/board/3/configuration",
+  "subQuery": {
+    "query": "fixVersion in unreleasedVersions() OR fixVersion is EMPTY"
+  },
+  "type": "kanban"
+}

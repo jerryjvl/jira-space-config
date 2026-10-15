@@ -1,0 +1,6 @@
+apiVersion: jira-space-config/v1alpha1
+kind: SpaceConfig
+metadata: {name: no-notifications}
+space:
+  key: VULN
+  notifications: null

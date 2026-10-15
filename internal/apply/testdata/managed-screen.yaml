@@ -1,0 +1,9 @@
+apiVersion: jira-space-config/v1alpha1
+kind: SpaceConfig
+metadata: {name: managed-screen}
+screens:
+  - name: VULN Old Screen
+    tabs: [{name: Main, fields: [Summary, Description]}]
+space:
+  key: VULN
+  managed_prefix: VULN

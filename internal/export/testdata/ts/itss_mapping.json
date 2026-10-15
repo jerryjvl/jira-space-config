@@ -1,0 +1,23 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 3,
+  "values": [
+    {
+      "issueTypeId": "default",
+      "issueTypeScreenSchemeId": "10002",
+      "screenSchemeId": "10012"
+    },
+    {
+      "issueTypeId": "10013",
+      "issueTypeScreenSchemeId": "10002",
+      "screenSchemeId": "10013"
+    },
+    {
+      "issueTypeId": "10000",
+      "issueTypeScreenSchemeId": "10002",
+      "screenSchemeId": "10014"
+    }
+  ]
+}

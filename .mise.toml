@@ -1,0 +1,52 @@
+[tools]
+go = "1.27.2"
+golangci-lint = "2.14.0"
+goreleaser = "2.18.3"
+
+[env]
+CGO_ENABLED = "0"
+
+[tasks.lint]
+description = "Run golangci-lint"
+run = "golangci-lint run ./..."
+
+[tasks.test]
+description = "Run unit tests"
+run = "go test ./..."
+
+[tasks.checkcover]
+description = "Fail if a check is never made to fire by a test (see cmd/jsc-checkcover)"
+run = '''
+set -eu
+mkdir -p bin
+go test -count=1 -coverpkg=./... -coverprofile=bin/cover.out ./... > bin/cover-test.log || { cat bin/cover-test.log; exit 1; }
+go run ./cmd/jsc-checkcover bin/cover.out
+'''
+
+[tasks.build]
+description = "Build the binary for this machine into bin/"
+# The version is the git commit (with -dirty for uncommitted changes), so
+# --version shows which code a binary was built from.
+run = 'go build -trimpath -ldflags "-X github.com/jerryjvl/jira-space-config/internal/cli.version=$(git describe --always --dirty --tags)" -o bin/jira-space-config ./cmd/jira-space-config'
+
+[tasks.cross]
+description = "Cross-compile for every release target into bin/"
+run = '''
+set -eu
+version=$(git describe --always --dirty --tags)
+for target in linux/amd64 linux/arm64 darwin/amd64 darwin/arm64 windows/amd64 windows/arm64; do
+  os=${target%/*}; arch=${target#*/}
+  ext=""; [ "$os" = windows ] && ext=".exe"
+  echo "building $os/$arch"
+  GOOS=$os GOARCH=$arch go build -trimpath -ldflags "-X github.com/jerryjvl/jira-space-config/internal/cli.version=$version" \
+    -o "bin/jira-space-config-$os-$arch$ext" ./cmd/jira-space-config
+done
+'''
+
+[tasks.release-check]
+description = "Check the release config and build a release into dist/, without publishing it"
+run = "goreleaser check && goreleaser release --snapshot --clean"
+
+[tasks.check]
+description = "Everything CI runs: lint, test, check coverage, cross-compile"
+depends = ["lint", "test", "checkcover", "cross"]

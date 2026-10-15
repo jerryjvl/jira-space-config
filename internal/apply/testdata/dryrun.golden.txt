@@ -1,0 +1,179 @@
+jira-space-config apply · DRY RUN · nothing will be changed
+
+  Site       https://example.atlassian.net
+  Space      VULN "Vulnerability Management" · company-managed · 12 work items
+  Account    Example Admin · Administer Jira ✓ · Administer projects ✓
+  Spec       testdata/vuln.yaml · valid · 1 warning ('validate testdata/vuln.yaml' lists it)
+  Spec hash  sha256:54139f9e15a6fcb7252edf2528af16af0d34ab04a3048047254a9361e71d46e5
+  Overrides  none
+
+Plan · 13 steps evaluated · 8 with changes · 8 need attention
+
+      1  Preflight                        ok
+      2  Role types                       1 to create · 1 exists
+      3  Groups                           1 exists · 1 problem
+      4  Statuses                         1 to create · 1 exists · 1 differs · 2 problems · 1 manual
+      5  Resolutions                      1 to create · 1 exists
+      6  Priorities                       1 to create · 1 exists · 1 differs
+      7  Issue link types                 nothing to do (1 exists)
+      8  Issue types                      1 to create · 2 problems
+      9  Custom fields                    1 to create · 1 exists · 1 problem
+     11  Screens                          1 to create · 1 differs · 2 problems
+     12  Workflows                        1 to create · 2 problems
+     17  Permissions                      1 blocked
+     25  Scheme switches                  nothing to do (1 exists)
+
+── Step 2 of 28 · Role types ───────────────────────────────────────────────────────────────────────
+
+  Site-wide objects (role types, groups, statuses, resolutions, priorities, issue link types, issue
+  types and custom fields) are shared by every space on the site, so existing ones are compared,
+  never changed. Missing ones with mode ensure are created; missing ones with mode reuse must be
+  created first.
+
+  ✓ exists   Administrators  matches (id 10002)
+  + create   Triage Team     new role type · site-wide
+                               POST /rest/api/3/role
+
+── Step 3 of 28 · Groups ───────────────────────────────────────────────────────────────────────────
+
+  ✓ exists   team-alpha  matches (id g-1)
+  ✗ error    Team-Beta   not found, but Jira has "team-beta" (id g-2)
+                         Fix: If you mean that group, use its exact name. Creating "Team-Beta" as
+                         well would give the site two groups that differ only in case or spacing.
+
+── Step 4 of 28 · Statuses ─────────────────────────────────────────────────────────────────────────
+
+  ✓ exists   Open       matches (id 1)
+  + create   In Triage  new status · category in_progress · site-wide
+                          POST /rest/api/3/statuses
+  ✗ differs  Closed     exists (id 6) but does not match the spec:
+                          category   spec: done   Jira: in_progress
+                        Fix: Change category in the spec to match Jira, or use a different name.
+                        Jira's status is shared by every space on the site and will not be changed.
+  ✗ error    Blocked    not found; mode reuse needs it to exist
+                        Fix: Check the spelling, create the status in Jira, or set mode: ensure to
+                        have it created.
+  ✗ error    in review  not found, but Jira has "In Review" (id 10010)
+                        Fix: If you mean that status, use its exact name. Creating "in review" as
+                        well would give the site two statuses that differ only in case or spacing.
+  ? manual   Done       exists (id 10001); marked manual, so these differences are yours to resolve:
+                          category   spec: todo   Jira: done
+                        Fix: Change it in Jira by hand, or change the spec to match.
+
+── Step 5 of 28 · Resolutions ──────────────────────────────────────────────────────────────────────
+
+  ✓ exists   Fixed          matches (id 10000)
+  + create   Accepted Risk  new resolution · site-wide
+                              POST /rest/api/3/resolution
+
+── Step 6 of 28 · Priorities ───────────────────────────────────────────────────────────────────────
+
+  ✓ exists   High    matches (id 2)
+  ✗ differs  Medium  exists (id 3) but does not match the spec:
+                       description
+                         spec: A problem that should be looked at within the current sprint, before
+                               lower priorities.
+                         Jira: none
+                     Fix: Change description in the spec to match Jira, or use a different name.
+                     Jira's priority is shared by every space on the site and will not be changed.
+  + create   Urgent  new priority · colour #ff0000 · site-wide
+                       POST /rest/api/3/priority
+
+── Step 7 of 28 · Issue link types ─────────────────────────────────────────────────────────────────
+
+  ✓ exists   Blocks  matches (id 10000)
+
+── Step 8 of 28 · Issue types ──────────────────────────────────────────────────────────────────────
+
+  + create   Finding     new issue type · level standard · site-wide
+                           POST /rest/api/3/issuetype
+  ✗ error    Task        has id 10099 in the spec, but Jira has no issue type with that ID
+                         Fix: If it was deleted in Jira, remove the id from the spec so it is found,
+                         or created, by name. If the spec was written for another site, run with
+                         --ignore-ids.
+  ✗ error    User Story  id 10005 is named "Story" in Jira
+                         Fix: If it was renamed in Jira, change the name in the spec to "Story". If
+                         the name in the spec is the one you want, rename it in Jira, or remove the
+                         id.
+
+── Step 9 of 28 · Custom fields ────────────────────────────────────────────────────────────────────
+
+  + create   Severity      new custom field · type select · site-wide
+                             POST /rest/api/3/field
+  ✗ error    Target        2 custom fields on the site have this name (ids customfield_10050,
+                           customfield_10051)
+                           Fix: Add the id of the one you mean to the spec.
+  ✓ exists   Story points  matches (id customfield_10060)
+
+── Step 11 of 28 · Screens ─────────────────────────────────────────────────────────────────────────
+
+  Screens and workflows can be used by several spaces. A managed one (mode managed, the default) is
+  created for this space when missing, and changed to match the spec only while this space alone
+  uses it; a change that removes something needs --allow-delete. A reused one must exist, and is
+  never changed.
+
+  + create   VULN Triage Screen  new screen · 1 tab, 2 fields
+                                   POST /rest/api/3/screens
+                                   PUT /rest/api/3/screens/{screenId}/tabs/{tabId} (names the first tab)
+                                   POST /rest/api/3/screens/{screenId}/tabs/{tabId}/fields × 2
+  ✗ differs  Default Screen      exists (id 1) but does not match the spec:
+                                   tab "Field Tab" fields
+                                     spec: Summary, Description
+                                     Jira: Summary
+                                 Fix: Change tab "Field Tab" fields in the spec to match Jira. A
+                                 reused screen is used as it is and never changed.
+  ✗ error    VULN Old Screen     exists (id 10100), but this tool did not create it (its description
+                                 has no [managed-by] marker)
+                                 Fix: Set mode: reuse to use the screen as it is, or give the
+                                 managed one another name.
+  ✗ error    VULN Bad Screen     cannot be created: no field on the site is named "Sumary"
+                                 Fix: Check the field names, or declare the fields in custom_fields
+                                 with mode: ensure so they are created first.
+
+── Step 12 of 28 · Workflows ───────────────────────────────────────────────────────────────────────
+
+  ✗ error    VULN Workflow      exists (id wf-1) but does not match the spec, and matching it
+                                removes transition "Reopen":
+                                  transition "Reopen"
+                                    spec: none
+                                    Jira: {name: Reopen, from: [Done], to: Open}
+                                Fix: Removing is done only when allowed explicitly: run with
+                                --allow-delete=workflows, or keep them in the spec.
+  + create   VULN New Workflow  new workflow · 2 statuses, 2 transitions
+                                  POST /rest/api/3/workflows/create/validation (read-only check)
+                                  POST /rest/api/3/workflows/create
+  ✗ error    VULN Broken        cannot be created: the site has no status "Nowhere"
+                                Fix: Check the names, or declare them in the spec (statuses with
+                                mode: ensure, screens with mode: managed) so they are created first.
+
+── Step 17 of 28 · Permissions ─────────────────────────────────────────────────────────────────────
+
+  Who may do what in the space, who is told of changes, who may see which work items, and which
+  priorities it offers are schemes too, decided the same way: the space's scheme is kept when it
+  matches; otherwise the one the spec's binding names, or a new one named after
+  space.managed_prefix, is used, and step 25 switches the space to it. A switch that would leave
+  work items without their priority or security level is blocked.
+
+  ■ blocked  Permission scheme  new permission scheme "VULN Permission Scheme" · 1 permission; step
+                                25 switches the space to it from "Default software scheme"; but it
+                                grants Administer projects to nobody
+                                Fix: Grant ADMINISTER_PROJECTS to someone (role:Administrators, for
+                                example), or nobody could administer the space.
+                                  POST /rest/api/3/permissionscheme
+                                  DELETE /rest/api/3/permissionscheme/{schemeId}/permission/{permissionId} (grants Jira adds)
+
+── Step 25 of 28 · Scheme switches ─────────────────────────────────────────────────────────────────
+
+  The space is switched to the schemes the steps above decided on, one kind at a time. A switch is
+  blocked while it would affect work items: their count is shown, with what to do first.
+
+  ✓ exists   Schemes  the space keeps every scheme it uses
+
+Summary · dry run
+  Would create   8 · 1 role type, 1 status, 1 resolution, 1 priority, 1 issue type, 1 custom field,
+                 1 screen, 1 workflow (6 site-wide, shared by every space)
+  Matched        8
+  Needs fixing   14 · steps 3, 4, 6, 8, 9, 11, 12 and 17
+  Manual         1 · compared only; yours to resolve
+
+Nothing was changed. 43 requests made, all read-only.

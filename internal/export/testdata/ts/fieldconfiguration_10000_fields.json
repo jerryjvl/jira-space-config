@@ -1,0 +1,373 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "startAt": 0,
+  "total": 63,
+  "values": [
+    {
+      "id": "summary",
+      "isHidden": false,
+      "isRequired": true
+    },
+    {
+      "id": "issuetype",
+      "isHidden": false,
+      "isRequired": true
+    },
+    {
+      "id": "security",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "priority",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "duedate",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "components",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "versions",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "fixVersions",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "assignee",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "reporter",
+      "isHidden": false,
+      "isRequired": true
+    },
+    {
+      "description": "For example operating system, software platform and/or hardware specifications (include as appropriate for the work item).",
+      "id": "environment",
+      "isHidden": false,
+      "isRequired": false,
+      "renderer": "wiki-renderer"
+    },
+    {
+      "id": "description",
+      "isHidden": false,
+      "isRequired": false,
+      "renderer": "wiki-renderer"
+    },
+    {
+      "description": "An estimate of how much work remains until this issue will be resolved.The format of this is ' *w *d *h *m ' (representing weeks, days, hours and minutes - where * can be any number).Examples: 4d, 5h 30m, 60m and 3w.",
+      "id": "timetracking",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "resolution",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "attachment",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "comment",
+      "isHidden": false,
+      "isRequired": false,
+      "renderer": "wiki-renderer"
+    },
+    {
+      "id": "labels",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Allows work to be logged whilst creating, editing or transitioning issues.",
+      "id": "worklog",
+      "isHidden": false,
+      "isRequired": false,
+      "renderer": "wiki-renderer"
+    },
+    {
+      "id": "issuelinks",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Includes development summary panel information used in JQL",
+      "id": "customfield_10000",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "customfield_10001",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Stores the organizations that are associated with a Service Desk customer portal requests. This custom field is created programmatically and required by Service Desk.",
+      "id": "customfield_10002",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Contains users needed for approval. This custom field was created by Jira Service Desk.",
+      "id": "customfield_10003",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "customfield_10004",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "customfield_10005",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "customfield_10006",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Choose the reason for the change request",
+      "id": "customfield_10007",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Enter when the change actually started.",
+      "id": "customfield_10008",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Enter when the change actually ended.",
+      "id": "customfield_10009",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Holds information about which Service Desk was used to create a ticket. This custom field is created programmatically and must not be modified.",
+      "id": "customfield_10010",
+      "isHidden": false,
+      "isRequired": false,
+      "renderer": "text-renderer"
+    },
+    {
+      "description": "Provide a short name to identify this epic.",
+      "id": "customfield_10011",
+      "isHidden": false,
+      "isRequired": false,
+      "renderer": "text-renderer"
+    },
+    {
+      "description": "Epic Status field for Jira Software use only.",
+      "id": "customfield_10012",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Epic Color field for Jira Software use only.",
+      "id": "customfield_10013",
+      "isHidden": false,
+      "isRequired": false,
+      "renderer": "text-renderer"
+    },
+    {
+      "description": "Choose an epic to assign this issue to.",
+      "id": "customfield_10014",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Allows the planned start date for a piece of work to be set.",
+      "id": "customfield_10015",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Measurement of complexity and/or size of a requirement.",
+      "id": "customfield_10016",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "",
+      "id": "customfield_10017",
+      "isHidden": false,
+      "isRequired": false,
+      "renderer": "text-renderer"
+    },
+    {
+      "id": "customfield_10018",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Global rank field for Jira use only.",
+      "id": "customfield_10019",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Jira Software sprint field",
+      "id": "customfield_10020",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Allows to flag issues with impediments.",
+      "id": "customfield_10021",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "The targeted start date. This custom field is created and required by Advanced Roadmaps for Jira.",
+      "id": "customfield_10022",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "The targeted end date. This custom field is created and required by Advanced Roadmaps for Jira.",
+      "id": "customfield_10023",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Sentiment is determined by content in the issue and latest comments from the customer. Content quality may vary",
+      "id": "customfield_10024",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "parent",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Provides search options for Jira approvals information. This custom field is created programmatically and required by Jira.",
+      "id": "customfield_10025",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Link agent sessions to work items",
+      "id": "customfield_10026",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "id": "dataclassification",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "",
+      "id": "customfield_10027",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "",
+      "id": "customfield_10028",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Link goals to work items",
+      "id": "customfield_10029",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "UUIDs of forms associated with this work item at creation",
+      "id": "customfield_10030",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "The number of open forms on the work item",
+      "id": "customfield_10032",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "The number of locked forms on the work item",
+      "id": "customfield_10033",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "The number of submitted forms on the work item",
+      "id": "customfield_10031",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "The total number of forms on the work item",
+      "id": "customfield_10034",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Measurement of complexity and/or size of a requirement.",
+      "id": "customfield_10035",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Custom field that stores vulnerability information for JQL",
+      "id": "customfield_10036",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Custom field that stores design information for JQL",
+      "id": "customfield_10037",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "The assigned team member managing the incident end-to-end, from response through resolution.",
+      "id": "customfield_10038",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Link focus areas to work items",
+      "id": "customfield_10040",
+      "isHidden": false,
+      "isRequired": false
+    },
+    {
+      "description": "Key of project overview connected via Atlassian Home for Jira Cloud",
+      "id": "customfield_10041",
+      "isHidden": false,
+      "isRequired": false,
+      "renderer": "text-renderer"
+    },
+    {
+      "description": "Status of project overview connected via Atlassian Home for Jira Cloud",
+      "id": "customfield_10042",
+      "isHidden": false,
+      "isRequired": false,
+      "renderer": "text-renderer"
+    }
+  ]
+}

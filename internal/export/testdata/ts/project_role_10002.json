@@ -1,0 +1,7 @@
+{
+  "actors": [],
+  "description": "A project role that represents administrators in a project",
+  "id": 10002,
+  "name": "Administrators",
+  "self": "https://example.atlassian.net/rest/api/3/project/10002/role/10002"
+}

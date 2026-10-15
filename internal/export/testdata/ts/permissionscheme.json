@@ -1,0 +1,1051 @@
+{
+  "description": "Default scheme for Software projects.",
+  "expand": "permissions,user,group,projectRole,field,all",
+  "id": 10002,
+  "name": "Default software scheme",
+  "permissions": [
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "projectRole": {
+          "description": "A project role that represents administrators in a project",
+          "id": 10002,
+          "name": "Administrators",
+          "self": "https://example.atlassian.net/rest/api/3/role/10002"
+        },
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": 10655,
+      "permission": "DELETE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10655"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "projectRole": {
+          "description": "A project role that represents administrators in a project",
+          "id": 10002,
+          "name": "Administrators",
+          "self": "https://example.atlassian.net/rest/api/3/role/10002"
+        },
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": 10657,
+      "permission": "ARCHIVE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10657"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "projectRole": {
+          "description": "A project role that represents administrators in a project",
+          "id": 10002,
+          "name": "Administrators",
+          "self": "https://example.atlassian.net/rest/api/3/role/10002"
+        },
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": 10659,
+      "permission": "EDIT_ALL_WORKLOGS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10659"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "projectRole": {
+          "description": "A project role that represents administrators in a project",
+          "id": 10002,
+          "name": "Administrators",
+          "self": "https://example.atlassian.net/rest/api/3/role/10002"
+        },
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": 10661,
+      "permission": "MODIFY_REPORTER",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10661"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "projectRole": {
+          "description": "A project role that represents administrators in a project",
+          "id": 10002,
+          "name": "Administrators",
+          "self": "https://example.atlassian.net/rest/api/3/role/10002"
+        },
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": 10663,
+      "permission": "EDIT_ALL_COMMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10663"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "projectRole": {
+          "description": "A project role that represents administrators in a project",
+          "id": 10002,
+          "name": "Administrators",
+          "self": "https://example.atlassian.net/rest/api/3/role/10002"
+        },
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": 10665,
+      "permission": "MANAGE_WATCHERS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10665"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "projectRole": {
+          "description": "A project role that represents administrators in a project",
+          "id": 10002,
+          "name": "Administrators",
+          "self": "https://example.atlassian.net/rest/api/3/role/10002"
+        },
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": 10667,
+      "permission": "DELETE_ALL_ATTACHMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10667"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "projectRole": {
+          "description": "A project role that represents administrators in a project",
+          "id": 10002,
+          "name": "Administrators",
+          "self": "https://example.atlassian.net/rest/api/3/role/10002"
+        },
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": 10669,
+      "permission": "UNARCHIVE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10669"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "projectRole": {
+          "description": "A project role that represents administrators in a project",
+          "id": 10002,
+          "name": "Administrators",
+          "self": "https://example.atlassian.net/rest/api/3/role/10002"
+        },
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": 10671,
+      "permission": "DELETE_ALL_WORKLOGS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10671"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "projectRole": {
+          "description": "A project role that represents administrators in a project",
+          "id": 10002,
+          "name": "Administrators",
+          "self": "https://example.atlassian.net/rest/api/3/role/10002"
+        },
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": 10673,
+      "permission": "DELETE_ALL_COMMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10673"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "projectRole": {
+          "description": "A project role that represents administrators in a project",
+          "id": 10002,
+          "name": "Administrators",
+          "self": "https://example.atlassian.net/rest/api/3/role/10002"
+        },
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": 10675,
+      "permission": "ADMINISTER_PROJECTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10675"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10656,
+      "permission": "DELETE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10656"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10658,
+      "permission": "ARCHIVE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10658"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10660,
+      "permission": "EDIT_ALL_WORKLOGS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10660"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10662,
+      "permission": "MODIFY_REPORTER",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10662"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10664,
+      "permission": "EDIT_ALL_COMMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10664"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10666,
+      "permission": "MANAGE_WATCHERS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10666"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10668,
+      "permission": "DELETE_ALL_ATTACHMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10668"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10670,
+      "permission": "UNARCHIVE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10670"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10672,
+      "permission": "DELETE_ALL_WORKLOGS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10672"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10674,
+      "permission": "DELETE_ALL_COMMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10674"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10676,
+      "permission": "ADMINISTER_PROJECTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10676"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10677,
+      "permission": "EDIT_ISSUE_LAYOUT",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10677"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10678,
+      "permission": "EDIT_WORKFLOW",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10678"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10679,
+      "permission": "SET_ISSUE_SECURITY",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10679"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10680,
+      "permission": "MANAGE_VERSIONS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10680"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10681,
+      "permission": "DELETE_OWN_WORKLOGS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10681"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10683,
+      "permission": "VIEW_AGGREGATED_DATA",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10683"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10685,
+      "permission": "CREATE_ATTACHMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10685"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10687,
+      "permission": "VIEW_DEV_TOOLS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10687"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10689,
+      "permission": "CREATE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10689"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10691,
+      "permission": "DELETE_OWN_COMMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10691"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10693,
+      "permission": "WORK_ON_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10693"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10695,
+      "permission": "EDIT_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10695"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10697,
+      "permission": "MANAGE_SPRINTS_PERMISSION",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10697"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10699,
+      "permission": "CLOSE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10699"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10701,
+      "permission": "SCHEDULE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10701"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10703,
+      "permission": "VIEW_VOTERS_AND_WATCHERS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10703"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10705,
+      "permission": "ADD_COMMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10705"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10707,
+      "permission": "EDIT_OWN_COMMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10707"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10709,
+      "permission": "ASSIGN_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10709"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10711,
+      "permission": "BROWSE_PROJECTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10711"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10713,
+      "permission": "RESOLVE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10713"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10715,
+      "permission": "VIEW_READONLY_WORKFLOW",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10715"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10717,
+      "permission": "MOVE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10717"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10719,
+      "permission": "DELETE_OWN_ATTACHMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10719"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10721,
+      "permission": "TRANSITION_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10721"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10723,
+      "permission": "ASSIGNABLE_USER",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10723"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10725,
+      "permission": "EDIT_OWN_WORKLOGS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10725"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10003",
+        "projectRole": {
+          "description": "A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions",
+          "id": 10003,
+          "name": "atlassian-addons-project-access",
+          "self": "https://example.atlassian.net/rest/api/3/role/10003"
+        },
+        "type": "projectRole",
+        "value": "10003"
+      },
+      "id": 10727,
+      "permission": "LINK_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10727"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10682,
+      "permission": "DELETE_OWN_WORKLOGS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10682"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10684,
+      "permission": "VIEW_AGGREGATED_DATA",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10684"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10686,
+      "permission": "CREATE_ATTACHMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10686"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10688,
+      "permission": "VIEW_DEV_TOOLS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10688"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10690,
+      "permission": "CREATE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10690"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10692,
+      "permission": "DELETE_OWN_COMMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10692"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10694,
+      "permission": "WORK_ON_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10694"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10696,
+      "permission": "EDIT_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10696"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10698,
+      "permission": "MANAGE_SPRINTS_PERMISSION",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10698"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10700,
+      "permission": "CLOSE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10700"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10702,
+      "permission": "SCHEDULE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10702"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10704,
+      "permission": "VIEW_VOTERS_AND_WATCHERS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10704"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10706,
+      "permission": "ADD_COMMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10706"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10708,
+      "permission": "EDIT_OWN_COMMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10708"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10710,
+      "permission": "ASSIGN_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10710"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10712,
+      "permission": "BROWSE_PROJECTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10712"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10714,
+      "permission": "RESOLVE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10714"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10716,
+      "permission": "VIEW_READONLY_WORKFLOW",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10716"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10718,
+      "permission": "MOVE_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10718"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10720,
+      "permission": "DELETE_OWN_ATTACHMENTS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10720"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10722,
+      "permission": "TRANSITION_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10722"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10724,
+      "permission": "ASSIGNABLE_USER",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10724"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10726,
+      "permission": "EDIT_OWN_WORKLOGS",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10726"
+    },
+    {
+      "holder": {
+        "type": "applicationRole"
+      },
+      "id": 10728,
+      "permission": "LINK_ISSUES",
+      "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002/permission/10728"
+    }
+  ],
+  "self": "https://example.atlassian.net/rest/api/3/permissionscheme/10002"
+}

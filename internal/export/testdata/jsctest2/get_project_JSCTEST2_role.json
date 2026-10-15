@@ -1,0 +1,5 @@
+{
+  "Administrators": "https://example.atlassian.net/rest/api/3/project/10003/role/10002",
+  "atlassian-addons-project-access": "https://example.atlassian.net/rest/api/3/project/10003/role/10003",
+  "jira-guest-member": "https://example.atlassian.net/rest/api/3/project/10003/role/10014"
+}

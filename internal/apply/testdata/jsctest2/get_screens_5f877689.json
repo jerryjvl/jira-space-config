@@ -1,0 +1,14 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "self": "https://example.atlassian.net/rest/api/3/screens?queryString=JSCTEST2+Edit&startAt=0&maxResults=100",
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "description": "Edit screen for Story (test data)",
+      "id": 10019,
+      "name": "JSCTEST2 Edit"
+    }
+  ]
+}

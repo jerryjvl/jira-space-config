@@ -1,0 +1,39 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "self": "https://example.atlassian.net/rest/api/3/screens?startAt=0&maxResults=100",
+  "startAt": 0,
+  "total": 6,
+  "values": [
+    {
+      "description": "",
+      "id": 10015,
+      "name": "JSCTEST2: Scrum Default Issue Screen"
+    },
+    {
+      "description": "",
+      "id": 10016,
+      "name": "JSCTEST2: Scrum Bug Screen"
+    },
+    {
+      "description": "",
+      "id": 10017,
+      "name": "JSCTEST2: Scrum Epic Screen"
+    },
+    {
+      "description": "Create screen for Story (test data)",
+      "id": 10018,
+      "name": "JSCTEST2 Create"
+    },
+    {
+      "description": "Edit screen for Story (test data)",
+      "id": 10019,
+      "name": "JSCTEST2 Edit"
+    },
+    {
+      "description": "View screen for Story (test data)",
+      "id": 10020,
+      "name": "JSCTEST2 View"
+    }
+  ]
+}

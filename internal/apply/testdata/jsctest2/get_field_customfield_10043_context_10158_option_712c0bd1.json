@@ -1,0 +1,38 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "startAt": 0,
+  "total": 6,
+  "values": [
+    {
+      "disabled": false,
+      "id": "10020",
+      "value": "5 – Critical"
+    },
+    {
+      "disabled": false,
+      "id": "10021",
+      "value": "4 – High"
+    },
+    {
+      "disabled": false,
+      "id": "10022",
+      "value": "3 – Medium"
+    },
+    {
+      "disabled": false,
+      "id": "10023",
+      "value": "2 – Low"
+    },
+    {
+      "disabled": false,
+      "id": "10024",
+      "value": "1 – Insignificant"
+    },
+    {
+      "disabled": true,
+      "id": "10025",
+      "value": "Legacy"
+    }
+  ]
+}

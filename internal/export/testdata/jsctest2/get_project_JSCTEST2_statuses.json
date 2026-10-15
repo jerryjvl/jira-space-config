@@ -1,0 +1,387 @@
+[
+  {
+    "id": "10012",
+    "name": "Sub-task",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10012",
+    "statuses": [
+      {
+        "description": "A resolution has been taken, and it is awaiting verification by reporter. From here work items are either reopened, or are closed.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/resolved.png",
+        "id": "5",
+        "name": "Resolved",
+        "self": "https://example.atlassian.net/rest/api/3/status/5",
+        "statusCategory": {
+          "colorName": "green",
+          "id": 3,
+          "key": "done",
+          "name": "Done",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/3"
+        },
+        "untranslatedName": "Resolved"
+      },
+      {
+        "description": "This work item was once resolved, but the resolution was deemed incorrect. From here work items are either marked assigned or resolved.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/reopened.png",
+        "id": "4",
+        "name": "Reopened",
+        "self": "https://example.atlassian.net/rest/api/3/status/4",
+        "statusCategory": {
+          "colorName": "blue-gray",
+          "id": 2,
+          "key": "new",
+          "name": "To Do",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/2"
+        },
+        "untranslatedName": "Reopened"
+      },
+      {
+        "description": "The work item is considered finished, the resolution is correct. Work items which are closed can be reopened.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/closed.png",
+        "id": "6",
+        "name": "Closed",
+        "self": "https://example.atlassian.net/rest/api/3/status/6",
+        "statusCategory": {
+          "colorName": "green",
+          "id": 3,
+          "key": "done",
+          "name": "Done",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/3"
+        },
+        "untranslatedName": "Closed"
+      },
+      {
+        "description": "The work item is open and ready for the assignee to start work on it.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/open.png",
+        "id": "1",
+        "name": "Open",
+        "self": "https://example.atlassian.net/rest/api/3/status/1",
+        "statusCategory": {
+          "colorName": "blue-gray",
+          "id": 2,
+          "key": "new",
+          "name": "To Do",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/2"
+        },
+        "untranslatedName": "Open"
+      },
+      {
+        "description": "This work item is being actively worked on at the moment by the assignee.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/inprogress.png",
+        "id": "3",
+        "name": "In Progress",
+        "self": "https://example.atlassian.net/rest/api/3/status/3",
+        "statusCategory": {
+          "colorName": "yellow",
+          "id": 4,
+          "key": "indeterminate",
+          "name": "In Progress",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/4"
+        },
+        "untranslatedName": "In Progress"
+      }
+    ],
+    "subtask": true
+  },
+  {
+    "id": "10000",
+    "name": "Epic",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10000",
+    "statuses": [
+      {
+        "description": "A resolution has been taken, and it is awaiting verification by reporter. From here work items are either reopened, or are closed.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/resolved.png",
+        "id": "5",
+        "name": "Resolved",
+        "self": "https://example.atlassian.net/rest/api/3/status/5",
+        "statusCategory": {
+          "colorName": "green",
+          "id": 3,
+          "key": "done",
+          "name": "Done",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/3"
+        },
+        "untranslatedName": "Resolved"
+      },
+      {
+        "description": "This work item was once resolved, but the resolution was deemed incorrect. From here work items are either marked assigned or resolved.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/reopened.png",
+        "id": "4",
+        "name": "Reopened",
+        "self": "https://example.atlassian.net/rest/api/3/status/4",
+        "statusCategory": {
+          "colorName": "blue-gray",
+          "id": 2,
+          "key": "new",
+          "name": "To Do",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/2"
+        },
+        "untranslatedName": "Reopened"
+      },
+      {
+        "description": "The work item is considered finished, the resolution is correct. Work items which are closed can be reopened.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/closed.png",
+        "id": "6",
+        "name": "Closed",
+        "self": "https://example.atlassian.net/rest/api/3/status/6",
+        "statusCategory": {
+          "colorName": "green",
+          "id": 3,
+          "key": "done",
+          "name": "Done",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/3"
+        },
+        "untranslatedName": "Closed"
+      },
+      {
+        "description": "The work item is open and ready for the assignee to start work on it.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/open.png",
+        "id": "1",
+        "name": "Open",
+        "self": "https://example.atlassian.net/rest/api/3/status/1",
+        "statusCategory": {
+          "colorName": "blue-gray",
+          "id": 2,
+          "key": "new",
+          "name": "To Do",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/2"
+        },
+        "untranslatedName": "Open"
+      },
+      {
+        "description": "This work item is being actively worked on at the moment by the assignee.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/inprogress.png",
+        "id": "3",
+        "name": "In Progress",
+        "self": "https://example.atlassian.net/rest/api/3/status/3",
+        "statusCategory": {
+          "colorName": "yellow",
+          "id": 4,
+          "key": "indeterminate",
+          "name": "In Progress",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/4"
+        },
+        "untranslatedName": "In Progress"
+      }
+    ],
+    "subtask": false
+  },
+  {
+    "id": "10005",
+    "name": "Story",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10005",
+    "statuses": [
+      {
+        "description": "A resolution has been taken, and it is awaiting verification by reporter. From here work items are either reopened, or are closed.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/resolved.png",
+        "id": "5",
+        "name": "Resolved",
+        "self": "https://example.atlassian.net/rest/api/3/status/5",
+        "statusCategory": {
+          "colorName": "green",
+          "id": 3,
+          "key": "done",
+          "name": "Done",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/3"
+        },
+        "untranslatedName": "Resolved"
+      },
+      {
+        "description": "This work item was once resolved, but the resolution was deemed incorrect. From here work items are either marked assigned or resolved.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/reopened.png",
+        "id": "4",
+        "name": "Reopened",
+        "self": "https://example.atlassian.net/rest/api/3/status/4",
+        "statusCategory": {
+          "colorName": "blue-gray",
+          "id": 2,
+          "key": "new",
+          "name": "To Do",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/2"
+        },
+        "untranslatedName": "Reopened"
+      },
+      {
+        "description": "The work item is considered finished, the resolution is correct. Work items which are closed can be reopened.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/closed.png",
+        "id": "6",
+        "name": "Closed",
+        "self": "https://example.atlassian.net/rest/api/3/status/6",
+        "statusCategory": {
+          "colorName": "green",
+          "id": 3,
+          "key": "done",
+          "name": "Done",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/3"
+        },
+        "untranslatedName": "Closed"
+      },
+      {
+        "description": "The work item is open and ready for the assignee to start work on it.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/open.png",
+        "id": "1",
+        "name": "Open",
+        "self": "https://example.atlassian.net/rest/api/3/status/1",
+        "statusCategory": {
+          "colorName": "blue-gray",
+          "id": 2,
+          "key": "new",
+          "name": "To Do",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/2"
+        },
+        "untranslatedName": "Open"
+      },
+      {
+        "description": "This work item is being actively worked on at the moment by the assignee.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/inprogress.png",
+        "id": "3",
+        "name": "In Progress",
+        "self": "https://example.atlassian.net/rest/api/3/status/3",
+        "statusCategory": {
+          "colorName": "yellow",
+          "id": 4,
+          "key": "indeterminate",
+          "name": "In Progress",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/4"
+        },
+        "untranslatedName": "In Progress"
+      }
+    ],
+    "subtask": false
+  },
+  {
+    "id": "10013",
+    "name": "Bug",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10013",
+    "statuses": [
+      {
+        "description": "",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/generic.png",
+        "id": "10011",
+        "name": "To Do",
+        "self": "https://example.atlassian.net/rest/api/3/status/10011",
+        "statusCategory": {
+          "colorName": "blue-gray",
+          "id": 2,
+          "key": "new",
+          "name": "To Do",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/2"
+        },
+        "untranslatedName": "To Do"
+      },
+      {
+        "description": "This work item is being actively worked on at the moment by the assignee.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/inprogress.png",
+        "id": "3",
+        "name": "In Progress",
+        "self": "https://example.atlassian.net/rest/api/3/status/3",
+        "statusCategory": {
+          "colorName": "yellow",
+          "id": 4,
+          "key": "indeterminate",
+          "name": "In Progress",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/4"
+        },
+        "untranslatedName": "In Progress"
+      },
+      {
+        "description": "",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/generic.png",
+        "id": "10010",
+        "name": "Done",
+        "self": "https://example.atlassian.net/rest/api/3/status/10010",
+        "statusCategory": {
+          "colorName": "green",
+          "id": 3,
+          "key": "done",
+          "name": "Done",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/3"
+        },
+        "untranslatedName": "Done"
+      }
+    ],
+    "subtask": false
+  },
+  {
+    "id": "10014",
+    "name": "Task",
+    "self": "https://example.atlassian.net/rest/api/3/issuetype/10014",
+    "statuses": [
+      {
+        "description": "A resolution has been taken, and it is awaiting verification by reporter. From here work items are either reopened, or are closed.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/resolved.png",
+        "id": "5",
+        "name": "Resolved",
+        "self": "https://example.atlassian.net/rest/api/3/status/5",
+        "statusCategory": {
+          "colorName": "green",
+          "id": 3,
+          "key": "done",
+          "name": "Done",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/3"
+        },
+        "untranslatedName": "Resolved"
+      },
+      {
+        "description": "This work item was once resolved, but the resolution was deemed incorrect. From here work items are either marked assigned or resolved.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/reopened.png",
+        "id": "4",
+        "name": "Reopened",
+        "self": "https://example.atlassian.net/rest/api/3/status/4",
+        "statusCategory": {
+          "colorName": "blue-gray",
+          "id": 2,
+          "key": "new",
+          "name": "To Do",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/2"
+        },
+        "untranslatedName": "Reopened"
+      },
+      {
+        "description": "The work item is considered finished, the resolution is correct. Work items which are closed can be reopened.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/closed.png",
+        "id": "6",
+        "name": "Closed",
+        "self": "https://example.atlassian.net/rest/api/3/status/6",
+        "statusCategory": {
+          "colorName": "green",
+          "id": 3,
+          "key": "done",
+          "name": "Done",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/3"
+        },
+        "untranslatedName": "Closed"
+      },
+      {
+        "description": "The work item is open and ready for the assignee to start work on it.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/open.png",
+        "id": "1",
+        "name": "Open",
+        "self": "https://example.atlassian.net/rest/api/3/status/1",
+        "statusCategory": {
+          "colorName": "blue-gray",
+          "id": 2,
+          "key": "new",
+          "name": "To Do",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/2"
+        },
+        "untranslatedName": "Open"
+      },
+      {
+        "description": "This work item is being actively worked on at the moment by the assignee.",
+        "iconUrl": "https://example.atlassian.net/images/icons/statuses/inprogress.png",
+        "id": "3",
+        "name": "In Progress",
+        "self": "https://example.atlassian.net/rest/api/3/status/3",
+        "statusCategory": {
+          "colorName": "yellow",
+          "id": 4,
+          "key": "indeterminate",
+          "name": "In Progress",
+          "self": "https://example.atlassian.net/rest/api/3/statuscategory/4"
+        },
+        "untranslatedName": "In Progress"
+      }
+    ],
+    "subtask": false
+  }
+]

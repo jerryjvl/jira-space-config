@@ -1,0 +1,24 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "id": 3,
+      "isPrivate": false,
+      "location": {
+        "avatarURI": "https://example.atlassian.net/rest/api/2/universal_avatar/view/type/project/avatar/10417?size=small",
+        "displayName": "Example User",
+        "name": "Test Sandbox (TS)",
+        "projectId": 10002,
+        "projectKey": "TS",
+        "projectName": "Test Sandbox",
+        "projectTypeKey": "software"
+      },
+      "name": "TS board",
+      "self": "https://example.atlassian.net/rest/agile/1.0/board/3",
+      "type": "kanban"
+    }
+  ]
+}

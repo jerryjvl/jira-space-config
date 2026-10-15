@@ -1,0 +1,21 @@
+{
+  "defaultSecurityLevelId": 10000,
+  "description": "Two levels (test data)",
+  "id": 10002,
+  "levels": [
+    {
+      "description": "Administrators and reporters only",
+      "id": "10000",
+      "name": "Restricted",
+      "self": "https://example.atlassian.net/rest/api/3/securitylevel/10000"
+    },
+    {
+      "description": "The admin group",
+      "id": "10001",
+      "name": "Team",
+      "self": "https://example.atlassian.net/rest/api/3/securitylevel/10001"
+    }
+  ],
+  "name": "JSCTEST2 Security",
+  "self": "https://example.atlassian.net/rest/api/3/issuesecurityschemes/10002"
+}

@@ -1,0 +1,7 @@
+{
+  "actors": [],
+  "description": "Can only access one assigned space within the app, with no app admin permissions. Assign to external collaborators who need limited access. (non-billable)",
+  "id": 10014,
+  "name": "jira-guest-member",
+  "self": "https://example.atlassian.net/rest/api/3/project/10003/role/10014"
+}

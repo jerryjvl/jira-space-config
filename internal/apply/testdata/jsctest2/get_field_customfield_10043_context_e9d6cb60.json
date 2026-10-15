@@ -1,0 +1,15 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "description": "Severity scale for JSCTEST2 (test data)",
+      "id": "10158",
+      "isAnyIssueType": true,
+      "isGlobalContext": false,
+      "name": "JSCTEST2 Severity"
+    }
+  ]
+}

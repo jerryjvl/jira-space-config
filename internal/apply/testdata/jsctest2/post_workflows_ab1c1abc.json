@@ -1,0 +1,700 @@
+{
+  "statuses": [
+    {
+      "description": "The work item is considered finished, the resolution is correct. work items which are closed can be reopened.",
+      "id": "6",
+      "name": "Closed",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "DONE",
+      "statusReference": "6"
+    },
+    {
+      "description": "",
+      "id": "10011",
+      "name": "To Do",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "TODO",
+      "statusReference": "10011"
+    },
+    {
+      "description": "The work item is open and ready for the assignee to start work on it.",
+      "id": "1",
+      "name": "Open",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "TODO",
+      "statusReference": "1"
+    },
+    {
+      "description": "A resolution has been taken, and it's awaiting verification by the reporter. From here work items are either reopened, or are closed.",
+      "id": "5",
+      "name": "Resolved",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "DONE",
+      "statusReference": "5"
+    },
+    {
+      "description": "This work item is being actively worked on at the moment by the assignee.",
+      "id": "3",
+      "name": "In Progress",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "IN_PROGRESS",
+      "statusReference": "3"
+    },
+    {
+      "description": "This work item was once resolved, but the resolution was deemed incorrect. From here the work items are either reopened, or are closed.",
+      "id": "4",
+      "name": "Reopened",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "TODO",
+      "statusReference": "4"
+    },
+    {
+      "description": "",
+      "id": "10010",
+      "name": "Done",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "statusCategory": "DONE",
+      "statusReference": "10010"
+    }
+  ],
+  "workflows": [
+    {
+      "description": "The default Jira workflow.",
+      "id": "0cfdac10-d186-4e2d-ad75-ea4140279570",
+      "isEditable": true,
+      "loopedTransitionContainerLayout": {},
+      "name": "JSCTEST2 Classic Jira",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "startPointLayout": {
+        "x": 1353.0,
+        "y": 54.0
+      },
+      "statuses": [
+        {
+          "deprecated": false,
+          "layout": {
+            "x": 1328.0,
+            "y": 165.0
+          },
+          "properties": {},
+          "statusReference": "1"
+        },
+        {
+          "deprecated": false,
+          "layout": {
+            "x": 1305.07373046875,
+            "y": 610.0
+          },
+          "properties": {},
+          "statusReference": "3"
+        },
+        {
+          "deprecated": false,
+          "layout": {
+            "x": 1714.5,
+            "y": 165.0
+          },
+          "properties": {},
+          "statusReference": "5"
+        },
+        {
+          "deprecated": false,
+          "layout": {
+            "x": 1713.75,
+            "y": 421.0
+          },
+          "properties": {},
+          "statusReference": "4"
+        },
+        {
+          "deprecated": false,
+          "layout": {
+            "x": 1522.0,
+            "y": 315.0
+          },
+          "properties": {
+            "jira.issue.editable": "false"
+          },
+          "statusReference": "6"
+        }
+      ],
+      "transitions": [
+        {
+          "actions": [],
+          "description": "",
+          "id": "1",
+          "links": [
+            {
+              "toPort": 1
+            }
+          ],
+          "name": "Create Issue",
+          "properties": {
+            "jira.i18n.title": "common.forms.create",
+            "opsbar-sequence": "0"
+          },
+          "toStatusReference": "1",
+          "triggers": [],
+          "type": "INITIAL",
+          "validators": [
+            {
+              "id": "1cb2a0b8-bf12-4436-8142-051d32e8478f",
+              "parameters": {
+                "permissionKey": "CREATE_ISSUES"
+              },
+              "ruleKey": "system:check-permission-validator"
+            }
+          ]
+        },
+        {
+          "actions": [
+            {
+              "id": "2077064246",
+              "parameters": {
+                "field": "resolution",
+                "mode": "",
+                "value": ""
+              },
+              "ruleKey": "system:update-field"
+            }
+          ],
+          "conditions": {
+            "conditionGroups": [],
+            "conditions": [
+              {
+                "id": "45f6144a-c784-48b8-88c5-84bae611afb3",
+                "parameters": {
+                  "accountIds": "",
+                  "allowUserCustomFields": "",
+                  "denyUserCustomFields": "",
+                  "groupCustomFields": "",
+                  "groupIds": "",
+                  "permissionKeys": "ASSIGNABLE_USER",
+                  "roleIds": ""
+                },
+                "ruleKey": "system:restrict-issue-transition"
+              }
+            ],
+            "operation": "ALL"
+          },
+          "customIssueEventId": "12",
+          "description": "",
+          "id": "301",
+          "links": [
+            {
+              "fromPort": 7,
+              "fromStatusReference": "3",
+              "toPort": 7
+            }
+          ],
+          "name": "Stop Progress",
+          "properties": {
+            "jira.i18n.title": "stopprogress.title",
+            "opsbar-sequence": "20"
+          },
+          "toStatusReference": "1",
+          "triggers": [],
+          "type": "DIRECTED",
+          "validators": [
+            {
+              "id": "6caa39b3-a9be-4906-86f8-7569ea650183",
+              "parameters": {
+                "errorMessage": "Assignee must be set(!)",
+                "fieldsRequired": "assignee",
+                "ignoreContext": "false",
+                "ruleType": "fieldRequired"
+              },
+              "ruleKey": "system:validate-field-value"
+            }
+          ]
+        },
+        {
+          "actions": [],
+          "description": "",
+          "id": "6",
+          "links": [
+            {
+              "fromPort": 0,
+              "fromStatusReference": "5",
+              "toPort": 2
+            }
+          ],
+          "name": "Self-loop",
+          "properties": {},
+          "toStatusReference": "5",
+          "triggers": [],
+          "type": "DIRECTED",
+          "validators": []
+        },
+        {
+          "actions": [],
+          "conditions": {
+            "conditionGroups": [],
+            "conditions": [
+              {
+                "id": "a28a85d8-c1e1-4186-87f2-d91cc6ae919f",
+                "parameters": {
+                  "accountIds": "",
+                  "allowUserCustomFields": "",
+                  "denyUserCustomFields": "",
+                  "groupCustomFields": "",
+                  "groupIds": "",
+                  "permissionKeys": "CLOSE_ISSUES",
+                  "roleIds": ""
+                },
+                "ruleKey": "system:restrict-issue-transition"
+              }
+            ],
+            "operation": "ALL"
+          },
+          "customIssueEventId": "5",
+          "description": "Closing an issue indicates there is no more work to be done on it, and it has been verified as complete.",
+          "id": "701",
+          "links": [
+            {
+              "fromPort": 6,
+              "fromStatusReference": "5",
+              "toPort": 1
+            }
+          ],
+          "name": "Close Issue",
+          "properties": {
+            "jira.i18n.submit": "closeissue.close",
+            "jira.i18n.title": "closeissue.title",
+            "opsbar-sequence": "60"
+          },
+          "toStatusReference": "6",
+          "transitionScreen": {
+            "id": "12858991-9a9e-4a2a-ad59-dc23b62959b5",
+            "parameters": {
+              "screenId": "2"
+            },
+            "ruleKey": "system:transition-screen"
+          },
+          "triggers": [],
+          "type": "DIRECTED",
+          "validators": []
+        },
+        {
+          "actions": [],
+          "conditions": {
+            "conditionGroups": [],
+            "conditions": [
+              {
+                "id": "ebd6f218-c549-4f95-a0a8-86706aa94c8c",
+                "parameters": {
+                  "accountIds": "",
+                  "allowUserCustomFields": "",
+                  "denyUserCustomFields": "",
+                  "groupCustomFields": "",
+                  "groupIds": "",
+                  "permissionKeys": "RESOLVE_ISSUES",
+                  "roleIds": ""
+                },
+                "ruleKey": "system:restrict-issue-transition"
+              },
+              {
+                "id": "cc650bdf-4076-49fd-84ec-4a1fa01d710c",
+                "parameters": {
+                  "accountIds": "",
+                  "allowUserCustomFields": "",
+                  "denyUserCustomFields": "",
+                  "groupCustomFields": "",
+                  "groupIds": "",
+                  "permissionKeys": "CLOSE_ISSUES",
+                  "roleIds": ""
+                },
+                "ruleKey": "system:restrict-issue-transition"
+              }
+            ],
+            "operation": "ALL"
+          },
+          "customIssueEventId": "5",
+          "description": "",
+          "id": "2",
+          "links": [
+            {
+              "fromPort": 4,
+              "fromStatusReference": "1",
+              "toPort": 1
+            },
+            {
+              "fromPort": 2,
+              "fromStatusReference": "3",
+              "toPort": 6
+            },
+            {
+              "fromPort": 0,
+              "fromStatusReference": "4",
+              "toPort": 4
+            }
+          ],
+          "name": "Close Issue",
+          "properties": {
+            "jira.i18n.submit": "closeissue.close",
+            "jira.i18n.title": "closeissue.title",
+            "opsbar-sequence": "60"
+          },
+          "toStatusReference": "6",
+          "transitionScreen": {
+            "id": "abba1db9-df70-439f-8e86-425829b059c8",
+            "parameters": {
+              "screenId": "3"
+            },
+            "ruleKey": "system:transition-screen"
+          },
+          "triggers": [],
+          "type": "DIRECTED",
+          "validators": []
+        },
+        {
+          "actions": [
+            {
+              "id": "957635116",
+              "parameters": {
+                "field": "resolution",
+                "mode": "",
+                "value": ""
+              },
+              "ruleKey": "system:update-field"
+            }
+          ],
+          "conditions": {
+            "conditionGroups": [],
+            "conditions": [
+              {
+                "id": "caeadb16-1dbd-44fe-8727-ae3859bfd274",
+                "parameters": {
+                  "accountIds": "",
+                  "allowUserCustomFields": "",
+                  "denyUserCustomFields": "",
+                  "groupCustomFields": "",
+                  "groupIds": "",
+                  "permissionKeys": "RESOLVE_ISSUES",
+                  "roleIds": ""
+                },
+                "ruleKey": "system:restrict-issue-transition"
+              }
+            ],
+            "operation": "ALL"
+          },
+          "customIssueEventId": "7",
+          "description": "",
+          "id": "3",
+          "links": [
+            {
+              "fromPort": 5,
+              "fromStatusReference": "5",
+              "toPort": 1
+            },
+            {
+              "fromPort": 3,
+              "fromStatusReference": "6",
+              "toPort": 1
+            }
+          ],
+          "name": "Reopen Issue",
+          "properties": {
+            "jira.i18n.submit": "issue.operations.reopen.issue",
+            "jira.i18n.title": "issue.operations.reopen.issue",
+            "opsbar-sequence": "80"
+          },
+          "toStatusReference": "4",
+          "transitionScreen": {
+            "id": "09f13d28-deb3-4c15-b3f4-55f13a09098e",
+            "parameters": {
+              "screenId": "2"
+            },
+            "ruleKey": "system:transition-screen"
+          },
+          "triggers": [],
+          "type": "DIRECTED",
+          "validators": []
+        },
+        {
+          "actions": [
+            {
+              "id": "967071326",
+              "parameters": {
+                "field": "resolution",
+                "mode": "",
+                "value": ""
+              },
+              "ruleKey": "system:update-field"
+            },
+            {
+              "id": "736065099",
+              "parameters": {
+                "type": "to-current-user"
+              },
+              "ruleKey": "system:change-assignee"
+            }
+          ],
+          "conditions": {
+            "conditionGroups": [],
+            "conditions": [
+              {
+                "id": "efd7c792-3126-4315-8e2c-9a03d9e272b8",
+                "parameters": {
+                  "accountIds": "",
+                  "allowUserCustomFields": "",
+                  "denyUserCustomFields": "",
+                  "groupCustomFields": "",
+                  "groupIds": "58a02559-d97d-4dd0-835a-d1b4d19632c9",
+                  "permissionKeys": "",
+                  "roleIds": ""
+                },
+                "ruleKey": "system:restrict-issue-transition"
+              }
+            ],
+            "operation": "ALL"
+          },
+          "customIssueEventId": "11",
+          "description": "",
+          "id": "4",
+          "links": [
+            {
+              "fromPort": 5,
+              "fromStatusReference": "1",
+              "toPort": 1
+            },
+            {
+              "fromPort": 7,
+              "fromStatusReference": "4",
+              "toPort": 3
+            }
+          ],
+          "name": "Start Progress",
+          "properties": {
+            "jira.i18n.title": "startprogress.title",
+            "opsbar-sequence": "20"
+          },
+          "toStatusReference": "3",
+          "transitionScreen": {
+            "id": "7e789dba-35fc-4ea0-8c24-f174aebc94f9",
+            "parameters": {
+              "screenId": "1"
+            },
+            "ruleKey": "system:transition-screen"
+          },
+          "triggers": [],
+          "type": "DIRECTED",
+          "validators": []
+        },
+        {
+          "actions": [
+            {
+              "id": "1819747280",
+              "parameters": {
+                "field": "customfield_10009",
+                "mode": "replace",
+                "value": "%%CURRENT_DATETIME%%"
+              },
+              "ruleKey": "system:update-field"
+            }
+          ],
+          "conditions": {
+            "conditionGroups": [],
+            "conditions": [
+              {
+                "id": "64e8aae4-658b-47a4-96ec-47b7a6233695",
+                "parameters": {
+                  "accountIds": "",
+                  "allowUserCustomFields": "",
+                  "denyUserCustomFields": "",
+                  "groupCustomFields": "",
+                  "groupIds": "",
+                  "permissionKeys": "RESOLVE_ISSUES",
+                  "roleIds": ""
+                },
+                "ruleKey": "system:restrict-issue-transition"
+              }
+            ],
+            "operation": "ALL"
+          },
+          "customIssueEventId": "4",
+          "description": "",
+          "id": "5",
+          "links": [
+            {
+              "fromPort": 3,
+              "fromStatusReference": "1",
+              "toPort": 7
+            },
+            {
+              "fromPort": 5,
+              "fromStatusReference": "3",
+              "toPort": 3
+            },
+            {
+              "fromPort": 3,
+              "fromStatusReference": "4",
+              "toPort": 3
+            }
+          ],
+          "name": "Resolve Issue",
+          "properties": {
+            "jira.i18n.submit": "resolveissue.resolve",
+            "jira.i18n.title": "resolveissue.title",
+            "opsbar-sequence": "40"
+          },
+          "toStatusReference": "5",
+          "transitionScreen": {
+            "id": "069ea580-e450-478b-86b2-fc558a1cd4c8",
+            "parameters": {
+              "screenId": "3"
+            },
+            "ruleKey": "system:transition-screen"
+          },
+          "triggers": [],
+          "type": "DIRECTED",
+          "validators": []
+        }
+      ],
+      "version": {
+        "id": "8e217a3f-33bb-45a8-a466-441a95191e17",
+        "versionNumber": 1
+      }
+    },
+    {
+      "description": "Generated by JIRA Software version 1001.0.0-SNAPSHOT. This workflow is managed internally by Jira. Do not manually modify this workflow.",
+      "id": "c7f13f5d-64c8-4780-900c-5e01fc9d1f43",
+      "isEditable": true,
+      "name": "Software Simplified Workflow for Project JSCTEST2",
+      "scope": {
+        "type": "GLOBAL"
+      },
+      "startPointLayout": {},
+      "statuses": [
+        {
+          "deprecated": false,
+          "layout": {},
+          "properties": {},
+          "statusReference": "10011"
+        },
+        {
+          "deprecated": false,
+          "layout": {},
+          "properties": {},
+          "statusReference": "3"
+        },
+        {
+          "deprecated": false,
+          "layout": {},
+          "properties": {},
+          "statusReference": "10010"
+        }
+      ],
+      "transitions": [
+        {
+          "actions": [
+            {
+              "id": "366601339",
+              "parameters": {
+                "field": "resolution",
+                "mode": "",
+                "value": ""
+              },
+              "ruleKey": "system:update-field"
+            }
+          ],
+          "description": "",
+          "id": "11",
+          "links": [],
+          "name": "To Do",
+          "properties": {},
+          "toStatusReference": "10011",
+          "triggers": [],
+          "type": "GLOBAL",
+          "validators": []
+        },
+        {
+          "actions": [
+            {
+              "id": "1577408031",
+              "parameters": {
+                "field": "resolution",
+                "mode": "",
+                "value": ""
+              },
+              "ruleKey": "system:update-field"
+            }
+          ],
+          "description": "",
+          "id": "21",
+          "links": [],
+          "name": "In Progress",
+          "properties": {},
+          "toStatusReference": "3",
+          "triggers": [],
+          "type": "GLOBAL",
+          "validators": []
+        },
+        {
+          "actions": [
+            {
+              "id": "1588580484",
+              "parameters": {
+                "field": "resolution",
+                "mode": "",
+                "value": ""
+              },
+              "ruleKey": "system:update-field"
+            }
+          ],
+          "description": "",
+          "id": "31",
+          "links": [],
+          "name": "Done",
+          "properties": {},
+          "toStatusReference": "10010",
+          "triggers": [],
+          "type": "GLOBAL",
+          "validators": []
+        },
+        {
+          "actions": [],
+          "description": "",
+          "id": "1",
+          "links": [],
+          "name": "Create",
+          "properties": {
+            "jira.i18n.title": "common.forms.create"
+          },
+          "toStatusReference": "10011",
+          "triggers": [],
+          "type": "INITIAL",
+          "validators": [
+            {
+              "id": "649b6067-0331-44c2-ad72-51509b197084",
+              "parameters": {
+                "permissionKey": "CREATE_ISSUES"
+              },
+              "ruleKey": "system:check-permission-validator"
+            }
+          ]
+        }
+      ],
+      "version": {
+        "id": "5d505016-ce14-49a0-a8dd-bc667100e866",
+        "versionNumber": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "rule": {
+    "name": "Close duplicate work items",
+    "state": "DISABLED",
+    "description": "Closes duplicates [managed-by: jira-space-config]",
+    "canOtherRuleTrigger": false,
+    "notifyOnError": "FIRSTERROR",
+    "authorAccountId": "000000:00000000-0000-0000-0000-000000000001",
+    "actor": {
+      "type": "ACCOUNT_ID",
+      "actor": "000000:00000000-0000-0000-0000-000000000002"
+    },
+    "trigger": {
+      "component": "TRIGGER",
+      "schemaVersion": -1,
+      "type": "jira.issue.event.trigger:link",
+      "value": {
+        "linkTypes": [
+          "Duplicate"
+        ],
+        "eventFilters": [
+          "ari:cloud:jira:00000000-0000-0000-0000-000000000000:project/10042"
+        ]
+      },
+      "connectionId": null,
+      "conditions": [],
+      "id": "f9e76955-717b-4074-97a7-127a996b57de"
+    },
+    "components": [
+      {
+        "component": "CONDITION",
+        "schemaVersion": 3,
+        "type": "jira.issue.condition",
+        "value": {
+          "selectedField": {
+            "type": "ID",
+            "value": "status"
+          },
+          "selectedFieldType": "status",
+          "comparison": "NOT_EQUAL",
+          "compareValue": {
+            "type": "ID",
+            "modifier": null,
+            "value": "10010",
+            "multiValue": false,
+            "source": null
+          }
+        },
+        "connectionId": null,
+        "conditions": [],
+        "parentId": null,
+        "conditionParentId": null,
+        "children": [],
+        "id": "08db0048-dfad-4410-89ea-dace2055326e"
+      },
+      {
+        "component": "ACTION",
+        "schemaVersion": 11,
+        "type": "jira.issue.transition",
+        "value": {
+          "operations": [
+            {
+              "field": {
+                "type": "ID",
+                "value": "resolution"
+              },
+              "fieldType": "resolution",
+              "type": "SET",
+              "value": {
+                "type": "NAME",
+                "value": "Duplicate"
+              }
+            }
+          ],
+          "advancedFields": null,
+          "sendNotifications": true,
+          "destinationStatus": {
+            "type": "ID",
+            "value": "10010"
+          },
+          "transitionMatch": null
+        },
+        "connectionId": null,
+        "conditions": [],
+        "parentId": null,
+        "conditionParentId": null,
+        "children": [],
+        "id": "7c1e9971-ccba-4131-9a44-47f91d2aa2ee"
+      }
+    ],
+    "ruleScopeARIs": [
+      "ari:cloud:jira:00000000-0000-0000-0000-000000000000:project/10042"
+    ],
+    "labels": [],
+    "writeAccessType": "UNRESTRICTED",
+    "collaborators": [],
+    "uuid": "01a13a2d-e70f-7dc8-bac9-4a19f6ed28b2",
+    "created": 1791977449.231000000,
+    "updated": 1791977449.231000000
+  },
+  "connections": []
+}

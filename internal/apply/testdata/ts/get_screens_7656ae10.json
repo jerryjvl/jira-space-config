@@ -1,0 +1,24 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "self": "https://example.atlassian.net/rest/api/3/screens?startAt=0&maxResults=100",
+  "startAt": 0,
+  "total": 3,
+  "values": [
+    {
+      "description": "",
+      "id": 10012,
+      "name": "TS: Kanban Default Issue Screen"
+    },
+    {
+      "description": "",
+      "id": 10013,
+      "name": "TS: Kanban Bug Screen"
+    },
+    {
+      "description": "",
+      "id": 10014,
+      "name": "TS: Kanban Epic Screen"
+    }
+  ]
+}

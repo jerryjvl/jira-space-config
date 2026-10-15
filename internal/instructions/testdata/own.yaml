@@ -1,0 +1,12 @@
+# A space without managed_prefix: its own schemes are changed in place.
+apiVersion: jira-space-config/v1alpha1
+kind: SpaceConfig
+metadata:
+  name: example-own
+space:
+  key: OWN
+  permissions:
+    grants:
+      BROWSE_PROJECTS: ["role:Administrators"]
+  issue_types:
+    - { name: Task, default: true }

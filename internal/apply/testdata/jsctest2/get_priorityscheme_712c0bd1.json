@@ -1,0 +1,26 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 2,
+  "values": [
+    {
+      "defaultPriorityId": "3",
+      "description": "This is the default scheme used by all new and unassigned projects",
+      "id": "10124",
+      "isDefault": true,
+      "name": "Default priority scheme",
+      "prioritiesLimit": 100,
+      "self": "https://example.atlassian.net/rest/api/3/priorityscheme/10124"
+    },
+    {
+      "defaultPriorityId": "3",
+      "description": "Three priorities (test data)",
+      "id": "10161",
+      "isDefault": false,
+      "name": "JSCTEST2 Priority Scheme",
+      "prioritiesLimit": 100,
+      "self": "https://example.atlassian.net/rest/api/3/priorityscheme/10161"
+    }
+  ]
+}

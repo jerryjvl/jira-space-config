@@ -1,0 +1,33 @@
+{
+  "isLast": true,
+  "maxResults": 25,
+  "self": "https://example.atlassian.net/rest/api/3/screenscheme?startAt=0&maxResults=25",
+  "startAt": 0,
+  "total": 3,
+  "values": [
+    {
+      "description": "",
+      "id": 10012,
+      "name": "TS: Kanban Default Screen Scheme",
+      "screens": {
+        "default": 10012
+      }
+    },
+    {
+      "description": "",
+      "id": 10013,
+      "name": "TS: Kanban Bug Screen Scheme",
+      "screens": {
+        "default": 10013
+      }
+    },
+    {
+      "description": "",
+      "id": 10014,
+      "name": "TS: Kanban Epic Screen Scheme",
+      "screens": {
+        "default": 10014
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "approximateLastUsed": "2026-10-14T03:22:28.558+0000",
+  "editPermissions": [],
+  "favourite": false,
+  "favouritedCount": 0,
+  "id": "10002",
+  "isWritable": true,
+  "jql": "project = \"TS\" ORDER BY Rank ASC",
+  "name": "Filter for TS board",
+  "owner": {
+    "accountId": "000000:00000000-0000-0000-0000-000000000001",
+    "active": true,
+    "displayName": "Example User",
+    "self": "https://example.atlassian.net/rest/api/3/user?accountId=000000:00000000-0000-0000-0000-000000000001"
+  },
+  "searchUrl": "https://example.atlassian.net/rest/api/3/search/jql?jql=project%20%3D%20%22TS%22%20ORDER%20BY%20Rank%20ASC",
+  "self": "https://example.atlassian.net/rest/api/3/filter/10002",
+  "sharePermissions": [
+    {
+      "id": 10003,
+      "project": {
+        "assigneeType": "PROJECT_LEAD",
+        "avatarUrls": {
+          "16x16": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10417?size=xsmall",
+          "24x24": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10417?size=small",
+          "32x32": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10417?size=medium",
+          "48x48": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10417"
+        },
+        "entityId": "85c92cf4-97fd-493c-b750-4fbe51cbca99",
+        "id": "10002",
+        "key": "TS",
+        "name": "Test Sandbox",
+        "projectTypeKey": "software",
+        "properties": {},
+        "roles": {},
+        "self": "https://example.atlassian.net/rest/api/3/project/10002",
+        "simplified": false,
+        "style": "classic",
+        "uuid": "85c92cf4-97fd-493c-b750-4fbe51cbca99"
+      },
+      "type": "project"
+    }
+  ],
+  "sharedUsers": {
+    "end-index": 0,
+    "items": [],
+    "max-results": 1000,
+    "size": 21,
+    "start-index": 0
+  },
+  "subscriptions": {
+    "end-index": 0,
+    "items": [],
+    "max-results": 1000,
+    "size": 0,
+    "start-index": 0
+  },
+  "viewUrl": "https://example.atlassian.net/issues/?filter=10002"
+}
