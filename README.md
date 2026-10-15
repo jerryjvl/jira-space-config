@@ -12,7 +12,13 @@ and make the space match it, cautiously:
   this space alone uses them.
 - A change that would affect existing work items is **blocked**, with a count
   and what to do.
-- Running it again is always safe. It never creates or deletes spaces.
+- Running it again changes nothing that already matches. It never creates or
+  deletes spaces.
+
+> **Use at your own risk.** This is free software, provided "as is" without
+> warranty of any kind; its authors accept no liability for its use. `apply`
+> changes live Jira configuration: dry-run first, and try a spec on a sandbox
+> site before a real one. See [Licence and disclaimer](#licence-and-disclaimer).
 
 ## Install
 
@@ -106,6 +112,17 @@ The full format, with what is compared, what is refused and the tool's
 limits, is in [docs/spec-format.md](docs/spec-format.md); automation rules
 are in [docs/automation.md](docs/automation.md).
 
-## Licence
+## Licence and disclaimer
 
-MIT; see [LICENSE](LICENSE).
+Free to use under the MIT licence; see [LICENSE](LICENSE), whose terms
+govern. The software is provided **"as is", without warranty of any kind**,
+and its authors are not liable for any claim, damage or other liability
+arising from its use.
+
+`apply` changes a live Jira site with an administrator's credentials, and
+you are responsible for what it does there. Read every dry run before
+applying, try a spec on a sandbox site first, and keep a way back (an
+`export` of the space before you start).
+
+This is an independent project. It is not made, endorsed or supported by
+Atlassian; Jira is a trademark of Atlassian.

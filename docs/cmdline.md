@@ -162,8 +162,8 @@ Protections:
   what it did.
 - Every write is recorded in a JSONL audit log in the log directory, with the
   spec's SHA-256.
-- When a run stops, the summary lists what was done. Running again is always
-  safe: what was created is found and reused.
+- When a run stops, the summary lists what was done. Running again
+  picks up where it stopped: what was created is found and reused.
 
 ### Allowing particular changes
 
