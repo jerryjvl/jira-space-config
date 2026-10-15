@@ -3,6 +3,7 @@ package spec
 import (
 	"flag"
 	"os"
+	"regexp"
 	"strings"
 	"testing"
 )
@@ -118,6 +119,63 @@ func TestNothingLost(t *testing.T) {
 	} {
 		if !strings.Contains(golden, want) {
 			t.Errorf("golden output lacks %q", want)
+		}
+	}
+}
+
+// TestAutomationExamples: every rule example in docs/automation.md is a
+// valid automation_rules entry.
+func TestAutomationExamples(t *testing.T) {
+	data, err := os.ReadFile("../../docs/automation.md")
+	if err != nil {
+		t.Fatal(err)
+	}
+	blocks := regexp.MustCompile("(?s)```yaml\n(- name: .*?)```").FindAllStringSubmatch(string(data), -1)
+	if len(blocks) < 7 {
+		t.Fatalf("found %d examples", len(blocks))
+	}
+	for _, b := range blocks {
+		if strings.Contains(b[1], "{...}") {
+			continue // an outline, not a whole rule
+		}
+		indented := "  " + strings.ReplaceAll(strings.TrimSuffix(b[1], "\n"), "\n", "\n  ")
+		src := "apiVersion: jira-space-config/v1alpha1\nkind: SpaceConfig\nmetadata: {name: t}\nbinding: {site: https://x.atlassian.net, cloud_id: c}\nautomation_rules:\n" + indented +
+			"\nspace: {key: VULN, managed_prefix: VULN}\n"
+		s, diags := Parse([]byte(src))
+		if !diags.HasErrors() {
+			diags = append(diags, Validate(s)...)
+		}
+		for _, d := range diags {
+			if d.Severity == SeverityError {
+				t.Errorf("%s: %v", strings.SplitN(b[1], "\n", 2)[0], d)
+			}
+		}
+	}
+}
+
+// TestSpecFormatExamples: every whole spec in the user documentation (a
+// block that starts with apiVersion) parses and validates without errors, so
+// the documents cannot describe a format the tool refuses.
+func TestSpecFormatExamples(t *testing.T) {
+	for file, least := range map[string]int{"../../docs/spec-format.md": 4, "../../README.md": 1} {
+		data, err := os.ReadFile(file)
+		if err != nil {
+			t.Fatal(err)
+		}
+		blocks := regexp.MustCompile("(?s)```yaml\n(apiVersion: .*?)```").FindAllStringSubmatch(string(data), -1)
+		if len(blocks) < least {
+			t.Fatalf("%s: found %d whole specs", file, len(blocks))
+		}
+		for _, b := range blocks {
+			s, diags := Parse([]byte(b[1]))
+			if !diags.HasErrors() {
+				diags = append(diags, Validate(s)...)
+			}
+			for _, d := range diags {
+				if d.Severity == SeverityError {
+					t.Errorf("%s: %s: %v", file, strings.SplitN(b[1], "\n", 4)[2], d)
+				}
+			}
 		}
 	}
 }
