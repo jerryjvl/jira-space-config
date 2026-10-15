@@ -1,0 +1,819 @@
+apiVersion: jira-space-config/v1alpha1
+kind: SpaceConfig
+
+metadata:
+  name: ts-export
+  description: Exported from https://example.atlassian.net, space TS.
+
+binding:
+  site: https://example.atlassian.net
+  cloud_id: 00000000-0000-0000-0000-000000000000
+  written_at: "2026-10-13T09:00:00Z"
+  tool_version: test
+  field_backend: field_schemes
+
+roles:
+  - name: Administrators
+    mode: reuse
+    description: A project role that represents administrators in a project
+    id: "10002"
+  - name: atlassian-addons-project-access
+    mode: reuse
+    default_members:
+      - user:000000:00000000-0000-0000-0000-000000000002
+      - user:000000:00000000-0000-0000-0000-000000000003
+      - user:000000:00000000-0000-0000-0000-000000000004
+      - user:000000:00000000-0000-0000-0000-000000000005
+      - user:000000:00000000-0000-0000-0000-000000000006
+      - user:000000:00000000-0000-0000-0000-000000000007
+      - user:000000:00000000-0000-0000-0000-000000000008
+      - user:000000:00000000-0000-0000-0000-000000000009
+      - user:000000:00000000-0000-0000-0000-000000000010
+      - user:000000:00000000-0000-0000-0000-000000000011
+    description: A project role that represents Connect add-ons declaring a scope that requires more than read issue permissions
+    id: "10003"
+  - name: jira-guest-member
+    mode: reuse
+    description: Can only access one assigned space within the app, with no app admin permissions. Assign to external collaborators who need limited access. (non-billable)
+    id: "10014"
+
+statuses:
+  - name: Backlog
+    mode: reuse
+    category: todo
+    id: "10008"
+  - name: Done
+    mode: reuse
+    category: done
+    id: "10010"
+  - name: In Progress
+    mode: reuse
+    category: in_progress
+    description: This work item is being actively worked on at the moment by the assignee.
+    id: "3"
+  - name: Selected for development
+    mode: reuse
+    category: in_progress
+    id: "10009"
+
+resolutions:
+  - name: Cannot Reproduce
+    mode: reuse
+    description: All attempts at reproducing this work item failed, or not enough information was available to reproduce the work item. Reading the code produces no clues as to why this behaviour would occur. If more information appears later, please reopen the work item.
+    id: "10003"
+  - name: Done
+    mode: reuse
+    description: Work has been completed on this issue.
+    id: "10000"
+  - name: Duplicate
+    mode: reuse
+    description: The problem is a duplicate of an existing work item.
+    id: "10002"
+  - name: Won't Do
+    mode: reuse
+    description: This issue won't be actioned.
+    id: "10001"
+
+priorities:
+  - name: Highest
+    mode: reuse
+    colour: '#d04437'
+    icon: /images/icons/priorities/highest_new.svg
+    description: This problem will block progress.
+    id: "1"
+  - name: High
+    mode: reuse
+    colour: '#f15C75'
+    icon: /images/icons/priorities/high_new.svg
+    description: Serious problem that could block progress.
+    id: "2"
+  - name: Medium
+    mode: reuse
+    colour: '#f79232'
+    icon: /images/icons/priorities/medium_new.svg
+    description: Has the potential to affect progress.
+    id: "3"
+  - name: Low
+    mode: reuse
+    colour: '#707070'
+    icon: /images/icons/priorities/low_new.svg
+    description: Minor problem or easily worked around.
+    id: "4"
+  - name: Lowest
+    mode: reuse
+    colour: '#999999'
+    icon: /images/icons/priorities/lowest_new.svg
+    description: Trivial problem with little or no impact on progress.
+    id: "5"
+
+issue_types:
+  - name: Bug
+    mode: reuse
+    level: standard
+    avatar: "10303"
+    description: A problem or error.
+    id: "10013"
+  - name: Epic
+    mode: reuse
+    level: epic
+    icon: /images/icons/issuetypes/epic.svg
+    description: A collection of related bugs, stories, and tasks.
+    id: "10000"
+  - name: Story
+    mode: reuse
+    level: standard
+    avatar: "10300"
+    description: Created by Jira Agile - do not edit or delete. Issue type for a user story.
+    id: "10005"
+  - name: Sub-task
+    mode: reuse
+    level: subtask
+    avatar: "10316"
+    description: A small piece of work that's part of a larger task.
+    id: "10012"
+  - name: Task
+    mode: reuse
+    level: standard
+    avatar: "10318"
+    description: A small, distinct piece of work.
+    id: "10014"
+
+custom_fields:
+  - name: Actual end
+    mode: reuse
+    type: datetime
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:datetimerange
+    description: Enter when the change actually ended.
+    id: customfield_10009
+  - name: Actual start
+    mode: reuse
+    type: datetime
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:datetimerange
+    description: Enter when the change actually started.
+    id: customfield_10008
+  - name: AgentSessions
+    mode: reuse
+    type: com.atlassian.jira.plugin.system.customfieldtypes:agent-sessions
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:agent-sessions-searcher
+    locked: true
+    description: Link agent sessions to work items
+    id: customfield_10026
+  - name: Approvals
+    mode: reuse
+    type: com.atlassian.servicedesk.approvals-plugin:sd-approvals
+    searcher: com.atlassian.servicedesk.approvals-plugin:sd-approvals-searcher
+    locked: true
+    description: Provides search options for Jira approvals information. This custom field is created programmatically and required by Jira.
+    id: customfield_10025
+  - name: Approvers
+    mode: reuse
+    type: multiuser
+    description: Contains users needed for approval. This custom field was created by Jira.
+    id: customfield_10003
+  - name: Change reason
+    mode: reuse
+    type: select
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher
+    description: Choose the reason for the change request
+    id: customfield_10007
+  - name: Change risk
+    mode: reuse
+    type: select
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher
+    id: customfield_10006
+  - name: Change type
+    mode: reuse
+    type: select
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher
+    id: customfield_10005
+  - name: Epic Color
+    mode: reuse
+    type: com.pyxis.greenhopper.jira:gh-epic-color
+    searcher: com.pyxis.greenhopper.jira:gh-epic-color-searcher
+    locked: true
+    description: Epic Color field for Jira Software use only.
+    id: customfield_10013
+  - name: Epic Link
+    mode: reuse
+    type: com.pyxis.greenhopper.jira:gh-epic-link
+    searcher: com.pyxis.greenhopper.jira:gh-epic-link-searcher
+    locked: true
+    description: Choose an epic to assign this issue to.
+    id: customfield_10014
+  - name: Epic Name
+    mode: reuse
+    type: com.pyxis.greenhopper.jira:gh-epic-label
+    searcher: com.pyxis.greenhopper.jira:gh-epic-label-searcher
+    locked: true
+    description: Provide a short name to identify this epic.
+    id: customfield_10011
+  - name: Epic Status
+    mode: reuse
+    type: com.pyxis.greenhopper.jira:gh-epic-status
+    searcher: com.pyxis.greenhopper.jira:gh-epic-status-searcher
+    locked: true
+    description: Epic Status field for Jira Software use only.
+    id: customfield_10012
+  - name: Flagged
+    mode: reuse
+    type: checkboxes
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher
+    locked: true
+    description: Allows to flag issues with impediments.
+    id: customfield_10021
+  - name: Focus Areas
+    mode: reuse
+    type: com.atlassian.jira.plugin.system.customfieldtypes:focus-areas
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:focus-areas-searcher
+    locked: true
+    description: Link focus areas to work items
+    id: customfield_10040
+  - name: Goals
+    mode: reuse
+    type: com.atlassian.jira.plugin.system.customfieldtypes:goals
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:goals-searcher
+    locked: true
+    description: Link goals to work items
+    id: customfield_10029
+  - name: Impact
+    mode: reuse
+    type: select
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:multiselectsearcher
+    id: customfield_10004
+  - name: Incident manager
+    mode: reuse
+    type: user
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:userpickergroupsearcher
+    locked: true
+    description: The assigned team member managing the incident end-to-end, from response through resolution.
+    id: customfield_10038
+  - name: Issue color
+    mode: reuse
+    type: com.pyxis.greenhopper.jira:jsw-issue-color
+    searcher: com.pyxis.greenhopper.jira:jsw-issue-color-searcher
+    locked: true
+    id: customfield_10017
+  - name: Locked forms
+    mode: reuse
+    type: com.atlassian.jira.plugins.proforma-managed-fields:forms-locked-field-cftype
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:exactnumber
+    locked: true
+    description: The number of locked forms on the work item
+    id: customfield_10033
+  - name: Open forms
+    mode: reuse
+    type: com.atlassian.jira.plugins.proforma-managed-fields:forms-open-field-cftype
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:exactnumber
+    locked: true
+    description: The number of open forms on the work item
+    id: customfield_10032
+  - name: Organizations
+    mode: reuse
+    type: com.atlassian.servicedesk:sd-customer-organizations
+    searcher: com.atlassian.servicedesk:sd-customer-organizations-searcher
+    locked: true
+    description: Stores the organizations that are associated with a Service Desk customer portal requests. This custom field is created programmatically and required by Service Desk.
+    id: customfield_10002
+  - name: Parent Link
+    mode: reuse
+    type: com.atlassian.jpo:jpo-custom-field-parent
+    searcher: com.atlassian.jpo:jpo-custom-field-parent-searcher
+    locked: true
+    id: customfield_10018
+  - name: Project overview key
+    mode: reuse
+    type: read-only-string-issue-field
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:readonlyissuefieldsearcher
+    locked: true
+    description: Key of project overview connected via Atlassian Home for Jira Cloud
+    id: customfield_10041
+  - name: Project overview status
+    mode: reuse
+    type: read-only-string-issue-field
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:readonlyissuefieldsearcher
+    locked: true
+    description: Status of project overview connected via Atlassian Home for Jira Cloud
+    id: customfield_10042
+  - name: Rank
+    mode: reuse
+    type: com.pyxis.greenhopper.jira:gh-lexo-rank
+    searcher: com.pyxis.greenhopper.jira:gh-lexo-rank-searcher
+    locked: true
+    description: Global rank field for Jira Software use only.
+    id: customfield_10019
+  - name: Request Type
+    mode: reuse
+    type: com.atlassian.servicedesk:vp-origin
+    searcher: com.atlassian.servicedesk:vp-origin-searcher
+    locked: true
+    description: Holds information about which Service Desk was used to create a ticket. This custom field is created programmatically and must not be modified.
+    id: customfield_10010
+  - name: Sentiment
+    mode: reuse
+    type: com.atlassian.servicedesk.sentiment:sd-sentiment
+    searcher: com.atlassian.servicedesk.sentiment:sd-sentiment-searcher
+    locked: true
+    description: Sentiment is determined by content in the issue and latest comments from the customer. Content quality may vary
+    id: customfield_10024
+  - name: Sprint
+    mode: reuse
+    type: com.pyxis.greenhopper.jira:gh-sprint
+    searcher: com.pyxis.greenhopper.jira:gh-sprint-searcher
+    locked: true
+    description: Jira Software sprint field
+    id: customfield_10020
+  - name: Start date
+    mode: reuse
+    type: date
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:daterange
+    locked: true
+    description: Allows the planned start date for a piece of work to be set.
+    id: customfield_10015
+  - name: Story Points
+    mode: reuse
+    type: number
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:exactnumber
+    description: Measurement of complexity and/or size of a requirement.
+    id: customfield_10035
+  - name: Story point estimate
+    mode: reuse
+    type: com.pyxis.greenhopper.jira:jsw-story-points
+    searcher: com.pyxis.greenhopper.jira:jsw-story-points-searcher
+    locked: true
+    description: Measurement of complexity and/or size of a requirement.
+    id: customfield_10016
+  - name: Submitted forms
+    mode: reuse
+    type: com.atlassian.jira.plugins.proforma-managed-fields:forms-submitted-field-cftype
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:exactnumber
+    locked: true
+    description: The number of submitted forms on the work item
+    id: customfield_10031
+  - name: Target end
+    mode: reuse
+    type: com.atlassian.jpo:jpo-custom-field-baseline-end
+    searcher: com.atlassian.jpo:jpo-custom-field-baseline-end-searcher
+    locked: true
+    description: The targeted end date. This custom field is created and required by Advanced Roadmaps for Jira.
+    id: customfield_10023
+  - name: Target start
+    mode: reuse
+    type: com.atlassian.jpo:jpo-custom-field-baseline-start
+    searcher: com.atlassian.jpo:jpo-custom-field-baseline-start-searcher
+    locked: true
+    description: The targeted start date. This custom field is created and required by Advanced Roadmaps for Jira.
+    id: customfield_10022
+  - name: Team
+    mode: reuse
+    type: com.atlassian.jira.plugin.system.customfieldtypes:atlassian-team
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:atlassian-team-searcher
+    locked: true
+    description: Associates a team to an issue. You can use this field to search and filter issues by team.
+    id: customfield_10001
+  - name: Total forms
+    mode: reuse
+    type: com.atlassian.jira.plugins.proforma-managed-fields:forms-total-field-cftype
+    searcher: com.atlassian.jira.plugin.system.customfieldtypes:exactnumber
+    locked: true
+    description: The total number of forms on the work item
+    id: customfield_10034
+  - name: Work item created forms
+    mode: reuse
+    type: com.atlassian.jira.plugins.proforma-managed-fields:proforma-forms-field-cftype
+    locked: true
+    description: UUIDs of forms associated with this work item at creation
+    id: customfield_10030
+  - name: '[CHART] Date of First Response'
+    mode: reuse
+    type: com.atlassian.jira.ext.charting:firstresponsedate
+    searcher: com.atlassian.jira.ext.charting:firstreponsedatesearcher
+    id: customfield_10027
+  - name: '[CHART] Time in Status'
+    mode: reuse
+    type: com.atlassian.jira.ext.charting:timeinstatus
+    searcher: com.atlassian.jira.ext.charting:textsearcher
+    id: customfield_10028
+  - name: development
+    mode: reuse
+    type: com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf
+    searcher: com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarysearcher
+    locked: true
+    description: Includes development summary panel information used in JQL
+    id: customfield_10000
+
+screens:
+  - name: 'TS: Kanban Bug Screen'
+    mode: reuse
+    id: "10013"
+    tabs:
+      - name: Field Tab
+        fields:
+          - Summary
+          - Description
+          - Issue Type
+          - Assignee
+          - Parent
+          - Priority
+          - Components
+          - Labels
+          - Due date
+          - Linked work items
+          - Fix versions
+          - Attachment
+          - Team
+          - Start date
+          - Security Level
+          - Environment
+          - Affects versions
+          - Reporter
+  - name: 'TS: Kanban Default Issue Screen'
+    mode: reuse
+    id: "10012"
+    tabs:
+      - name: Field Tab
+        fields:
+          - Summary
+          - Description
+          - Issue Type
+          - Assignee
+          - Parent
+          - Priority
+          - Components
+          - Labels
+          - Due date
+          - Linked work items
+          - Fix versions
+          - Attachment
+          - Team
+          - Start date
+          - Security Level
+          - Reporter
+  - name: 'TS: Kanban Epic Screen'
+    mode: reuse
+    id: "10014"
+    tabs:
+      - name: Field Tab
+        fields:
+          - Summary
+          - Issue Type
+          - Assignee
+          - Labels
+          - Description
+          - Priority
+          - Components
+          - Parent
+          - Due date
+          - Linked work items
+          - Fix versions
+          - Attachment
+          - Team
+          - Start date
+          - Security Level
+          - Reporter
+
+workflows:
+  - name: Software Simplified Workflow for Project TS
+    mode: reuse
+    description: Generated by JIRA Software version 1001.0.0-SNAPSHOT. This workflow is managed internally by Jira. Do not manually modify this workflow.
+    id: ed643179-7c7c-444a-beaf-a807bd648e02
+    statuses: [Backlog, Selected for development, In Progress, Done]
+    transitions:
+      - name: Backlog
+        type: global
+        to: Backlog
+        post_functions:
+          - type: clear_field
+            field: Resolution
+        id: "11"
+      - name: Selected for development
+        type: global
+        to: Selected for development
+        post_functions:
+          - type: clear_field
+            field: Resolution
+        id: "21"
+      - name: In Progress
+        type: global
+        to: In Progress
+        post_functions:
+          - type: clear_field
+            field: Resolution
+        id: "31"
+      - name: Done
+        type: global
+        to: Done
+        post_functions:
+          - type: clear_field
+            field: Resolution
+        id: "41"
+      - name: Create
+        type: initial
+        to: Backlog
+        validators:
+          - type: permission
+            permission: CREATE_ISSUES
+        properties: {jira.i18n.title: common.forms.create}
+        id: "1"
+
+space:
+  key: TS
+  id: "10002"
+
+  details:
+    name: Test Sandbox
+    type: software
+    avatar: "10417"
+    lead: user:000000:00000000-0000-0000-0000-000000000001
+    assignee_type: unassigned
+    category: null
+    url: null
+
+  issue_types:
+    - name: Sub-task
+      workflow: Software Simplified Workflow for Project TS
+      screens: 'TS: Kanban Default Issue Screen'
+      binding:
+        screen_scheme: {name: 'TS: Kanban Default Screen Scheme', id: "10012", mode: reuse}
+    - name: Epic
+      default: true
+      workflow: Software Simplified Workflow for Project TS
+      screens: 'TS: Kanban Epic Screen'
+      binding:
+        screen_scheme: {name: 'TS: Kanban Epic Screen Scheme', id: "10014", mode: reuse}
+    - name: Story
+      workflow: Software Simplified Workflow for Project TS
+      screens: 'TS: Kanban Default Issue Screen'
+      binding:
+        screen_scheme: {name: 'TS: Kanban Default Screen Scheme', id: "10012", mode: reuse}
+    - name: Bug
+      workflow: Software Simplified Workflow for Project TS
+      screens: 'TS: Kanban Bug Screen'
+      binding:
+        screen_scheme: {name: 'TS: Kanban Bug Screen Scheme', id: "10013", mode: reuse}
+    - name: Task
+      workflow: Software Simplified Workflow for Project TS
+      screens: 'TS: Kanban Default Issue Screen'
+      binding:
+        screen_scheme: {name: 'TS: Kanban Default Screen Scheme', id: "10012", mode: reuse}
+
+  fields:
+    - name: Actual end
+    - name: Actual start
+    - name: Affects versions
+    - name: AgentSessions
+    - name: Approvals
+    - name: Approvers
+    - name: Assignee
+    - name: Attachment
+    - name: Change reason
+    - name: Change risk
+    - name: Change type
+    - name: Comment
+      renderer: wiki
+    - name: Components
+    - name: Description
+      renderer: wiki
+    - name: Due date
+    - name: Environment
+      renderer: wiki
+      description: For example operating system, software platform and/or hardware specifications (include as appropriate for the issue).
+    - name: Epic Color
+      issue_types: [Epic]
+      description: Epic Colour field for Jira use only.
+    - name: Epic Link
+    - name: Epic Name
+      issue_types: [Epic]
+    - name: Epic Status
+      issue_types: [Epic]
+      description: Epic Status field for Jira use only.
+    - name: Fix versions
+    - name: Flagged
+    - name: Focus Areas
+    - name: Goals
+    - name: Impact
+    - name: Incident manager
+    - name: Issue Type
+      required: true
+    - name: Issue color
+    - name: Labels
+    - name: Linked work items
+    - name: Locked forms
+    - name: Log Work
+      renderer: wiki
+      description: Allows work to be logged whilst creating, editing or transitioning issues.
+    - name: Open forms
+    - name: Organizations
+    - name: Parent
+    - name: Parent Link
+    - name: Priority
+    - name: Project overview key
+    - name: Project overview status
+    - name: Rank
+    - name: Reporter
+      required: true
+    - name: Request Type
+    - name: Resolution
+    - name: Security Level
+    - name: Sentiment
+    - name: Sprint
+    - name: Start date
+    - name: Story Points
+      issue_types: [Epic, Story]
+    - name: Story point estimate
+    - name: Submitted forms
+    - name: Summary
+      required: true
+    - name: Target end
+    - name: Target start
+    - name: Team
+    - name: Time tracking
+      description: |-
+        An estimate of how much work remains until this issue will be resolved.
+        The format of this is ' *w *d *h *m ' (representing weeks, days, hours and minutes - where * can be any number).
+        Examples: 4d, 5h 30m, 60m and 3w.
+    - name: Total forms
+    - name: Work item created forms
+    - name: '[CHART] Date of First Response'
+    - name: '[CHART] Time in Status'
+    - name: development
+    - name: id:dataclassification
+
+  field_contexts:
+    Change reason:
+      - issue_types: all
+        options: [Repair, Upgrade, Maintenance, New functionality, Other]
+        binding:
+          name: Default Configuration Scheme for Change reason
+          id: "10107"
+          scope: shared
+          mode: reuse
+          description: Default configuration scheme generated by Jira
+    Change risk:
+      - issue_types: all
+        options: [Critical, High, Medium, Low]
+        binding:
+          name: Default Configuration Scheme for Change risk
+          id: "10106"
+          scope: shared
+          mode: reuse
+          description: Default configuration scheme generated by Jira
+    Change type:
+      - issue_types: all
+        options: [Standard, Normal, Emergency]
+        binding:
+          name: Default Configuration Scheme for Change type
+          id: "10105"
+          scope: shared
+          mode: reuse
+          description: Default configuration scheme generated by Jira
+    Flagged:
+      - issue_types: all
+        options: [Impediment]
+        binding:
+          name: Default Configuration Scheme for Flagged
+          id: "10121"
+          scope: shared
+          mode: reuse
+          description: Default configuration scheme generated by Jira
+    Impact:
+      - issue_types: all
+        options: [Extensive / Widespread, Significant / Large, Moderate / Limited, Minor / Localized]
+        binding:
+          name: Default Configuration Scheme for Impact
+          id: "10104"
+          scope: shared
+          mode: reuse
+          description: Default configuration scheme generated by Jira
+
+  permissions:
+    grants:
+      ADD_COMMENTS: [application_role, 'role:atlassian-addons-project-access']
+      ADMINISTER_PROJECTS: ['role:Administrators', 'role:atlassian-addons-project-access']
+      ARCHIVE_ISSUES: ['role:Administrators', 'role:atlassian-addons-project-access']
+      ASSIGNABLE_USER: [application_role, 'role:atlassian-addons-project-access']
+      ASSIGN_ISSUES: [application_role, 'role:atlassian-addons-project-access']
+      BROWSE_PROJECTS: [application_role, 'role:atlassian-addons-project-access']
+      CLOSE_ISSUES: [application_role, 'role:atlassian-addons-project-access']
+      CREATE_ATTACHMENTS: [application_role, 'role:atlassian-addons-project-access']
+      CREATE_ISSUES: [application_role, 'role:atlassian-addons-project-access']
+      DELETE_ALL_ATTACHMENTS: ['role:Administrators', 'role:atlassian-addons-project-access']
+      DELETE_ALL_COMMENTS: ['role:Administrators', 'role:atlassian-addons-project-access']
+      DELETE_ALL_WORKLOGS: ['role:Administrators', 'role:atlassian-addons-project-access']
+      DELETE_ISSUES: ['role:Administrators', 'role:atlassian-addons-project-access']
+      DELETE_OWN_ATTACHMENTS: [application_role, 'role:atlassian-addons-project-access']
+      DELETE_OWN_COMMENTS: [application_role, 'role:atlassian-addons-project-access']
+      DELETE_OWN_WORKLOGS: [application_role, 'role:atlassian-addons-project-access']
+      EDIT_ALL_COMMENTS: ['role:Administrators', 'role:atlassian-addons-project-access']
+      EDIT_ALL_WORKLOGS: ['role:Administrators', 'role:atlassian-addons-project-access']
+      EDIT_ISSUES: [application_role, 'role:atlassian-addons-project-access']
+      EDIT_ISSUE_LAYOUT: ['role:atlassian-addons-project-access']
+      EDIT_OWN_COMMENTS: [application_role, 'role:atlassian-addons-project-access']
+      EDIT_OWN_WORKLOGS: [application_role, 'role:atlassian-addons-project-access']
+      EDIT_WORKFLOW: ['role:atlassian-addons-project-access']
+      LINK_ISSUES: [application_role, 'role:atlassian-addons-project-access']
+      MANAGE_SPRINTS_PERMISSION: [application_role, 'role:atlassian-addons-project-access']
+      MANAGE_VERSIONS: ['role:atlassian-addons-project-access']
+      MANAGE_WATCHERS: ['role:Administrators', 'role:atlassian-addons-project-access']
+      MODIFY_REPORTER: ['role:Administrators', 'role:atlassian-addons-project-access']
+      MOVE_ISSUES: [application_role, 'role:atlassian-addons-project-access']
+      RESOLVE_ISSUES: [application_role, 'role:atlassian-addons-project-access']
+      SCHEDULE_ISSUES: [application_role, 'role:atlassian-addons-project-access']
+      SET_ISSUE_SECURITY: ['role:atlassian-addons-project-access']
+      TRANSITION_ISSUES: [application_role, 'role:atlassian-addons-project-access']
+      UNARCHIVE_ISSUES: ['role:Administrators', 'role:atlassian-addons-project-access']
+      VIEW_AGGREGATED_DATA: [application_role, 'role:atlassian-addons-project-access']
+      VIEW_DEV_TOOLS: [application_role, 'role:atlassian-addons-project-access']
+      VIEW_READONLY_WORKFLOW: [application_role, 'role:atlassian-addons-project-access']
+      VIEW_VOTERS_AND_WATCHERS: [application_role, 'role:atlassian-addons-project-access']
+      WORK_ON_ISSUES: [application_role, 'role:atlassian-addons-project-access']
+    binding:
+      name: Default software scheme
+      id: "10002"
+      mode: reuse
+      description: Default scheme for Software projects.
+
+  notifications:
+    events:
+      Generic Event: [all_watchers, current_assignee, reporter]
+      Issue Assigned: [all_watchers, current_assignee, reporter]
+      Issue Closed: [all_watchers, current_assignee, reporter]
+      Issue Comment Edited: [all_watchers, current_assignee, reporter]
+      Issue Commented: [all_watchers, current_assignee, reporter]
+      Issue Created: [all_watchers, current_assignee, reporter]
+      Issue Deleted: [all_watchers, current_assignee, reporter]
+      Issue Moved: [all_watchers, current_assignee, reporter]
+      Issue Reopened: [all_watchers, current_assignee, reporter]
+      Issue Resolved: [all_watchers, current_assignee, reporter]
+      Issue Updated: [all_watchers, current_assignee, reporter]
+      Issue Worklog Deleted: [all_watchers, current_assignee, reporter]
+      Issue Worklog Updated: [all_watchers, current_assignee, reporter]
+      Work Logged On Issue: [all_watchers, current_assignee, reporter]
+      Work Started On Issue: [all_watchers, current_assignee, reporter]
+      Work Stopped On Issue: [all_watchers, current_assignee, reporter]
+    binding: {name: Default Notification Scheme, id: "10000", mode: reuse}
+
+  issue_security: null
+
+  priorities:
+    priorities: [Highest, High, Medium, Low, Lowest]
+    default: Medium
+    binding:
+      name: Default priority scheme
+      id: "10124"
+      mode: reuse
+      site_default: true
+      description: This is the default scheme used by all new and unassigned projects
+
+  binding:
+    issue_type_scheme: {name: 'TS: Kanban Issue Type Scheme', id: "10146", mode: reuse}
+    issue_type_screen_scheme: {name: 'TS: Kanban Issue Type Screen Scheme', id: "10002", mode: reuse}
+    field_scheme: {name: Default Field Scheme, id: "1", mode: reuse, site_default: true}
+    workflow_scheme:
+      name: 'TS: Software Simplified Workflow Scheme'
+      id: "10003"
+      mode: reuse
+      description: Generated by JIRA Software version 1001.0.0-SNAPSHOT. This workflow scheme is managed internally by Jira. Do not manually modify this workflow scheme.
+
+  role_members:
+    atlassian-addons-project-access:
+      - user:000000:00000000-0000-0000-0000-000000000002
+      - user:000000:00000000-0000-0000-0000-000000000003
+      - user:000000:00000000-0000-0000-0000-000000000004
+      - user:000000:00000000-0000-0000-0000-000000000005
+      - user:000000:00000000-0000-0000-0000-000000000006
+      - user:000000:00000000-0000-0000-0000-000000000007
+      - user:000000:00000000-0000-0000-0000-000000000008
+      - user:000000:00000000-0000-0000-0000-000000000009
+      - user:000000:00000000-0000-0000-0000-000000000010
+      - user:000000:00000000-0000-0000-0000-000000000011
+
+  properties:
+    jira-slack-integration-projectLeadNotified: {projectLeadNotified: 0}
+    jswSelectedBoardType: {jswSelectedBoardType: kanban}
+    project.created.via.v2: true
+
+filters:
+  - name: Filter for TS board
+    mode: reuse
+    jql: project = "TS" ORDER BY Rank ASC
+    viewers: [space]
+    id: "10002"
+
+boards:
+  - name: TS board
+    mode: reuse
+    type: kanban
+    filter: Filter for TS board
+    id: "3"
+
+notes:
+  - Field "development" is shown as "Development" in this account's language; the spec uses the stored name.
+  - Field "Issue color" is shown as "Issue colour" in this account's language; the spec uses the stored name.
+  - Field "AgentSessions" is shown as "Agent Sessions" in this account's language; the spec uses the stored name.
+  - Field dataclassification is configured for the space but is not in the site's field list; the spec names it as id:dataclassification.
+  - Field "Start date" has a default value of type "datepicker", which the format has no form for; set it in Jira by hand.
+  - Field "Actual start" has a default value of type "datetimepicker", which the format has no form for; set it in Jira by hand.
+  - Field "Actual end" has a default value of type "datetimepicker", which the format has no form for; set it in Jira by hand.
+  - Workflow "Software Simplified Workflow for Project TS" is a simplified workflow that Jira manages through the board's columns; change it there, not here.
+  - Role type "atlassian-addons-project-access" (id 10012) has the same name as role 10003 used here; the ID in the spec tells them apart.
+  - Role type "jira-guest-member" (id 10011) has the same name as role 10014 used here; the ID in the spec tells them apart.

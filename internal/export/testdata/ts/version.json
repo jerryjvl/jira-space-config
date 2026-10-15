@@ -1,0 +1,8 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "self": "https://example.atlassian.net/rest/api/3/project/TS/version?maxResults=50&startAt=0",
+  "startAt": 0,
+  "total": 0,
+  "values": []
+}

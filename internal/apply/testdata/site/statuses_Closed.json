@@ -1,0 +1,1 @@
+{"isLast":true,"startAt":0,"maxResults":50,"total":2,"values":[{"id":"6","name":"Closed","description":"","statusCategory":"IN_PROGRESS","scope":{"type":"GLOBAL"}},{"id":"10200","name":"Closed","description":"","statusCategory":"DONE","scope":{"type":"PROJECT","project":{"id":"10300"}}}]}

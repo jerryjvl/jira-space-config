@@ -1,0 +1,344 @@
+{
+  "expand": "notificationSchemeEvents,user,group,projectRole,field,all",
+  "id": 10000,
+  "name": "Default Notification Scheme",
+  "notificationSchemeEvents": [
+    {
+      "event": {
+        "description": "This is the 'issue created' event.",
+        "id": 1,
+        "name": "Issue Created"
+      },
+      "notifications": [
+        {
+          "id": 10000,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10001,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10002,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue updated' event.",
+        "id": 2,
+        "name": "Issue Updated"
+      },
+      "notifications": [
+        {
+          "id": 10003,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10004,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10005,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue assigned' event.",
+        "id": 3,
+        "name": "Issue Assigned"
+      },
+      "notifications": [
+        {
+          "id": 10006,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10007,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10008,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue resolved' event.",
+        "id": 4,
+        "name": "Issue Resolved"
+      },
+      "notifications": [
+        {
+          "id": 10009,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10010,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10011,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue closed' event.",
+        "id": 5,
+        "name": "Issue Closed"
+      },
+      "notifications": [
+        {
+          "id": 10012,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10013,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10014,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue commented' event.",
+        "id": 6,
+        "name": "Issue Commented"
+      },
+      "notifications": [
+        {
+          "id": 10015,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10016,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10017,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue reopened' event.",
+        "id": 7,
+        "name": "Issue Reopened"
+      },
+      "notifications": [
+        {
+          "id": 10018,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10019,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10020,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue deleted' event.",
+        "id": 8,
+        "name": "Issue Deleted"
+      },
+      "notifications": [
+        {
+          "id": 10021,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10022,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10023,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue moved' event.",
+        "id": 9,
+        "name": "Issue Moved"
+      },
+      "notifications": [
+        {
+          "id": 10024,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10025,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10026,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'work logged on issue' event.",
+        "id": 10,
+        "name": "Work Logged On Issue"
+      },
+      "notifications": [
+        {
+          "id": 10027,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10028,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10029,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'work started on issue' event.",
+        "id": 11,
+        "name": "Work Started On Issue"
+      },
+      "notifications": [
+        {
+          "id": 10030,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10031,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10032,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'work stopped on issue' event.",
+        "id": 12,
+        "name": "Work Stopped On Issue"
+      },
+      "notifications": [
+        {
+          "id": 10033,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10034,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10035,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'generic event' event.",
+        "id": 13,
+        "name": "Generic Event"
+      },
+      "notifications": [
+        {
+          "id": 10036,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10037,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10038,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue comment edited' event.",
+        "id": 14,
+        "name": "Issue Comment Edited"
+      },
+      "notifications": [
+        {
+          "id": 10100,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10101,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10102,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue worklog updated' event.",
+        "id": 15,
+        "name": "Issue Worklog Updated"
+      },
+      "notifications": [
+        {
+          "id": 10103,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10104,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10105,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    },
+    {
+      "event": {
+        "description": "This is the 'issue worklog deleted' event.",
+        "id": 16,
+        "name": "Issue Worklog Deleted"
+      },
+      "notifications": [
+        {
+          "id": 10106,
+          "notificationType": "CurrentAssignee"
+        },
+        {
+          "id": 10107,
+          "notificationType": "Reporter"
+        },
+        {
+          "id": 10108,
+          "notificationType": "AllWatchers"
+        }
+      ]
+    }
+  ],
+  "self": "https://example.atlassian.net/rest/api/3/notificationscheme/10000"
+}

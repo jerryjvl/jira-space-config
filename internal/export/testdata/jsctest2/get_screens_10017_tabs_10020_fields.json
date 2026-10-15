@@ -1,0 +1,70 @@
+[
+  {
+    "id": "summary",
+    "name": "Summary"
+  },
+  {
+    "id": "issuetype",
+    "name": "Issue Type"
+  },
+  {
+    "id": "assignee",
+    "name": "Assignee"
+  },
+  {
+    "id": "labels",
+    "name": "Labels"
+  },
+  {
+    "id": "customfield_10020",
+    "name": "Sprint"
+  },
+  {
+    "id": "description",
+    "name": "Description"
+  },
+  {
+    "id": "priority",
+    "name": "Priority"
+  },
+  {
+    "id": "components",
+    "name": "Components"
+  },
+  {
+    "id": "parent",
+    "name": "Parent"
+  },
+  {
+    "id": "issuelinks",
+    "name": "Linked work items"
+  },
+  {
+    "id": "duedate",
+    "name": "Due date"
+  },
+  {
+    "id": "fixVersions",
+    "name": "Fix versions"
+  },
+  {
+    "id": "attachment",
+    "name": "Attachment"
+  },
+  {
+    "id": "customfield_10001",
+    "name": "Team"
+  },
+  {
+    "id": "customfield_10015",
+    "name": "Start date"
+  },
+  {
+    "id": "security",
+    "name": "Security Level"
+  },
+  {
+    "id": "reporter",
+    "name": "Reporter"
+  }
+]

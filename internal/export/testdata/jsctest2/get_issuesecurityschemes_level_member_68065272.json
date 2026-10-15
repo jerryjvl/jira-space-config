@@ -1,0 +1,38 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 3,
+  "values": [
+    {
+      "holder": {
+        "expand": "group",
+        "parameter": "jira-admins-example",
+        "type": "group",
+        "value": "58a02559-d97d-4dd0-835a-d1b4d19632c9"
+      },
+      "id": "10000",
+      "issueSecurityLevelId": "10001",
+      "issueSecuritySchemeId": "10002"
+    },
+    {
+      "holder": {
+        "type": "reporter"
+      },
+      "id": "10001",
+      "issueSecurityLevelId": "10000",
+      "issueSecuritySchemeId": "10002"
+    },
+    {
+      "holder": {
+        "expand": "projectRole",
+        "parameter": "10002",
+        "type": "projectRole",
+        "value": "10002"
+      },
+      "id": "10002",
+      "issueSecurityLevelId": "10000",
+      "issueSecuritySchemeId": "10002"
+    }
+  ]
+}

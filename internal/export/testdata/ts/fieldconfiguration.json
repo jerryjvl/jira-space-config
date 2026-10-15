@@ -1,0 +1,14 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "description": "The default field configuration",
+      "id": 10000,
+      "isDefault": true,
+      "name": "Default Field Configuration"
+    }
+  ]
+}

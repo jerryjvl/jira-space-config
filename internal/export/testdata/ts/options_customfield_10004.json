@@ -1,0 +1,28 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "startAt": 0,
+  "total": 4,
+  "values": [
+    {
+      "disabled": false,
+      "id": "10000",
+      "value": "Extensive / Widespread"
+    },
+    {
+      "disabled": false,
+      "id": "10001",
+      "value": "Significant / Large"
+    },
+    {
+      "disabled": false,
+      "id": "10002",
+      "value": "Moderate / Limited"
+    },
+    {
+      "disabled": false,
+      "id": "10003",
+      "value": "Minor / Localized"
+    }
+  ]
+}

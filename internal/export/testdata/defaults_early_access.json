@@ -1,0 +1,6 @@
+{
+  "errorMessages": [
+    "This feature is not enabled for this tenant. Only tenants enrolled in the early access program (EAP) can access this resource. See https://ecosystem.atlassian.net/browse/CHANGE-3082."
+  ],
+  "errors": {}
+}

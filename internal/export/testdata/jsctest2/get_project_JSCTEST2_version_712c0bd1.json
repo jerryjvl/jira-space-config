@@ -1,0 +1,41 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "self": "https://example.atlassian.net/rest/api/3/project/JSCTEST2/version?maxResults=50&startAt=0",
+  "startAt": 0,
+  "total": 3,
+  "values": [
+    {
+      "archived": false,
+      "description": "First release",
+      "id": "10000",
+      "name": "1.0",
+      "projectId": 10003,
+      "releaseDate": "2026-03-31",
+      "released": true,
+      "self": "https://example.atlassian.net/rest/api/3/version/10000",
+      "startDate": "2026-01-05",
+      "userReleaseDate": "31/Mar/26",
+      "userStartDate": "05/Jan/26"
+    },
+    {
+      "archived": true,
+      "description": "Beta",
+      "id": "10001",
+      "name": "0.9",
+      "projectId": 10003,
+      "released": true,
+      "self": "https://example.atlassian.net/rest/api/3/version/10001"
+    },
+    {
+      "archived": false,
+      "id": "10002",
+      "name": "1.1",
+      "projectId": 10003,
+      "released": false,
+      "self": "https://example.atlassian.net/rest/api/3/version/10002",
+      "startDate": "2026-04-01",
+      "userStartDate": "01/Apr/26"
+    }
+  ]
+}

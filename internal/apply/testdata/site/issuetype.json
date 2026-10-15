@@ -1,0 +1,3 @@
+[{"id":"10005","name":"Story","untranslatedName":"Story","description":"","hierarchyLevel":0,"avatarId":10315},
+ {"id":"10014","name":"Task","untranslatedName":"Task","description":"","hierarchyLevel":0,"avatarId":10318},
+ {"id":"10400","name":"Finding","description":"","hierarchyLevel":0,"avatarId":10318,"scope":{"type":"PROJECT","project":{"id":"10300"}}}]

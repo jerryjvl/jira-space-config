@@ -1,0 +1,43 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "self": "https://example.atlassian.net/rest/api/3/filter/search?expand=description%2Cjql%2CsharePermissions%2CeditPermissions&maxResults=50&projectId=10002&startAt=0",
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "editPermissions": [],
+      "expand": "description,owner,jql,viewUrl,searchUrl,favourite,favouritedCount,sharePermissions,editPermissions,isWritable,approximateLastUsed,subscriptions",
+      "id": "10002",
+      "jql": "project = \"TS\" ORDER BY Rank ASC",
+      "name": "Filter for TS board",
+      "self": "https://example.atlassian.net/rest/api/3/filter/10002",
+      "sharePermissions": [
+        {
+          "id": 10003,
+          "project": {
+            "assigneeType": "PROJECT_LEAD",
+            "avatarUrls": {
+              "16x16": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10417?size=xsmall",
+              "24x24": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10417?size=small",
+              "32x32": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10417?size=medium",
+              "48x48": "https://example.atlassian.net/rest/api/3/universal_avatar/view/type/project/avatar/10417"
+            },
+            "entityId": "85c92cf4-97fd-493c-b750-4fbe51cbca99",
+            "id": "10002",
+            "key": "TS",
+            "name": "Test Sandbox",
+            "projectTypeKey": "software",
+            "properties": {},
+            "roles": {},
+            "self": "https://example.atlassian.net/rest/api/3/project/10002",
+            "simplified": false,
+            "style": "classic",
+            "uuid": "85c92cf4-97fd-493c-b750-4fbe51cbca99"
+          },
+          "type": "project"
+        }
+      ]
+    }
+  ]
+}

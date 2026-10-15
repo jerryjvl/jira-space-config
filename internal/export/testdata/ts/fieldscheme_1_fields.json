@@ -1,0 +1,746 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "self": "https://example.atlassian.net/rest/api/3/config/fieldschemes/1/fields?startAt=0&maxResults=100",
+  "startAt": 0,
+  "total": 61,
+  "values": [
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "assignee",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "attachment",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "comment",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "atlassian-wiki-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "components",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10000",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10001",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10002",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "customfield_10003",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "customfield_10004",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "customfield_10005",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "customfield_10006",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "customfield_10007",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "customfield_10008",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "customfield_10009",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10010",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10011",
+      "restrictedToWorkTypes": [
+        "10000"
+      ],
+      "workTypeParameters": [
+        {
+          "description": "Provide a short name to identify this epic.",
+          "isRequired": false,
+          "rendererType": "jira-text-renderer",
+          "workTypeId": "10000"
+        }
+      ]
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10012",
+      "restrictedToWorkTypes": [
+        "10000"
+      ],
+      "workTypeParameters": [
+        {
+          "description": "Epic Status field for Jira use only.",
+          "isRequired": false,
+          "rendererType": "jira-text-renderer",
+          "workTypeId": "10000"
+        }
+      ]
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10013",
+      "restrictedToWorkTypes": [
+        "10000"
+      ],
+      "workTypeParameters": [
+        {
+          "description": "Epic Colour field for Jira use only.",
+          "isRequired": false,
+          "rendererType": "jira-text-renderer",
+          "workTypeId": "10000"
+        }
+      ]
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10014",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10015",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10016",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10017",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10018",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10019",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10020",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10021",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10022",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10023",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10024",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10025",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10026",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "customfield_10027",
+      "parameters": {
+        "description": "",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "customfield_10028",
+      "parameters": {
+        "description": "",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10029",
+      "parameters": {
+        "description": "Link goals to work items",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10030",
+      "parameters": {
+        "description": "UUIDs of forms associated with this work item at creation",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10031",
+      "parameters": {
+        "description": "The number of submitted forms on the work item",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10032",
+      "parameters": {
+        "description": "The number of open forms on the work item",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10033",
+      "parameters": {
+        "description": "The number of locked forms on the work item",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10034",
+      "parameters": {
+        "description": "The total number of forms on the work item",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "customfield_10035",
+      "restrictedToWorkTypes": [
+        "10000",
+        "10005"
+      ],
+      "workTypeParameters": [
+        {
+          "description": "Measurement of complexity and/or size of a requirement.",
+          "isRequired": false,
+          "rendererType": "jira-text-renderer",
+          "workTypeId": "10000"
+        },
+        {
+          "description": "Measurement of complexity and/or size of a requirement.",
+          "isRequired": false,
+          "rendererType": "jira-text-renderer",
+          "workTypeId": "10005"
+        }
+      ]
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10038",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD"
+      ],
+      "fieldId": "customfield_10040",
+      "parameters": {
+        "description": "Link focus areas to work items",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "CHANGE_REQUIRED"
+      ],
+      "fieldId": "customfield_10041",
+      "parameters": {
+        "description": "Key of project overview connected via Atlassian Home for Jira Cloud",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "CHANGE_REQUIRED"
+      ],
+      "fieldId": "customfield_10042",
+      "parameters": {
+        "description": "Status of project overview connected via Atlassian Home for Jira Cloud",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "fieldId": "dataclassification",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "description",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "atlassian-wiki-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "duedate",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "environment",
+      "parameters": {
+        "description": "For example operating system, software platform and/or hardware specifications (include as appropriate for the issue).",
+        "isRequired": false,
+        "rendererType": "atlassian-wiki-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "fixVersions",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "issuelinks",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "issuetype",
+      "parameters": {
+        "isRequired": true,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "labels",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "parent",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "priority",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "reporter",
+      "parameters": {
+        "isRequired": true,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "resolution",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "security",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "summary",
+      "parameters": {
+        "isRequired": true,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "timetracking",
+      "parameters": {
+        "description": "An estimate of how much work remains until this issue will be resolved.\nThe format of this is ' *w *d *h *m ' (representing weeks, days, hours and minutes - where * can be any number).\nExamples: 4d, 5h 30m, 60m and 3w.",
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "versions",
+      "parameters": {
+        "isRequired": false,
+        "rendererType": "jira-text-renderer"
+      }
+    },
+    {
+      "allowedOperations": [
+        "ADD",
+        "REMOVE",
+        "CHANGE_REQUIRED",
+        "CHANGE_DESCRIPTION"
+      ],
+      "fieldId": "worklog",
+      "parameters": {
+        "description": "Allows work to be logged whilst creating, editing or transitioning issues.",
+        "isRequired": false,
+        "rendererType": "atlassian-wiki-renderer"
+      }
+    }
+  ]
+}

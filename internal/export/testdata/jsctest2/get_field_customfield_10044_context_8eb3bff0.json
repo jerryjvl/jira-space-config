@@ -1,0 +1,14 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "id": "10159",
+      "isAnyIssueType": false,
+      "isGlobalContext": false,
+      "name": "JSCTEST2 Target (Bug)"
+    }
+  ]
+}

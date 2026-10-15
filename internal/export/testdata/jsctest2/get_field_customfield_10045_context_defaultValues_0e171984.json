@@ -1,0 +1,20 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 1,
+  "values": [
+    {
+      "contextId": 10150,
+      "defaultValues": [
+        {
+          "isAnyIssueType": true,
+          "value": {
+            "optionId": "10035",
+            "type": "option.single"
+          }
+        }
+      ]
+    }
+  ]
+}

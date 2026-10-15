@@ -1,0 +1,24 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 2,
+  "values": [
+    {
+      "description": "Administrators and reporters only",
+      "id": "10000",
+      "isDefault": true,
+      "issueSecuritySchemeId": "10002",
+      "name": "Restricted",
+      "self": "https://example.atlassian.net/rest/api/3/issuesecurityscheme/level?id=10000"
+    },
+    {
+      "description": "The admin group",
+      "id": "10001",
+      "isDefault": false,
+      "issueSecuritySchemeId": "10002",
+      "name": "Team",
+      "self": "https://example.atlassian.net/rest/api/3/issuesecurityscheme/level?id=10001"
+    }
+  ]
+}

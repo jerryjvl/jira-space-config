@@ -1,0 +1,36 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 4,
+  "values": [
+    {
+      "description": "Work has been completed on this issue.",
+      "id": "10000",
+      "isDefault": false,
+      "name": "Done",
+      "self": "https://example.atlassian.net/rest/api/3/resolution/10000"
+    },
+    {
+      "description": "This issue won't be actioned.",
+      "id": "10001",
+      "isDefault": false,
+      "name": "Won't Do",
+      "self": "https://example.atlassian.net/rest/api/3/resolution/10001"
+    },
+    {
+      "description": "The problem is a duplicate of an existing work item.",
+      "id": "10002",
+      "isDefault": false,
+      "name": "Duplicate",
+      "self": "https://example.atlassian.net/rest/api/3/resolution/10002"
+    },
+    {
+      "description": "All attempts at reproducing this work item failed, or not enough information was available to reproduce the work item. Reading the code produces no clues as to why this behaviour would occur. If more information appears later, please reopen the work item.",
+      "id": "10003",
+      "isDefault": false,
+      "name": "Cannot Reproduce",
+      "self": "https://example.atlassian.net/rest/api/3/resolution/10003"
+    }
+  ]
+}

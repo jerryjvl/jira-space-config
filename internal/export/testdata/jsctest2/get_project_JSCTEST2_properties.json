@@ -1,0 +1,16 @@
+{
+  "keys": [
+    {
+      "key": "jira-slack-integration-projectLeadNotified",
+      "self": "https://example.atlassian.net/rest/api/3/project/10003/properties/jira-slack-integration-projectLeadNotified"
+    },
+    {
+      "key": "jswSelectedBoardType",
+      "self": "https://example.atlassian.net/rest/api/3/project/10003/properties/jswSelectedBoardType"
+    },
+    {
+      "key": "project.created.via.v2",
+      "self": "https://example.atlassian.net/rest/api/3/project/10003/properties/project.created.via.v2"
+    }
+  ]
+}

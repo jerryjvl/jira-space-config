@@ -1,0 +1,22 @@
+[
+  {
+    "id": "summary",
+    "name": "Summary"
+  },
+  {
+    "id": "description",
+    "name": "Description"
+  },
+  {
+    "id": "customfield_10043",
+    "name": "JSCTEST2 Severity"
+  },
+  {
+    "id": "customfield_10047",
+    "name": "JSCTEST2 Score"
+  },
+  {
+    "id": "customfield_10050",
+    "name": "JSCTEST2 Notes"
+  }
+]

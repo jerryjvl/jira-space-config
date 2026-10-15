@@ -1,0 +1,237 @@
+{
+  "connectRules": [],
+  "editorScope": "GLOBAL",
+  "forgeRules": [],
+  "projectTypes": [
+    "software"
+  ],
+  "systemRules": [
+    {
+      "description": "Automatically assign a work item to someone after moving the work item using a particular transition.",
+      "isAvailableForInitialTransition": true,
+      "isVisible": true,
+      "name": "Assign a work item",
+      "ruleKey": "system:change-assignee",
+      "ruleType": "Function"
+    },
+    {
+      "description": "Automatically copy the value of one field to another after moving a work item using a particular transition.",
+      "isAvailableForInitialTransition": true,
+      "isVisible": true,
+      "name": "Copy the value of one field to another",
+      "ruleKey": "system:copy-value-from-other-field",
+      "ruleType": "Function"
+    },
+    {
+      "description": "Automatically change the value of a work item field after moving the work item using a particular transition.",
+      "isAvailableForInitialTransition": true,
+      "isVisible": true,
+      "name": "Update a work item field",
+      "ruleKey": "system:update-field",
+      "ruleType": "Function"
+    },
+    {
+      "description": "Only allow certain people to move a work item using a particular transition.",
+      "isAvailableForInitialTransition": false,
+      "isVisible": true,
+      "name": "Restrict who can move a work item",
+      "ruleKey": "system:restrict-issue-transition",
+      "ruleType": "Condition"
+    },
+    {
+      "description": "Only allow a work item to be moved using a particular transition if a work item has had a specific status.",
+      "isAvailableForInitialTransition": false,
+      "isVisible": true,
+      "name": "Restrict to when a work item has been through a specific status",
+      "ruleKey": "system:previous-status-condition",
+      "ruleType": "Condition"
+    },
+    {
+      "description": "Only allow a work item to be moved using a particular transition when a field is a specific value or range of values.",
+      "isAvailableForInitialTransition": false,
+      "isVisible": true,
+      "name": "Restrict to when a field is a specific value",
+      "ruleKey": "system:check-field-value",
+      "ruleType": "Condition"
+    },
+    {
+      "description": "Allow people to update fields in a screen before they move a work item.",
+      "isAvailableForInitialTransition": false,
+      "isVisible": true,
+      "name": "Show a screen",
+      "ruleKey": "system:transition-screen",
+      "ruleType": "Screen"
+    },
+    {
+      "description": "Ensure people have a specific permission when moving a work item using a particular transition.",
+      "isAvailableForInitialTransition": true,
+      "isVisible": true,
+      "name": "Validate that people have a specific permission",
+      "ruleKey": "system:check-permission-validator",
+      "ruleType": "Validator"
+    },
+    {
+      "description": "Notify other apps and websites that this work item has moved through a particular transition.",
+      "isAvailableForInitialTransition": true,
+      "isVisible": true,
+      "name": "Trigger a webhook",
+      "ruleKey": "system:trigger-webhook",
+      "ruleType": "Function"
+    },
+    {
+      "description": "Only allow a work item to be transitioned when its subtasks have a specific status.",
+      "isAvailableForInitialTransition": false,
+      "isVisible": true,
+      "name": "Restrict based on the status of subtasks",
+      "ruleKey": "system:parent-or-child-blocking-condition",
+      "ruleType": "Condition"
+    },
+    {
+      "description": "Ensure that a work item's parent has a specific status when moving a work item.",
+      "isAvailableForInitialTransition": true,
+      "isVisible": true,
+      "name": "Validate that parent work items are in a specific status",
+      "ruleKey": "system:parent-or-child-blocking-validator",
+      "ruleType": "Validator"
+    },
+    {
+      "description": "Ensure that a work item has been through a specific status when moving a work item.",
+      "isAvailableForInitialTransition": false,
+      "isVisible": true,
+      "name": "Validate that a work item has been through a specific status",
+      "ruleKey": "system:previous-status-validator",
+      "ruleType": "Validator"
+    },
+    {
+      "description": "Only allow people who haven't moved a work item between two statuses to move a work item using a particular transition.",
+      "isAvailableForInitialTransition": false,
+      "isVisible": true,
+      "name": "Restrict users who have previously updated a work item's status",
+      "ruleKey": "system:separation-of-duties",
+      "ruleType": "Condition"
+    },
+    {
+      "description": "Ensure that a field is a certain value when moving a work item using a particular transition",
+      "isAvailableForInitialTransition": true,
+      "isVisible": true,
+      "name": "Validate a field",
+      "ruleKey": "system:validate-field-value",
+      "ruleType": "Validator"
+    },
+    {
+      "description": "Don't allow anyone to move a work item using a particular transition (can include APIs).",
+      "isAvailableForInitialTransition": false,
+      "isVisible": true,
+      "name": "Restrict from all users",
+      "ruleKey": "system:restrict-from-all-users",
+      "ruleType": "Condition"
+    },
+    {
+      "description": "Automatically triggers an agent action after moving the work item using a particular transition.",
+      "isAvailableForInitialTransition": true,
+      "isVisible": true,
+      "name": "Trigger agent action",
+      "ruleKey": "system:trigger-agent",
+      "ruleType": "Function"
+    },
+    {
+      "description": "Validate that one or more forms are attached to the work item.",
+      "isAvailableForInitialTransition": true,
+      "isVisible": true,
+      "name": "Require a work item to have a form attached",
+      "ruleKey": "system:proforma-forms-attached",
+      "ruleType": "Validator"
+    },
+    {
+      "description": "Validate that all forms attached to the work item have been submitted.",
+      "isAvailableForInitialTransition": true,
+      "isVisible": true,
+      "name": "Require form submission on a work item",
+      "ruleKey": "system:proforma-forms-submitted",
+      "ruleType": "Validator"
+    },
+    {
+      "description": "Condition to block work item transition if there is a pending approval.",
+      "isAvailableForInitialTransition": false,
+      "isVisible": true,
+      "name": "Block transition until approval",
+      "ruleKey": "system:block-in-progress-approval",
+      "ruleType": "Condition"
+    },
+    {
+      "description": "Automatically set a work item's security level if the user is in a specific space role after moving the work item using a particular transition.",
+      "isAvailableForInitialTransition": true,
+      "isVisible": true,
+      "name": "Set a work item's security level",
+      "ruleKey": "system:set-security-level-from-role",
+      "ruleType": "Function"
+    }
+  ],
+  "triggerRules": [
+    {
+      "availableTypes": [
+        {
+          "description": "Automatically transitions the work item when a related pull request is created in a connected repository.",
+          "name": "Pull request created",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:pull-request-created-trigger"
+        },
+        {
+          "description": "Automatically transitions the work item when a related pull request is merged in a connected repository.",
+          "name": "Pull request merged",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:pull-request-merged-trigger"
+        },
+        {
+          "description": "Automatically transitions the work item when a related pull request is declined in a connected repository.",
+          "name": "Pull request declined",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:pull-request-declined-trigger"
+        },
+        {
+          "description": "Automatically transitions the work item when a related pull request is reopened in a connected repository.",
+          "name": "Pull request reopened",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:pull-request-reopened-trigger"
+        },
+        {
+          "description": "Automatically transitions the work item when a related branch is created in a connected repository",
+          "name": "Branch created",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:branch-created-trigger"
+        },
+        {
+          "description": "Automatically transitions the work item when a related commit is made in a connected repository",
+          "name": "Commit created",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:commit-created-trigger"
+        },
+        {
+          "description": "Automatically transitions the work item when a related review is started in Crucible",
+          "name": "Review started",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:review-started-trigger"
+        },
+        {
+          "description": "Automatically transitions the work item when a related review is abandoned in Crucible",
+          "name": "Review abandoned",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:review-abandoned-trigger"
+        },
+        {
+          "description": "Automatically transitions the work item when a related review is submitted for approval in Crucible",
+          "name": "Review submitted for approval",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:review-approval-trigger"
+        },
+        {
+          "description": "Automatically transitions the work item when a related review is closed in Crucible",
+          "name": "Review closed",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:review-closed-trigger"
+        },
+        {
+          "description": "Automatically transitions the work item when a related review is rejected in Crucible",
+          "name": "Review rejected",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:review-rejected-trigger"
+        },
+        {
+          "description": "Automatically transitions the work item when a related review is summarised in Crucible",
+          "name": "Review summarised",
+          "type": "com.atlassian.jira.plugins.jira-development-integration-plugin:review-summarized-trigger"
+        }
+      ],
+      "ruleKey": "system:development-triggers"
+    }
+  ]
+}

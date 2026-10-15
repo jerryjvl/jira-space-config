@@ -1,0 +1,11 @@
+{
+  "description": "Fields for JSCTEST2 (test data)",
+  "fieldsCount": 70,
+  "id": "4",
+  "isDefault": false,
+  "links": {
+    "associations": "https://example.atlassian.net/rest/api/3/config/fieldschemes/4/fields",
+    "projects": "https://example.atlassian.net/rest/api/3/config/fieldschemes/4/projects"
+  },
+  "name": "JSCTEST2 Field Scheme"
+}

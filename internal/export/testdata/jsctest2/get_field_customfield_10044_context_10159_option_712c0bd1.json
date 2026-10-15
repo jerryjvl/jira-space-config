@@ -1,0 +1,41 @@
+{
+  "isLast": true,
+  "maxResults": 100,
+  "startAt": 0,
+  "total": 6,
+  "values": [
+    {
+      "disabled": false,
+      "id": "10026",
+      "value": "Host"
+    },
+    {
+      "disabled": false,
+      "id": "10027",
+      "value": "Network"
+    },
+    {
+      "disabled": false,
+      "id": "10028",
+      "value": "Application"
+    },
+    {
+      "disabled": false,
+      "id": "10029",
+      "optionId": "10026",
+      "value": "Linux"
+    },
+    {
+      "disabled": false,
+      "id": "10030",
+      "optionId": "10026",
+      "value": "Windows"
+    },
+    {
+      "disabled": false,
+      "id": "10031",
+      "optionId": "10028",
+      "value": "Web"
+    }
+  ]
+}

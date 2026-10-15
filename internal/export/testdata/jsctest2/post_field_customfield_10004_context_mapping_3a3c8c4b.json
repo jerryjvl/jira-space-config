@@ -1,0 +1,33 @@
+{
+  "isLast": true,
+  "maxResults": 50,
+  "startAt": 0,
+  "total": 5,
+  "values": [
+    {
+      "contextId": "10104",
+      "issueTypeId": "10012",
+      "projectId": "10003"
+    },
+    {
+      "contextId": "10104",
+      "issueTypeId": "10000",
+      "projectId": "10003"
+    },
+    {
+      "contextId": "10104",
+      "issueTypeId": "10005",
+      "projectId": "10003"
+    },
+    {
+      "contextId": "10104",
+      "issueTypeId": "10013",
+      "projectId": "10003"
+    },
+    {
+      "contextId": "10104",
+      "issueTypeId": "10014",
+      "projectId": "10003"
+    }
+  ]
+}
