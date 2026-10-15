@@ -77,6 +77,6 @@ func newRootCommand(env environment) *cobra.Command {
 		SilenceUsage:  true,
 		SilenceErrors: true,
 	}
-	root.AddCommand(newWhoamiCommand(env), newValidateCommand(), newExportCommand(env), newApplyCommand(env))
+	root.AddCommand(newWhoamiCommand(env), newValidateCommand(), newExportCommand(env), newApplyCommand(env), newInstructionsCommand())
 	return root
 }

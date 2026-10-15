@@ -1,0 +1,155 @@
+# The parts of the format that full.yaml (internal/spec/testdata) leaves out,
+# for the instructions: field schemes, automation, every workflow rule, a
+# reused scheme and objects created rather than reused.
+apiVersion: jira-space-config/v1alpha1
+kind: SpaceConfig
+metadata:
+  name: example-extra
+  description: >-
+    The rest of the format,
+    for the instructions' tests.
+
+binding:
+  site: https://example.atlassian.net
+  cloud_id: 00000000-0000-0000-0000-000000000000
+
+roles:
+  - { name: Administrators, mode: reuse }
+  - { name: atlassian-addons-project-access, mode: reuse, id: "10003" }
+groups:
+  - { name: ext-team, mode: ensure, notes: [Ask the organisation admin.] }
+statuses:
+  - { name: Waiting, mode: ensure, category: todo }
+  - { name: Done, mode: reuse }
+priorities:
+  - { name: Blocker, mode: ensure, colour: "#bf2600", icon: /images/icons/priorities/blocker.svg }
+issue_link_types:
+  - { name: Causes, mode: ensure, inward: is caused by, outward: causes }
+issue_types:
+  - { name: Check, mode: ensure, level: subtask }
+  - { name: Initiative, mode: ensure, level: "2" }   # by hand only
+  - { name: Theme, mode: ensure, level: epic }        # by hand only
+  - { name: Task, mode: reuse }
+custom_fields:
+  - { name: Area, mode: ensure, type: multiselect }
+  - { name: Reviewer, mode: ensure, type: user }
+  - { name: Starts, mode: ensure, type: date }
+  - { name: Ends, mode: ensure, type: date }
+  - { name: Score, mode: ensure, type: "com.example:score" }   # by hand only
+  - { name: Notes, mode: ensure, type: "com.atlassian.jira.plugin.system.customfieldtypes:textfield" }   # Jira's own: apply can
+
+screens:
+  - name: EXT Screen
+    notes: [Keep it short.]
+    tabs:
+      - { name: Main, fields: [Summary, Area, Reviewer] }
+
+workflows:
+  - name: EXT Workflow
+    statuses: [Waiting, Done]
+    transitions:
+      - { name: Create, type: initial, to: Waiting }
+      - name: Finish
+        from: [Waiting]
+        to: Done
+        description: Every rule, | in words
+        conditions:
+          any:
+            - { type: field_value, field: Area, values: [North, South], comparator: "=", comparison: string }
+            - { type: parent_child_blocking, statuses: [Done] }
+            - { type: separation_of_duties, from_status: Waiting }
+            - { type: block_in_progress_approval }
+            - { type: previous_status, status: Done, not: true }
+            - all:
+                - { type: restrict_to, user_fields: [Reviewer], deny_user_fields: [Reviewer], permissions: [BROWSE_PROJECTS] }
+                - { type: restrict_to, group_fields: [Area], accounts: [allow-reporter] }
+        validators:
+          - { type: permission, permission: RESOLVE_ISSUES }
+          - { type: parent_child_blocking, statuses: [Done] }
+          - { type: previous_status, status: Waiting }
+          - { type: field_changed, field: Area, exempt_groups: [ext-team], error_message: Change the area }
+          - { type: field_single_value, field: Area }
+          - { type: field_matches, field: Summary, regexp: "^EXT-", error_message: Use the prefix }
+          - { type: date_compare, field: Starts, comparator: "<", other_field: Ends }
+          - { type: date_window, field: Starts, other_field: Ends, days: "30" }
+          - { type: forms_attached }
+          - { type: forms_submitted }
+        post_functions:
+          - { type: copy_field, from: Area, to: Area, source: parent }
+          - { type: clear_field, field: Reviewer }
+          - { type: set_field, field: Area, value: North, mode: append }
+          - { type: trigger_webhook, webhook: "7" }
+          - { type: trigger_agent, agent: 5b10a2844c20165700ede21g, prompt: Summarise it }
+          - { type: assign, to: selected_user, user: 5b10a2844c20165700ede21g }
+          - { type: rule, key: "com.example:no-params" }
+  - { name: Shared Workflow, mode: reuse }
+
+space:
+  key: EXT
+  managed_prefix: EXT
+  details:
+    assignee_type: space_lead
+  issue_types:
+    - { name: Task, default: true, workflow: EXT Workflow, screens: EXT Screen }
+    - { name: Check, workflow: Shared Workflow, screens: EXT Screen }
+  fields:
+    - { name: Summary, required: true }
+    - { name: Area, description: Where it is, by_issue_type: { Check: { description: Where to check } } }
+  field_contexts:
+    Area:
+      - issue_types: [Task, Check]
+        options: [North, South]
+        default: [North, South]
+    Reviewer:
+      - { issue_types: all, default: null }
+  permissions:
+    grants:
+      BROWSE_PROJECTS: ["role:atlassian-addons-project-access", "application_role:", "application_role:jira-software", anyone, space_lead]
+      MANAGE_WATCHERS: ["user_field:Reviewer", "email:someone@example.com"]
+  notifications:
+    events:
+      Issue Resolved: [reporter, all_watchers, "group_field:Area", current_user, component_lead]
+  issue_security:
+    levels:
+      - { name: Private, description: Team only, default: true, holders: ["group:ext-team", reporter] }
+      - { name: Public, holders: ["application_role:"] }
+  priorities:
+    priorities: [Blocker]
+    binding: { name: Shared Priority Scheme, mode: reuse }
+  binding:
+    workflow_scheme: { name: Shared Workflow Scheme, mode: reuse }
+    issue_type_screen_scheme: { name: EXT Screens }
+
+filters:
+  - { name: EXT Everything, jql: "project = EXT", viewers: [logged_in, anyone, "user:5b10a2844c20165700ede21g"], editors: [], notes: [For the board.] }
+  - { name: Shared filter, mode: reuse, jql: "project = EXT" }
+boards:
+  - { name: EXT Scrum, type: scrum, filter: EXT Everything, notes: [Add a sprint.] }
+  - { name: Old board, mode: reuse, type: kanban, filter: Shared filter }
+
+automation_rules:
+  - name: EXT Close done checks
+    description: Closes a check when its parent is done.
+    state: disabled
+    notes: [Test it on a copy first.]
+    rule:
+      trigger: { component: TRIGGER, type: "jira.issue.event.trigger:transitioned", children: [], conditions: [] }
+      components:
+        - component: CONDITION
+          type: jira.condition.if.block
+          children:
+            - component: CONDITION_BLOCK
+              type: jira.condition.if.block.if
+              conditions:
+                - { component: CONDITION, type: jira.issue.condition, children: [], conditions: [] }
+              children:
+                - { component: ACTION, type: jira.issue.transition, children: [], conditions: [] }
+        - { component: BRANCH, type: jira.issue.related, children: [{ component: ACTION, type: jira.issue.comment }] }
+        - { component: NEWKIND, type: x }
+  - { name: Site rule, mode: reuse, scope: shared, rule: { trigger: { type: x } } }
+
+issue_layouts:
+  - name: Task layout
+    notes:
+      - Put Area first.
+    sections: [{ name: Details, fields: [Area] }]
